@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Officer Hub | Friendship Speaker’s Circle</title>
+<meta name="description" content="Friendship Speaker’s Circle officer hub for board planning, training, mentor assignments, club success planning, action items, and leadership resources.">
+<link rel="icon" href="assets/club-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+.officer-hero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.28),transparent 24%),
+    radial-gradient(circle at 8% 88%,rgba(139,41,66,.18),transparent 28%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;padding:82px 0 66px
+}
+.officer-hero h1{font-size:clamp(3rem,7vw,5rem);line-height:.98;margin:8px 0 18px}
+.officer-hero p{max-width:850px;color:#e1eaf2;font-size:1.12rem}
+.secure-banner{
+  margin-top:-28px;position:relative;z-index:3;
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px 22px;
+  box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start
+}
+.secure-banner .lock{font-size:1.8rem}
+.secure-banner strong{display:block;color:var(--navy);margin-bottom:4px}
+.secure-banner p{margin:0;color:var(--muted)}
+.officer-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.officer-card{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;
+  display:flex;flex-direction:column
+}
+.officer-card .icon{font-size:1.65rem;margin-bottom:10px}
+.officer-card h3{margin:0 0 8px;color:var(--navy)}
+.officer-card p{color:var(--muted);margin:0 0 16px;flex:1}
+.officer-card .status{font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--maroon);margin-bottom:10px}
+.rhythm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rhythm-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.rhythm-card h3{color:var(--navy);margin-top:0}
+.rhythm-card ul{margin:0;padding-left:20px;color:var(--muted)}
+.rhythm-card li{margin:8px 0}
+.board-table{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.board-table th,.board-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left}
+.board-table th{background:var(--navy);color:#fff;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}
+.board-table tr:last-child td{border-bottom:0}
+.board-table td:first-child{font-weight:800;color:var(--navy)}
+.priority-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.priority-panel,.mentor-panel{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px
+}
+.priority-panel h2,.mentor-panel h2{color:var(--navy);margin-top:0}
+.checklist{display:grid;gap:10px;margin-top:14px}
+.check{background:#f7f8fa;border:1px solid var(--line);border-radius:13px;padding:12px 14px}
+.action-panel{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(255,255,255,.1),transparent 25%),
+    linear-gradient(135deg,#7d2a42,#4e1730);
+  color:#fff;border-radius:28px;padding:30px
+}
+.action-panel h2{color:#fff;margin-top:0}
+.action-panel p{color:#f3dfe6}
+.officer-note{
+  background:var(--gold-soft);border:1px solid #eadfbf;border-radius:20px;padding:20px;color:#403515
+}
+.officer-note strong{color:var(--navy)}
+@media(max-width:1000px){
+  .officer-grid{grid-template-columns:1fr 1fr}
+  .rhythm-grid{grid-template-columns:1fr}
+  .priority-wrap{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .officer-grid{grid-template-columns:1fr}
+  .secure-banner{display:block}
+  .board-table{font-size:.9rem}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/club-mark.svg" alt="">
+      <span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="roles.html">Roles</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="mentorship.html">Mentorship</a>
+      <a href="member-hub.html">Member Hub</a>
+      <a href="recognition.html">Recognition</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="resources.html">Resources</a>
+      <a href="join.html">Join Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="officer-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:var(--gold)">Leadership Workspace</div>
+    <h1>Officer Hub</h1>
+    <p>A central place for Friendship Speaker’s Circle officers to plan, follow through, support members, and keep the club moving with consistency.</p>
+  </div>
+</section>
+
+<section class="section white" style="padding-top:0">
+  <div class="container">
+    <div class="secure-banner">
+      <div class="lock">🔒</div>
+      <div>
+        <strong>Protected officer resources</strong>
+        <p>The page itself contains no confidential club data. Sensitive documents stay in Friendship Google Drive and require the proper Friendship Google login.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Officer Tools</div><h2>Everything the board needs in one place.</h2></div>
+      <p>These buttons are ready to activate as soon as the corresponding Google Drive, Sheet, or document links are added.</p>
+    </div>
+
+    <div class="officer-grid">
+      <article class="officer-card">
+        <div class="icon">🗓️</div><div class="status">Officer Access</div>
+        <h3>Board Meeting Agenda</h3>
+        <p>Open the current board meeting agenda and prepare discussion points before the meeting.</p>
+        <a class="btn btn-dark" data-link="officerBoardAgenda" href="#">Open Board Agenda</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">📝</div><div class="status">Officer Access</div>
+        <h3>Board Minutes</h3>
+        <p>Open the protected Board Meeting Minutes folder to review decisions, follow-up notes, and previous meeting records.</p>
+        <a class="btn btn-dark" data-link="officerMinutes" href="#">Open Board Minutes</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">🎯</div><div class="status">Officer Access</div>
+        <h3>Club Success Plan</h3>
+        <p>Track club goals, membership priorities, education goals, recognition, and leadership commitments.</p>
+        <a class="btn btn-dark" data-link="officerSuccessPlan" href="#">Open Success Plan</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">✅</div><div class="status">Officer Access</div>
+        <h3>Action Item Tracker</h3>
+        <p>Assign ownership, due dates, status, and follow-up for board commitments.</p>
+        <a class="btn btn-maroon" data-link="officerActionTracker" href="#">Open Action Tracker</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">🎓</div><div class="status">Officer Access</div>
+        <h3>Officer Training</h3>
+        <p>Store training certificates, officer resources, role expectations, and professional development materials.</p>
+        <a class="btn btn-dark" data-link="officerTraining" href="#">Open Training Resources</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">🤝</div><div class="status">Officer Access</div>
+        <h3>Mentor Assignments</h3>
+        <p>Track which board members are mentoring members and record follow-up needs.</p>
+        <a class="btn btn-dark" data-link="officerMentorAssignments" href="#">Open Mentor Assignments</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">👥</div><div class="status">Officer Access</div>
+        <h3>Membership Administration</h3>
+        <p>Access the protected Membership Folder for dues, onboarding, renewals, membership records, and administrative follow-up.</p>
+        <a class="btn btn-dark" data-link="officerMembershipAdmin" href="#">Open Membership Folder</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+
+      <article class="officer-card">
+        <div class="icon">📁</div><div class="status">Officer Access</div>
+        <h3>Officer Resource Drive</h3>
+        <p>The protected Board Folder for officer-only templates, planning documents, reports, meeting records, and leadership resources.</p>
+        <a class="btn btn-dark" data-link="officerResourceDrive" href="#">Open Board Folder</a>
+        <span class="login-note">Friendship Google login required</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Board Rhythm</div><h2>A simple operating cadence.</h2></div>
+      <p>The Officer Hub should reduce last-minute scrambling by giving the board a predictable cycle for planning and follow-through.</p>
+    </div>
+
+    <div class="rhythm-grid">
+      <article class="rhythm-card">
+        <h3>Before Each Board Meeting</h3>
+        <ul>
+          <li>Review action items from the previous meeting.</li>
+          <li>Add updates to the agenda before the meeting.</li>
+          <li>Check member needs, Pathways progress, and upcoming roles.</li>
+          <li>Bring only issues that require discussion, decision, or support.</li>
+        </ul>
+      </article>
+
+      <article class="rhythm-card">
+        <h3>During the Board Meeting</h3>
+        <ul>
+          <li>Keep discussion tied to decisions and outcomes.</li>
+          <li>Assign an owner and due date to every action item.</li>
+          <li>Capture decisions in the minutes.</li>
+          <li>Protect time for member experience and club growth.</li>
+        </ul>
+      </article>
+
+      <article class="rhythm-card">
+        <h3>After the Board Meeting</h3>
+        <ul>
+          <li>Update the action tracker.</li>
+          <li>Send follow-up notes and deadlines.</li>
+          <li>Contact assigned members or mentors.</li>
+          <li>Close completed tasks before the next board meeting.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section gold-soft">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Current Executive Committee</div><h2>Shared leadership, clear ownership.</h2></div>
+      <p>Each officer has a lane, but the member experience is a shared responsibility.</p>
+    </div>
+
+    <div style="overflow-x:auto">
+      <table class="board-table">
+        <thead><tr><th>Office</th><th>Officer</th><th>Primary Focus</th></tr></thead>
+        <tbody>
+          <tr><td>President</td><td>Abdul Dopson</td><td>Direction, accountability, board leadership, club quality</td></tr>
+          <tr><td>Vice President Education</td><td>William Foster</td><td>Speeches, Pathways, meeting roles, educational growth</td></tr>
+          <tr><td>Vice President Membership</td><td>Brandy Winchester</td><td>Onboarding, renewals, member engagement, retention</td></tr>
+          <tr><td>Vice President Public Relations</td><td>Monique Miller</td><td>Communication, visibility, promotion, club storytelling</td></tr>
+          <tr><td>Secretary</td><td>Vacant</td><td>Minutes, records, documentation, board follow-through</td></tr>
+          <tr><td>Treasurer</td><td>Tatiana Peters</td><td>Dues, financial records, payments, budget support</td></tr>
+          <tr><td>Sergeant at Arms</td><td>Neko Ramos</td><td>Meeting setup, opening/closing, logistics, environment</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container">
+    <div class="priority-wrap">
+      <article class="priority-panel">
+        <div class="eyebrow">Officer Checklist</div>
+        <h2>What healthy club leadership looks like.</h2>
+        <div class="checklist">
+          <div class="check">☐ Members know what is happening and what is expected.</div>
+          <div class="check">☐ Upcoming roles are filled and members are prepared.</div>
+          <div class="check">☐ New members are onboarded and connected to a mentor.</div>
+          <div class="check">☐ Pathways progress is visible and celebrated.</div>
+          <div class="check">☐ Officer commitments have owners and due dates.</div>
+          <div class="check">☐ Training, dues, and administrative deadlines are current.</div>
+          <div class="check">☐ Recognition is intentional, consistent, and documented.</div>
+        </div>
+      </article>
+
+      <article class="mentor-panel">
+        <div class="eyebrow">Mentoring Responsibility</div>
+        <h2>Board members also develop people.</h2>
+        <p>Officer leadership is not limited to meetings and paperwork. Board members help members stay connected, prepare for roles, navigate Pathways, and grow into greater responsibility.</p>
+        <p>Use mentor assignments and regular check-ins to make sure no member disappears simply because nobody followed up.</p>
+        <a class="btn btn-dark" href="mentorship.html">Review Mentoring System</a><span class="login-note">Friendship Google login required</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="action-panel">
+      <div class="eyebrow" style="color:var(--gold)">Board Accountability</div>
+      <h2>Every discussion should end with a next step.</h2>
+      <p>The Officer Hub is designed around one simple expectation: if the board identifies a need, concern, opportunity, or commitment, it should leave the meeting with an owner and a due date.</p>
+      <div class="actions">
+        <a class="btn btn-primary" data-link="officerActionTracker" href="#">Open Action Tracker</a><span class="login-note">Friendship Google login required</span>
+        <a class="btn btn-light" href="leadership.html">Leadership Standards</a><span class="login-note">Friendship Google login required</span>
+      </div>
+      <span class="login-note" style="color:#f1dfe5">Friendship Google login required for protected tools</span>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container">
+    <div class="officer-note">
+      <strong>Security note:</strong> this static website does not itself authenticate users. Confidential board information should never be typed directly onto this page. Keep sensitive records in Friendship-controlled Google Drive, Sheets, or approved systems and use this page only as the gateway.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+    <div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><span class="login-note">Friendship Google login required</span><a href="meetings.html">Meeting Flow</a><span class="login-note">Friendship Google login required</span><a href="calendar.html">Club Calendar</a><span class="login-note">Friendship Google login required</span><a href="roles.html">Meeting Roles</a><span class="login-note">Friendship Google login required</span><a href="member-hub.html">Member Hub</a><span class="login-note">Friendship Google login required</span></div></div>
+    <div><h3>Leadership</h3><div class="footer-links"><a href="leadership.html">Leadership Team</a><a href="officer-hub.html">Officer Hub</a><a href="mentorship.html">Mentorship</a><a href="resources.html">Resources</a></div></div>
+  </div>
+  <div class="container footer-bottom">© <span data-year></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

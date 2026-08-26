@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Leadership | Friendship Speaker’s Circle</title>
+<meta content="Friendship Speaker’s Circle executive leadership, officer responsibilities, club mentor support, board rhythm, and leadership standards." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.lead-hero{
+  background:
+    radial-gradient(circle at 84% 18%,rgba(216,180,90,.28),transparent 24%),
+    radial-gradient(circle at 9% 90%,rgba(139,41,66,.18),transparent 28%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;padding:80px 0 70px
+}
+.lead-hero .breadcrumbs{color:#cbd6e2}
+.lead-hero .breadcrumbs a{color:var(--gold)}
+.lead-hero .eyebrow{color:var(--gold)}
+.lead-hero h1{font-size:clamp(3rem,7vw,5.2rem);line-height:1;margin:8px 0 18px;max-width:930px}
+.lead-hero p{max-width:780px;color:#e4edf5;font-size:1.12rem}
+.lead-nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.lead-nav a{background:#fff;color:var(--navy);border-radius:999px;padding:9px 12px;text-decoration:none;font-weight:850;border:1px solid rgba(255,255,255,.35)}
+.lead-principles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:-34px;position:relative;z-index:5}
+.principle{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.principle b{display:block;color:var(--navy);font-size:1.08rem;margin-bottom:5px}
+.principle span{color:var(--muted);font-size:.9rem}
+.officer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.officer-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;
+  box-shadow:0 8px 24px rgba(19,42,70,.05);display:flex;flex-direction:column
+}
+.officer-top{
+  background:linear-gradient(135deg,var(--navy),#214f79);color:#fff;padding:22px;
+  min-height:156px;display:flex;flex-direction:column;justify-content:space-between
+}
+.officer-top .role{font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;color:var(--gold);font-weight:900}
+.officer-top h3{color:#fff;margin:6px 0 0;font-size:1.45rem}
+.officer-name{margin-top:12px;font-size:.9rem;color:#dce6ef;font-weight:700}
+.officer-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.officer-body p{color:var(--muted);margin-top:0}
+.officer-body ul{padding-left:1.1rem;margin-bottom:0}
+.officer-body li{margin:.42rem 0}
+.officer-focus{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem;color:var(--ink)}
+.officer-focus b{color:var(--maroon)}
+.mentor-highlight{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.32),transparent 26%),
+    linear-gradient(135deg,#f7f1df,#fff);
+  border:1px solid #eadfbf;border-radius:28px;padding:30px;
+  display:grid;grid-template-columns:1fr .8fr;gap:26px;align-items:center
+}
+.mentor-highlight h2{color:var(--navy);margin:0 0 10px;font-size:clamp(2rem,4vw,3rem)}
+.mentor-chip{display:inline-block;background:var(--gold);color:#241b07;font-weight:950;padding:8px 11px;border-radius:999px;margin-bottom:12px}
+.mentor-panel{background:#fff;border:1px solid #eadfbf;border-radius:20px;padding:22px}
+.mentor-panel h3{margin-top:0;color:var(--navy)}
+.board-rhythm{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.rhythm-card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px}
+.rhythm-card .when{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--maroon)}
+.rhythm-card h3{margin:5px 0 7px;color:var(--navy)}
+.board-standard{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.standard-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.standard-card h3{margin-top:0;color:var(--navy)}
+.standard-card ul{margin-bottom:0;padding-left:1.15rem}
+.standard-card li{margin:.46rem 0}
+.accountability{
+  background:var(--navy);color:#fff;border-radius:28px;padding:30px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center
+}
+.accountability h2{color:#fff;margin:0 0 10px}
+.accountability p{color:#dfe8f0}
+.accountability-list{display:grid;gap:10px}
+.accountability-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:13px}
+.accountability-item b{color:var(--gold)}
+@media(max-width:950px){
+  .lead-principles,.board-rhythm{grid-template-columns:1fr 1fr}
+  .officer-grid{grid-template-columns:1fr 1fr}
+  .mentor-highlight,.accountability{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .lead-principles,.board-rhythm,.officer-grid,.board-standard{grid-template-columns:1fr}
+}
+</style>
+
+<style>
+.officer-photo{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:18px;
+  margin-bottom:16px;
+  display:block;
+}
+.officer-card-photo{
+  overflow:hidden;
+}
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a href="mentorship.html">Mentorship</a><a href="member-hub.html">Member Hub</a><a href="recognition.html">Recognition</a><a aria-current="page" href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="lead-hero">
+<div class="container">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Leadership</div>
+<div class="eyebrow">Club Leadership</div>
+<h1>Leadership is how we make the club sustainable.</h1>
+<p>Friendship Speaker’s Circle is led by a volunteer executive board working together to create a strong member experience, consistent meetings, meaningful growth, and a culture where leadership is shared—not concentrated in one person.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#officers">Meet the Leadership Roles</a>
+<a class="btn btn-light" href="mentorship.html">Mentorship System</a>
+</div>
+<div class="lead-nav">
+<a href="#principles">Leadership Principles</a>
+<a href="#officers">Officer Roles</a>
+<a href="#club-mentor">Club Mentor</a>
+<a href="#board-rhythm">Board Rhythm</a>
+<a href="#standards">Standards</a>
+</div>
+</div>
+</section>
+<section class="section white" id="principles" style="padding-top:0">
+<div class="container">
+<div class="lead-principles">
+<article class="principle"><b>Serve first.</b><span>Leadership exists to strengthen the member experience.</span></article>
+<article class="principle"><b>Share ownership.</b><span>No single officer should be carrying the whole club.</span></article>
+<article class="principle"><b>Follow through.</b><span>Action items need owners, dates, and accountability.</span></article>
+<article class="principle"><b>Develop others.</b><span>Board members lead and mentor at the same time.</span></article>
+</div>
+</div>
+</section>
+<section class="section" id="officers">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Executive Board</div><h2>Seven roles. One leadership team.</h2></div>
+<p>Each officer has a distinct responsibility, but the strongest boards communicate across roles and solve problems together.</p>
+</div>
+<div class="officer-grid">
+<article class="officer-card">
+<img class="officer-photo" src="assets/officers/abdul-dopson.png" alt="Abdul Dopson, President">
+<div class="officer-top">
+<div>
+<div class="role">President</div>
+<h3>President</h3>
+</div>
+<div class="officer-name">Abdul Dopson</div>
+</div>
+<div class="officer-body">
+<p>Sets the tone for the club, protects the mission, leads the executive team, and ensures the club keeps moving toward its goals.</p>
+<ul><li>Lead with clarity and consistency</li><li>Keep the board aligned</li><li>Protect member experience</li><li>Represent the club professionally</li></ul>
+<div class="officer-focus"><b>Primary focus: direction, culture, accountability</b></div>
+</div>
+</article>
+<article class="officer-card">
+<div class="officer-top">
+<div>
+<div class="role">Vice President Education</div>
+<h3>Vice President Education</h3>
+</div>
+<div class="officer-name">William Foster</div>
+</div>
+<div class="officer-body">
+<p>Owns the educational experience of the club and helps members progress through speeches, meeting roles, and Pathways.</p>
+<ul><li>Coordinate speeches and roles</li><li>Support Pathways progress</li><li>Help members set learning goals</li><li>Strengthen meeting quality</li></ul>
+<div class="officer-focus"><b>Primary focus: member growth</b></div>
+</div>
+</article>
+<article class="officer-card">
+<div class="officer-top">
+<div>
+<div class="role">Vice President Membership</div>
+<h3>Vice President Membership</h3>
+</div>
+<div class="officer-name">Brandy Winchester</div>
+</div>
+<div class="officer-body">
+<p>Welcomes guests and new members, supports onboarding, and helps members stay connected to the club.</p>
+<ul><li>Follow up with guests</li><li>Support onboarding</li><li>Track member engagement</li><li>Help members feel included</li></ul>
+<div class="officer-focus"><b>Primary focus: belonging and retention</b></div>
+</div>
+</article>
+<article class="officer-card">
+<img class="officer-photo" src="assets/officers/monique-miller.png" alt="Monique Miller, Vice President Public Relations">
+<div class="officer-top">
+<div>
+<div class="role">Vice President Public Relations</div>
+<h3>Vice President Public Relations</h3>
+</div>
+<div class="officer-name">Monique Miller</div>
+</div>
+<div class="officer-body">
+<p>Shares the story of the club and promotes meetings, accomplishments, events, and member success.</p>
+<ul><li>Promote meetings and events</li><li>Celebrate member wins</li><li>Maintain public-facing messaging</li><li>Support recruitment and visibility</li></ul>
+<div class="officer-focus"><b>Primary focus: visibility and storytelling</b></div>
+</div>
+</article>
+<article class="officer-card">
+<div class="officer-top">
+<div>
+<div class="role">Secretary</div>
+<h3>Secretary</h3>
+</div>
+<div class="officer-name">Vacant</div>
+</div>
+<div class="officer-body">
+<p>Keeps the club’s records organized so decisions, commitments, action items, and important documents are not lost.</p>
+<ul><li>Record key decisions</li><li>Track action items</li><li>Maintain club records</li><li>Support follow-through</li></ul>
+<div class="officer-focus"><b>Primary focus: continuity and documentation</b></div>
+</div>
+</article>
+<article class="officer-card">
+<div class="officer-top">
+<div>
+<div class="role">Treasurer</div>
+<h3>Treasurer</h3>
+</div>
+<div class="officer-name">Tatiana Peters</div>
+</div>
+<div class="officer-body">
+<p>Supports responsible stewardship of club funds, dues, payments, and financial records.</p>
+<ul><li>Track dues and payments</li><li>Maintain accurate records</li><li>Support budgeting</li><li>Communicate financial needs clearly</li></ul>
+<div class="officer-focus"><b>Primary focus: stewardship</b></div>
+</div>
+</article>
+<article class="officer-card">
+<img class="officer-photo" src="assets/officers/neko-ramos.jpg" alt="Neko Ramos, Sergeant at Arms">
+<div class="officer-top">
+<div>
+<div class="role">Sergeant at Arms</div>
+<h3>Sergeant at Arms</h3>
+</div>
+<div class="officer-name">Neko Ramos</div>
+</div>
+<div class="officer-body">
+<p>Protects the meeting environment by helping meetings start smoothly, feel welcoming, and end professionally.</p>
+<ul><li>Open and close meetings</li><li>Support room or virtual setup</li><li>Welcome members and guests</li><li>Help maintain meeting order</li></ul>
+<div class="officer-focus"><b>Primary focus: meeting environment</b></div>
+</div>
+</article></div>
+<div class="spacer-24"></div>
+<div class="callout"><b>Leadership roster:</b> Current officer names are now listed. Photos, professional bios, and optional contact information can be added as the leadership page continues to develop.</div>
+</div>
+</section>
+<section class="section gold-soft" id="club-mentor">
+<div class="container">
+<div class="mentor-highlight">
+<div>
+<span class="mentor-chip">Club Mentor</span>
+<h2>Kimbaley</h2>
+<p>The Club Mentor supports Friendship Speaker’s Circle as an organization. This role brings an experienced Toastmasters perspective to club leadership, meeting quality, member development, and long-term sustainability.</p>
+<p>Kimbaley’s role is different from the board member mentor role. The Club Mentor supports the health of the <b>club</b>; board mentors provide direct support to individual <b>members</b>.</p>
+<div class="actions">
+<a class="btn btn-dark" href="mentorship.html">See the Mentorship System</a>
+</div>
+</div>
+<aside class="mentor-panel">
+<h3>How the Club Mentor Supports Leadership</h3>
+<ul>
+<li>Provides perspective and guidance to officers.</li>
+<li>Helps strengthen meeting quality and systems.</li>
+<li>Supports officer development and club sustainability.</li>
+<li>Helps the board connect local club practices to Toastmasters standards.</li>
+<li>Encourages a healthy leadership culture.</li>
+</ul>
+</aside>
+</div>
+</div>
+</section>
+<section class="section white" id="board-rhythm">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">How the Board Works</div><h2>A predictable leadership rhythm.</h2></div>
+<p>Good leadership becomes easier when communication and follow-through happen on a regular schedule.</p>
+</div>
+<div class="board-rhythm">
+<article class="rhythm-card"><div class="when">Monthly</div><h3>Board Meeting</h3><p>Review concerns, action items, member needs, deadlines, and upcoming meetings.</p></article>
+<article class="rhythm-card"><div class="when">Ongoing</div><h3>Mentor Outreach</h3><p>Board mentors stay connected with assigned members and share relevant resources or support.</p></article>
+<article class="rhythm-card"><div class="when">Before Meetings</div><h3>Operational Check</h3><p>Confirm roles, speakers, agenda readiness, and any member support needs.</p></article>
+<article class="rhythm-card"><div class="when">After Meetings</div><h3>Close the Loop</h3><p>Capture action items, attendance, awards, role gaps, and one improvement for the next meeting.</p></article>
+</div>
+</div>
+</section>
+<section class="section" id="standards">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Leadership Standards</div><h2>What members should be able to expect from the board.</h2></div>
+<p>Titles do not create trust. Consistent behavior does.</p>
+</div>
+<div class="board-standard">
+<article class="standard-card">
+<h3>Board Commitments</h3>
+<ul>
+<li>Prepare for meetings and leadership responsibilities.</li>
+<li>Communicate respectfully and professionally.</li>
+<li>Complete action items by agreed-upon deadlines.</li>
+<li>Ask for help before responsibilities become emergencies.</li>
+<li>Keep member information and sensitive conversations appropriate.</li>
+<li>Model the participation expected from members.</li>
+</ul>
+</article>
+<article class="standard-card">
+<h3>Member-Facing Leadership</h3>
+<ul>
+<li>Welcome questions without making members feel burdensome.</li>
+<li>Explain processes instead of assuming members already know them.</li>
+<li>Celebrate growth and effort publicly.</li>
+<li>Address concerns privately and respectfully.</li>
+<li>Connect members with the right officer or resource quickly.</li>
+<li>Help members become more independent over time.</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="accountability">
+<div>
+<div class="eyebrow" style="color:var(--gold)">Shared Accountability</div>
+<h2>The board should not depend on one person.</h2>
+<p>Healthy club leadership means systems continue even when one officer is absent. Documentation, clear ownership, mentoring, and predictable routines make the club stronger than any individual leader.</p>
+</div>
+<div class="accountability-list">
+<div class="accountability-item"><b>Every action item:</b> owner + due date</div>
+<div class="accountability-item"><b>Every meeting:</b> roles confirmed in advance</div>
+<div class="accountability-item"><b>Every member:</b> knows where to get support</div>
+<div class="accountability-item"><b>Every officer:</b> develops someone else</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">For Officers</div>
+<h2>Open the Officer Hub</h2>
+</div>
+<p>Board planning, action items, officer training, mentor assignments, and other protected leadership resources are organized in one place.</p>
+</div>
+<div class="actions">
+<a class="btn btn-dark" href="officer-hub.html">Open Officer Hub</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+<div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><a href="meetings.html">Meeting Flow</a><a href="calendar.html">Club Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a href="start-here.html">New Member Start Here</a></div></div>
+<div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
+</div>
+<div class="container footer-bottom">© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

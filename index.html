@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Friendship Speaker’s Circle | Conversations that Matter</title>
+<meta content="Friendship Speaker’s Circle member hub for communication, leadership, meetings, mentoring, Pathways, recognition, resources, and club growth." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.home-hero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.30),transparent 24%),
+    radial-gradient(circle at 10% 88%,rgba(139,41,66,.18),transparent 28%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;padding:92px 0 78px;overflow:hidden
+}
+.home-hero .eyebrow{color:var(--gold)}
+.home-hero h1{font-size:clamp(3.2rem,8vw,5.8rem);line-height:.96;margin:8px 0 20px;max-width:980px}
+.home-hero p{max-width:790px;color:#e5edf5;font-size:1.16rem}
+.home-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.home-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:-34px;position:relative;z-index:4}
+.home-stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.home-stat strong{display:block;color:var(--navy);font-size:1.08rem}
+.home-stat span{display:block;color:var(--muted);font-size:.89rem;margin-top:4px}
+.next-card{
+  background:var(--navy);color:#fff;border-radius:30px;padding:32px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center
+}
+.next-card h2{color:#fff;margin:0 0 10px;font-size:clamp(2.1rem,4vw,3.4rem)}
+.next-card p{color:#dce6ef}
+.next-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.next-fact{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:13px}
+.next-fact b{display:block;color:var(--gold);font-size:.76rem;text-transform:uppercase;letter-spacing:.09em}
+.command-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.command-card{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;
+  display:flex;flex-direction:column;box-shadow:0 7px 22px rgba(19,42,70,.05)
+}
+.command-card .icon{width:50px;height:50px;border-radius:15px;background:var(--gold-soft);display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px}
+.command-card h3{margin:0 0 7px;color:var(--navy)}
+.command-card p{margin:0 0 16px;color:var(--muted);flex:1}
+.journey-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.journey-step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.journey-step span{display:block;font-size:1.45rem;margin-bottom:7px}
+.journey-step b{color:var(--navy);display:block}
+.journey-step small{color:var(--muted)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feature-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px}
+.feature-card .tag{display:inline-block;background:var(--gold-soft);color:var(--navy);font-size:.73rem;font-weight:900;text-transform:uppercase;letter-spacing:.09em;padding:6px 9px;border-radius:999px;margin-bottom:10px}
+.feature-card h3{color:var(--navy);margin:0 0 8px}
+.feature-card p{color:var(--muted)}
+.recognition-home{
+  background:
+    radial-gradient(circle at 90% 18%,rgba(255,255,255,.13),transparent 24%),
+    linear-gradient(135deg,#7e6220,#d8b45a);
+  color:#241b07;border-radius:30px;padding:32px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center
+}
+.recognition-home h2{color:#241b07;margin:0 0 10px;font-size:clamp(2.1rem,4vw,3.3rem)}
+.recognition-home p{max-width:700px}
+.recognition-mark{font-size:6rem;text-align:center}
+.lead-home{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.lead-panel,.mentor-panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:25px}
+.lead-panel h2,.mentor-panel h2{color:var(--navy);margin:0 0 10px}
+.lead-panel p,.mentor-panel p{color:var(--muted)}
+.resource-band{
+  background:linear-gradient(135deg,#fff,#f8f1de);
+  border:1px solid #eadfbf;border-radius:28px;padding:30px;
+  display:flex;justify-content:space-between;gap:24px;align-items:center
+}
+.resource-band h2{color:var(--navy);margin:0 0 8px}
+.resource-band p{color:var(--muted);margin:0;max-width:720px}
+.join-home{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.28),transparent 25%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;border-radius:30px;padding:34px;text-align:center
+}
+.join-home h2{color:#fff;font-size:clamp(2.4rem,5vw,4rem);line-height:1.02;margin:0 auto 14px;max-width:880px}
+.join-home p{color:#dce6ef;max-width:720px;margin:0 auto}
+.join-home .actions{justify-content:center}
+@media(max-width:1000px){
+  .home-strip,.command-grid{grid-template-columns:1fr 1fr}
+  .journey-grid{grid-template-columns:repeat(3,1fr)}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .next-card,.recognition-home,.lead-home{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .home-strip,.command-grid,.journey-grid,.feature-grid,.next-facts{grid-template-columns:1fr}
+  .resource-band{display:block}
+  .resource-band .actions{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a aria-current="page" href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a href="mentorship.html">Mentorship</a><a href="member-hub.html">Member Hub</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="home-hero">
+<div class="container">
+<div class="eyebrow">Friendship Speaker’s Circle</div>
+<h1>Conversations that Matter.</h1>
+<p>Build confidence. Strengthen your voice. Practice leadership. Grow alongside a community committed to communication, feedback, mentoring, service, and excellence.</p>
+<div class="home-actions">
+<a class="btn btn-primary" href="start-here.html">Start Your Journey</a>
+<a class="btn btn-light" href="about.html">Learn About the Club</a>
+<a class="btn btn-light" href="member-hub.html">Open Member Hub</a>
+<a class="btn btn-light" data-link="roleSignup" href="#">Sign Up for a Role</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+</section>
+<section class="section white" style="padding-top:0">
+<div class="container">
+<div class="home-strip">
+<article class="home-stat"><strong>Speak.</strong><span>Prepared speeches and impromptu speaking.</span></article>
+<article class="home-stat"><strong>Connect.</strong><span>Mentoring, feedback, and community.</span></article>
+<article class="home-stat"><strong>Grow.</strong><span>Pathways, practice, and reflection.</span></article>
+<article class="home-stat"><strong>Lead.</strong><span>Roles, service, and leadership development.</span></article>
+</div>
+</div>
+</section>
+<section class="section" id="next">
+<div class="container">
+<div class="next-card">
+<div>
+<div class="eyebrow" style="color:var(--gold)">Next Meeting</div>
+<h2>Be ready before the meeting starts.</h2>
+<p>Check the date, choose a role, review the meeting flow, and use the shared resource folders to prepare with confidence.</p>
+<div class="actions">
+<a class="btn btn-primary" data-link="roleSignup" href="#">Choose a Role</a><span class="login-note">Friendship Google login required</span>
+<a class="btn btn-light" href="meetings.html">Meeting Guide</a><span class="login-note">Friendship Google login required</span>
+<a class="btn btn-light" href="calendar.html">Club Calendar</a>
+</div>
+</div>
+<div class="next-facts">
+<div class="next-fact"><b>Date</b><span data-config="nextMeeting.date">Monday, September 14, 2026 (planned)</span></div>
+<div class="next-fact"><b>Time</b><span data-config="nextMeeting.time">6:00 PM – 7:00 PM</span></div>
+<div class="next-fact"><b>Location</b><span data-config="nextMeeting.location">Announced with each meeting invitation</span></div>
+<div class="next-fact"><b>Theme</b><span data-config="nextMeeting.theme">Announced before each meeting</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Member Command Center</div><h2>Do what you came here to do.</h2></div>
+<p>The homepage should get members to the right tool quickly—without making them hunt through the site.</p>
+</div>
+<div class="command-grid">
+<article class="command-card"><div class="icon">✅</div><h3>Sign Up for a Role</h3><p>Choose an upcoming meeting assignment in the shared Participation &amp; Recognition workbook.</p><a class="btn btn-maroon" data-link="roleSignup" href="#">Open Sign-Up</a><span class="login-note">Friendship Google login required</span></article>
+<article class="command-card"><div class="icon">📅</div><h3>Check the Calendar</h3><p>See club meetings, board meetings, learning labs, and planned dates for the program year.</p><a class="btn btn-dark" href="calendar.html">View Calendar</a><span class="login-note">Friendship Google login required</span></article>
+<article class="command-card"><div class="icon">📁</div><h3>Open Member Resources</h3><p>Access the Friendship Speaker’s Circle Member Drive for documents, guides, templates, and club tools.</p><a class="btn btn-dark" data-link="memberResourceDrive" href="#">Open Drive</a><span class="login-note">Friendship Google login required</span></article>
+<article class="command-card"><div class="icon">🧭</div><h3>Track Your Growth</h3><p>Use the Member Hub for attendance, awards, Pathways, mentoring, resources, and upcoming meeting prep.</p><a class="btn btn-dark" href="member-hub.html">Member Hub</a><span class="login-note">Friendship Google login required</span></article>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">The Member Journey</div><h2>From first visit to leadership.</h2></div>
+<p>Every page on the site supports a stage of the journey.</p>
+</div>
+<div class="journey-grid">
+<article class="journey-step"><span>👋</span><b>Join</b><small>Visit and connect</small></article>
+<article class="journey-step"><span>🤝</span><b>Connect</b><small>Meet your mentor</small></article>
+<article class="journey-step"><span>🎤</span><b>Speak</b><small>Prepare and present</small></article>
+<article class="journey-step"><span>📝</span><b>Reflect</b><small>Use feedback</small></article>
+<article class="journey-step"><span>👑</span><b>Lead</b><small>Take roles and serve</small></article>
+<article class="journey-step"><span>🚀</span><b>Grow</b><small>Keep moving forward</small></article>
+</div>
+<div class="actions" style="justify-content:center">
+<a class="btn btn-dark" href="start-here.html">New Member Start Here</a>
+<a class="btn btn-maroon" href="pathways.html">Pathways &amp; Speeches</a>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Built for Member Growth</div><h2>More than meetings.</h2></div>
+<p>The club works because members have support before, during, and after they speak.</p>
+</div>
+<div class="feature-grid">
+<article class="feature-card"><span class="tag">Mentorship</span><h3>Support at every stage</h3><p>Learn how the Club Mentor, board mentors, and Toastmasters mentoring pathway connect.</p><a class="link-arrow" href="mentorship.html">Explore Mentorship →</a></article>
+<article class="feature-card"><span class="tag">Meeting System</span><h3>Know how the room works</h3><p>Review the standard meeting flow, 60-minute agenda, professional handoffs, and Golden Rules.</p><a class="link-arrow" href="meetings.html">Open Meeting Guide →</a></article>
+<article class="feature-card"><span class="tag">Resources</span><h3>Find what you need fast</h3><p>Access club tools, meeting resources, Pathways materials, Friendship links, and official Toastmasters resources.</p><a class="link-arrow" href="resources.html">Open Resource Library →</a></article>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="recognition-home">
+<div>
+<div class="eyebrow" style="color:#4c3909">Recognition</div>
+<h2>Growth deserves to be seen.</h2>
+<p>Celebrate Member of the Month, Speech Spotlight, Pathways milestones, service, visible improvement, and the club’s annual Golden Buzzer.</p>
+<div class="actions">
+<a class="btn btn-dark" href="recognition.html">Visit Recognition Center</a>
+<a class="btn btn-maroon" data-link="awardsTracker" href="#">Awards Tracker</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+<div aria-label="Recognition" class="recognition-mark">🏆</div>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="lead-home">
+<article class="lead-panel">
+<div class="eyebrow">Leadership</div>
+<h2>Meet the team behind the club.</h2>
+<p>Understand the executive board, officer responsibilities, accountability standards, and how leadership is shared across the club.</p>
+<a class="btn btn-dark" href="leadership.html">Meet the Leadership Team</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="mentor-panel">
+<div class="eyebrow">Club Mentor</div>
+<h2>Kimbaley</h2>
+<p>The Club Mentor supports the club’s overall development, leadership practices, meeting quality, and long-term sustainability.</p>
+<a class="link-arrow" href="mentorship.html">See how mentoring works →</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="resource-band">
+<div>
+<div class="eyebrow">Resource Library</div>
+<h2>One place for the links that keep the club moving.</h2>
+<p>Role sign-up, attendance, awards, member Drive, Pathways resources, meeting-role resources, Friendship links, and official Toastmasters resources are all organized here.</p>
+</div>
+<div class="actions" style="margin-top:0">
+<a class="btn btn-dark" href="resources.html">Browse Resources</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="join-home">
+<div class="eyebrow" style="color:var(--gold)">Friendship Speaker’s Circle</div>
+<h2>Come as a guest. Leave with a reason to return.</h2>
+<p>Whether you are building confidence, strengthening professional communication, practicing leadership, or sharpening skills you already have, there is room to grow here.</p>
+<div class="actions">
+<a class="btn btn-primary" href="join.html">Visit or Join Us</a>
+<a class="btn btn-light" href="calendar.html">See Upcoming Meetings</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+<div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><a href="meetings.html">Meeting Flow</a><a href="calendar.html">Club Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a href="start-here.html">New Member Start Here</a></div></div>
+<div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
+</div>
+<div class="container footer-bottom">© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

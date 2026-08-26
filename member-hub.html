@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Member Hub | Friendship Speaker’s Circle</title>
+<meta content="Friendship Speaker’s Circle Member Hub for role sign-up, attendance, awards, resources, mentoring, and member growth." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.hub-hero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.28),transparent 25%),
+    radial-gradient(circle at 10% 90%,rgba(139,41,66,.18),transparent 30%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;padding:78px 0 70px
+}
+.hub-hero .breadcrumbs{color:#cbd6e2}
+.hub-hero .breadcrumbs a{color:var(--gold)}
+.hub-hero .eyebrow{color:var(--gold)}
+.hub-hero h1{font-size:clamp(2.9rem,7vw,5.2rem);line-height:1;margin:8px 0 18px;max-width:880px}
+.hub-hero p{max-width:780px;color:#e5edf5;font-size:1.12rem}
+.hub-nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.hub-nav a{background:#fff;color:var(--navy);border-radius:999px;padding:9px 12px;text-decoration:none;font-weight:850;border:1px solid rgba(255,255,255,.35)}
+.action-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.action-card{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;
+  box-shadow:0 8px 25px rgba(19,42,70,.06);display:flex;flex-direction:column
+}
+.action-card .icon{width:50px;height:50px;border-radius:15px;background:var(--gold-soft);display:grid;place-items:center;font-size:1.45rem;margin-bottom:16px}
+.action-card h3{margin:0 0 8px;color:var(--navy)}
+.action-card p{color:var(--muted);margin:0 0 18px;flex:1}
+.action-card .btn{align-self:flex-start}
+.workbook{
+  background:linear-gradient(135deg,#fff,#f8f1de);
+  border:1px solid #e8dcb9;border-radius:28px;padding:30px;box-shadow:var(--shadow)
+}
+.workbook-head{display:flex;justify-content:space-between;align-items:start;gap:24px;margin-bottom:22px}
+.workbook-head h2{margin:0;color:var(--navy);font-size:clamp(1.8rem,4vw,2.8rem)}
+.sheet-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.sheet-tool{background:#fff;border:1px solid #eadfbf;border-radius:17px;padding:18px}
+.sheet-tool h3{margin:0 0 6px;color:var(--navy)}
+.sheet-tool p{margin:0 0 14px;color:var(--muted);font-size:.92rem}
+.section-label{display:inline-block;background:var(--gold-soft);color:var(--navy);font-weight:900;font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;padding:6px 9px;border-radius:999px;margin-bottom:9px}
+.support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.support-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.support-card h3{margin:0 0 7px;color:var(--navy)}
+.support-card p{margin:0 0 15px;color:var(--muted)}
+.next-meeting-card{
+  background:var(--navy);color:#fff;border-radius:26px;padding:30px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center
+}
+.next-meeting-card h2{color:#fff;margin:0 0 10px}
+.next-meeting-card p{color:#dce6ef}
+.meeting-facts{display:grid;gap:10px}
+.meeting-fact{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px}
+.meeting-fact b{display:block;color:var(--gold);font-size:.77rem;text-transform:uppercase;letter-spacing:.09em}
+.resource-lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.resource-lane{background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px}
+.resource-lane h3{margin:0 0 8px;color:var(--navy)}
+.resource-lane ul{margin:.6rem 0 0;padding-left:1.15rem}
+.resource-lane li{margin:.45rem 0}
+@media(max-width:900px){
+  .action-grid,.sheet-tools,.support-grid{grid-template-columns:1fr 1fr}
+  .next-meeting-card{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .action-grid,.sheet-tools,.support-grid,.resource-lanes{grid-template-columns:1fr}
+  .workbook-head{display:block}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a href="mentorship.html">Mentorship</a><a aria-current="page" href="member-hub.html">Member Hub</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hub-hero">
+<div class="container">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Member Hub</div>
+<div class="eyebrow">Your Club Dashboard</div>
+<h1>Everything you need to participate, prepare, and grow.</h1>
+<p>The Member Hub brings together the tools members use most often—from meeting participation and attendance to awards, Pathways, mentoring, and shared resources.</p>
+<div class="actions">
+<a class="btn btn-primary" data-link="roleSignup" href="#">Sign Up for a Role</a><span class="login-note">Friendship Google login required</span>
+<a class="btn btn-light" data-link="memberResourceDrive" href="#">Open Member Resource Drive</a><span class="login-note">Friendship Google login required</span>
+</div>
+<div class="hub-nav">
+<a href="#participate">Participate</a><span class="login-note">Friendship Google login required</span>
+<a href="#tracking">Track &amp; Recognize</a><span class="login-note">Friendship Google login required</span>
+<a href="#support">Get Support</a>
+<a href="#resources">Resources</a>
+</div>
+</div>
+</section>
+<section class="section white" id="participate">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Participate</div><h2>Take action before the next meeting.</h2></div>
+<p>Members grow fastest when they consistently move from observing to participating.</p>
+</div>
+<div class="action-grid">
+<article class="action-card">
+<div class="icon">✅</div>
+<h3>Sign Up for a Meeting Role</h3>
+<p>Choose an upcoming role and use the role-resource folder to prepare before the meeting.</p>
+<a class="btn btn-maroon" data-link="roleSignup" href="#">Open Role Sign-Up</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="action-card">
+<div class="icon">🎤</div>
+<h3>Prepare a Speech</h3>
+<p>Use the Pathways page and shared Pathways Drive to plan, practice, and prepare your next project.</p>
+<a class="btn btn-dark" href="pathways.html">Pathways &amp; Speeches</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="action-card">
+<div class="icon">🗓️</div>
+<h3>Prepare for the Meeting</h3>
+<p>Review the meeting flow, Golden Rules, standard handoffs, and expectations before you take the floor.</p>
+<a class="btn btn-dark" href="meetings.html">Meeting Guide</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section gold-soft" id="tracking">
+<div class="container">
+<div class="workbook">
+<div class="workbook-head">
+<div>
+<div class="eyebrow">One Shared Workbook</div>
+<h2>Participation &amp; Recognition Tracker</h2>
+<p style="color:var(--muted);max-width:720px">Role sign-up, attendance, and awards are maintained in the same club Google Sheet. Members and leaders can use the appropriate section of the workbook depending on what they need.</p>
+</div>
+<a class="btn btn-dark" data-link="roleSignup" href="#">Open Full Workbook</a><span class="login-note">Friendship Google login required</span>
+</div>
+<div class="sheet-tools">
+<article class="sheet-tool">
+<span class="section-label">Meeting Participation</span>
+<h3>Role Sign-Up</h3>
+<p>Choose a Toastmasters role for an upcoming meeting and see where support is still needed.</p>
+<a class="btn btn-maroon" data-link="roleSignup" href="#">Open Role Sign-Up</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="sheet-tool">
+<span class="section-label">Engagement</span>
+<h3>Attendance Tracker</h3>
+<p>Review or maintain club meeting attendance and participation records within the shared workbook.</p>
+<a class="btn btn-dark" data-link="attendanceTracker" href="#">Open Attendance Tracker</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="sheet-tool">
+<span class="section-label">Recognition</span>
+<h3>Awards Tracker</h3>
+<p>Track recognition, awards, participation milestones, and member accomplishments in the same workbook.</p>
+<a class="btn btn-dark" data-link="awardsTracker" href="#">Open Awards Tracker</a><span class="login-note">Friendship Google login required</span>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="next-meeting-card">
+<div>
+<div class="eyebrow" style="color:var(--gold)">Next Meeting</div>
+<h2>Know what is coming next.</h2>
+<p>Use the club calendar for upcoming dates, open the meeting agenda folder when you need the current agenda, and confirm your role before meeting day.</p>
+<div class="actions">
+<a class="btn btn-primary" data-link="roleSignup" href="#">Choose a Role</a><span class="login-note">Friendship Google login required</span>
+<a class="btn btn-light" href="calendar.html">View Club Calendar</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+<div class="meeting-facts">
+<div class="meeting-fact"><b>Date</b><span data-config="nextMeeting.date">Monday, September 14, 2026 (planned)</span></div>
+<div class="meeting-fact"><b>Time</b><span data-config="nextMeeting.time">6:00 PM – 7:00 PM</span></div>
+<div class="meeting-fact"><b>Location</b><span data-config="nextMeeting.location">Announced with each meeting invitation</span></div>
+<div class="meeting-fact"><b>Theme</b><span data-config="nextMeeting.theme">Announced before each meeting</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="support">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Get Support</div><h2>You should always know where to go for help.</h2></div>
+<p>Use mentoring, role guides, and Pathways resources to prepare with confidence instead of guessing.</p>
+</div>
+<div class="support-grid">
+<article class="support-card">
+<div class="icon">🤝</div>
+<h3>Mentorship</h3>
+<p>Understand the club mentor, board mentors, member responsibilities, and Toastmasters mentoring pathway.</p>
+<a class="link-arrow" href="mentorship.html">Open Mentorship Hub →</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="support-card">
+<div class="icon">🗣️</div>
+<h3>Meeting Role Resources</h3>
+<p>Scripts, guides, templates, and preparation tools for your next meeting assignment.</p>
+<a class="link-arrow" data-link="meetingRolesResourceDrive" href="#">Open Role Resource Drive →</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="support-card">
+<div class="icon">🧭</div>
+<h3>Pathways Resources</h3>
+<p>Club resources to help you understand projects, plan speeches, and continue your educational journey.</p>
+<a class="link-arrow" data-link="pathwaysResourceDrive" href="#">Open Pathways Drive →</a><span class="login-note">Friendship Google login required</span>
+</article>
+</div>
+</div>
+</section>
+<section class="section gold-soft" id="resources">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Resource Center</div><h2>Your most-used links, organized.</h2></div>
+<p>Use these organized lanes to reach the club resources and official tools you need without searching through old emails or messages.</p>
+</div>
+<div class="resource-lanes">
+<article class="resource-lane">
+<h3>Club Resources</h3>
+<ul>
+<li><a data-link="memberResourceDrive" href="#">Member Resource Google Drive</a><span class="login-note">Friendship Google login required</span></li>
+<li><a href="resources.html">Website Resource Library</a><span class="login-note">Friendship Google login required</span></li>
+<li><a data-link="talentHub" href="#">Friendship Talent Hub</a><span class="login-note">Friendship Google login required</span></li>
+<li><a data-link="friendshipHome" href="#">Friendship Homepage</a><span class="login-note">Friendship Google login required</span></li>
+</ul>
+</article>
+<article class="resource-lane">
+<h3>Toastmasters Resources</h3>
+<ul>
+<li><a data-link="officialToastmasters" href="#">Toastmasters International</a><span class="login-note">Friendship Google login required</span></li>
+<li><a href="pathways.html">Pathways &amp; Speech Planning</a></li>
+<li><a href="roles.html">Meeting Role Guides</a></li>
+<li><a href="start-here.html">New Member Start Here</a></li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+<div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><a href="meetings.html">Meeting Flow</a><a href="calendar.html">Club Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a href="start-here.html">New Member Start Here</a></div></div>
+<div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
+</div>
+<div class="container footer-bottom">© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

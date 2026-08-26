@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Recognition | Friendship Speaker’s Circle</title>
+<meta content="Friendship Speaker’s Circle recognition center for member growth, speeches, Pathways milestones, service, awards, and the Golden Buzzer." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.rec-hero{
+  background:
+    radial-gradient(circle at 86% 16%,rgba(216,180,90,.34),transparent 23%),
+    radial-gradient(circle at 10% 88%,rgba(139,41,66,.20),transparent 28%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;padding:82px 0 72px;overflow:hidden
+}
+.rec-hero .breadcrumbs{color:#cbd6e2}
+.rec-hero .breadcrumbs a{color:var(--gold)}
+.rec-hero .eyebrow{color:var(--gold)}
+.rec-hero h1{font-size:clamp(3rem,7vw,5.3rem);line-height:.98;margin:8px 0 18px;max-width:930px}
+.rec-hero p{max-width:790px;color:#e5edf5;font-size:1.13rem}
+.rec-nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.rec-nav a{background:#fff;color:var(--navy);border-radius:999px;padding:9px 12px;text-decoration:none;font-weight:850;border:1px solid rgba(255,255,255,.35)}
+.celebration-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:-34px;position:relative;z-index:5}
+.celebration-stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.celebration-stat strong{display:block;color:var(--navy);font-size:1.35rem}
+.celebration-stat span{display:block;color:var(--muted);font-size:.9rem;margin-top:3px}
+.award-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.award-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:25px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.award-card:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--gold)}
+.award-card:nth-child(2):before,.award-card:nth-child(5):before{background:var(--maroon)}
+.award-card:nth-child(3):before,.award-card:nth-child(6):before{background:var(--navy)}
+.award-icon{width:54px;height:54px;border-radius:16px;background:var(--gold-soft);display:grid;place-items:center;font-size:1.55rem;margin:8px 0 15px}
+.award-card h3{margin:0 0 8px;color:var(--navy);font-size:1.28rem}
+.award-card p{margin:0 0 14px;color:var(--muted)}
+.award-meta{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:grid;gap:8px}
+.award-meta span{font-size:.87rem;color:var(--ink)}
+.award-meta b{color:var(--maroon)}
+.featured-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch}
+.featured-main{
+  background:
+    radial-gradient(circle at 82% 20%,rgba(216,180,90,.28),transparent 28%),
+    linear-gradient(135deg,var(--navy),#214f79);
+  color:#fff;border-radius:28px;padding:32px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between
+}
+.featured-main h2{color:#fff;margin:0;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1}
+.featured-main p{color:#e4edf5;max-width:620px}
+.featured-badge{display:inline-block;background:var(--gold);color:#241b07;padding:7px 11px;border-radius:999px;font-weight:950;font-size:.78rem;text-transform:uppercase;letter-spacing:.09em}
+.featured-side{display:grid;gap:16px}
+.featured-slot{background:#fff;border:1px solid var(--line);border-radius:21px;padding:22px}
+.featured-slot .slot-label{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--maroon);font-weight:900}
+.featured-slot h3{color:var(--navy);margin:5px 0 7px}
+.featured-slot p{color:var(--muted);margin:0}
+.process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.process-step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:21px}
+.process-step .n{width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:12px}
+.process-step h3{color:var(--navy);margin:0 0 7px}
+.process-step p{color:var(--muted);margin:0}
+.milestone-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.milestone{background:#fff;border:1px solid var(--line);border-radius:19px;padding:21px;text-align:center}
+.milestone .big{font-size:2rem;display:block;margin-bottom:8px}
+.milestone h3{margin:0;color:var(--navy);font-size:1.05rem}
+.milestone p{color:var(--muted);font-size:.9rem;margin:.5rem 0 0}
+.gold-buzzer{
+  background:
+    radial-gradient(circle at 90% 16%,rgba(255,255,255,.16),transparent 24%),
+    linear-gradient(135deg,#7e6220,#d8b45a);
+  color:#201804;border-radius:30px;padding:34px;display:grid;grid-template-columns:1fr .75fr;gap:28px;align-items:center
+}
+.gold-buzzer h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1;margin:0 0 12px;color:#201804}
+.gold-buzzer p{font-size:1.03rem}
+.buzzer-mark{font-size:7rem;text-align:center;filter:drop-shadow(0 10px 20px rgba(0,0,0,.16))}
+.criteria{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.criteria-item{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;text-align:center}
+.criteria-item b{display:block;color:var(--navy);margin-top:7px}
+.criteria-item span{font-size:1.5rem}
+.tracker-panel{background:linear-gradient(135deg,#fff,#f8f1de);border:1px solid #eadfbf;border-radius:26px;padding:28px;display:flex;justify-content:space-between;gap:24px;align-items:center}
+.tracker-panel h2{color:var(--navy);margin:0 0 8px}
+.tracker-panel p{color:var(--muted);margin:0;max-width:700px}
+@media(max-width:950px){
+  .award-grid{grid-template-columns:1fr 1fr}
+  .process,.milestone-grid{grid-template-columns:1fr 1fr}
+  .criteria{grid-template-columns:repeat(3,1fr)}
+  .featured-grid,.gold-buzzer{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .celebration-strip,.award-grid,.process,.milestone-grid,.criteria{grid-template-columns:1fr}
+  .tracker-panel{display:block}
+  .tracker-panel .actions{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a href="mentorship.html">Mentorship</a><a href="member-hub.html">Member Hub</a><a aria-current="page" href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="rec-hero">
+<div class="container">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Recognition</div>
+<div class="eyebrow">Celebrate the Journey</div>
+<h1>Growth deserves to be seen.</h1>
+<p>Recognition at Friendship Speaker’s Circle is designed to reinforce the culture we want: courage, preparation, participation, service, improvement, consistency, and leadership.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#awards">Explore Recognition</a>
+<a class="btn btn-light" data-link="awardsTracker" href="#">Open Awards Tracker</a><span class="login-note">Friendship Google login required</span>
+</div>
+<div class="rec-nav">
+<a href="#spotlight">Celebration Wall</a><span class="login-note">Friendship Google login required</span>
+<a href="#awards">Awards</a>
+<a href="#process">How It Works</a>
+<a href="#milestones">Milestones</a>
+<a href="#golden-buzzer">Golden Buzzer</a>
+</div>
+</div>
+</section>
+<section class="section white" style="padding-top:0">
+<div class="container">
+<div class="celebration-strip">
+<article class="celebration-stat"><strong>Celebrate effort.</strong><span>Members should be recognized for doing the work, not only for polished outcomes.</span></article>
+<article class="celebration-stat"><strong>Make growth visible.</strong><span>Improvement, consistency, and courage deserve the same attention as excellence.</span></article>
+<article class="celebration-stat"><strong>Record the journey.</strong><span>The Awards Tracker creates a running history of member accomplishments.</span></article>
+</div>
+</div>
+</section>
+<section class="section" id="spotlight">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Celebration Wall</div><h2>Recognition lives here.</h2></div>
+<p>As honorees are selected, this section can become the club’s digital wall of celebration—with names, photos, milestones, and short recognition notes.</p>
+</div>
+<div class="featured-grid">
+<article class="featured-main">
+<div>
+<span class="featured-badge">Featured Recognition</span>
+<h2>Member of the Month</h2>
+<p>Future honorees will be featured here with their name, photo, recognition category, and a short note celebrating their contribution.</p>
+</div>
+<div><b style="color:var(--gold)">Coming with the next award announcement.</b></div>
+</article>
+<div class="featured-side">
+<article class="featured-slot">
+<div class="slot-label">Speech Spotlight</div>
+<h3>Next Featured Speech</h3>
+<p>Speaker name, speech title, meeting date, and the reason the speech stood out can appear here.</p>
+</article>
+<article class="featured-slot">
+<div class="slot-label">Recent Milestone</div>
+<h3>Pathways Achievement</h3>
+<p>Completed levels and educational milestones can be celebrated here as members progress.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section gold-soft" id="awards">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Signature Recognition</div><h2>Six ways we celebrate members.</h2></div>
+<p>Each category recognizes a different kind of contribution so recognition does not become a popularity contest or reward only the most experienced speakers.</p>
+</div>
+<div class="award-grid">
+<article class="award-card">
+<div class="award-icon">🌟</div>
+<h3>Member of the Month</h3>
+<p>Recognizes a member whose participation, encouragement, preparation, and positive contribution strengthen the club community.</p>
+<div class="award-meta">
+<span><b>Looks for:</b> Consistency • participation • encouragement</span>
+<span><b>Rhythm:</b> Monthly</span>
+</div>
+</article>
+<article class="award-card">
+<div class="award-icon">🎙️</div>
+<h3>Speech Spotlight</h3>
+<p>Celebrates a prepared speech that connects with the audience, demonstrates strong preparation, or shows meaningful improvement.</p>
+<div class="award-meta">
+<span><b>Looks for:</b> Connection • preparation • growth</span>
+<span><b>Rhythm:</b> Meeting / monthly spotlight</span>
+</div>
+</article>
+<article class="award-card">
+<div class="award-icon">🏅</div>
+<h3>Pathways Achievement</h3>
+<p>Recognizes members who complete educational projects, levels, or other meaningful Pathways milestones.</p>
+<div class="award-meta">
+<span><b>Looks for:</b> Progress • persistence • completion</span>
+<span><b>Rhythm:</b> As earned</span>
+</div>
+</article>
+<article class="award-card">
+<div class="award-icon">🤝</div>
+<h3>Service Recognition</h3>
+<p>Honors members who step up for roles, mentor others, solve problems, support events, or quietly help the club succeed.</p>
+<div class="award-meta">
+<span><b>Looks for:</b> Service • reliability • leadership</span>
+<span><b>Rhythm:</b> As earned</span>
+</div>
+</article>
+<article class="award-card">
+<div class="award-icon">🔔</div>
+<h3>Golden Buzzer</h3>
+<p>A special annual recognition for a standout moment that captures courage, connection, excellence, growth, or the spirit of the club.</p>
+<div class="award-meta">
+<span><b>Looks for:</b> Memorable impact • club spirit</span>
+<span><b>Rhythm:</b> Once per program year</span>
+</div>
+</article>
+<article class="award-card">
+<div class="award-icon">🚀</div>
+<h3>Growth Award</h3>
+<p>Highlights visible improvement over time. This award celebrates movement, effort, and application of feedback—not simply the strongest starting performance.</p>
+<div class="award-meta">
+<span><b>Looks for:</b> Improvement • feedback • courage</span>
+<span><b>Rhythm:</b> Quarterly / year-end</span>
+</div>
+</article></div>
+</div>
+</section>
+<section class="section white" id="process">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">How Recognition Works</div><h2>Simple, fair, and visible.</h2></div>
+<p>The goal is a repeatable system that the club can sustain from year to year.</p>
+</div>
+<div class="process">
+<article class="process-step"><div class="n">1</div><h3>Notice</h3><p>Members and leaders pay attention to growth, service, participation, speeches, milestones, and standout moments.</p></article>
+<article class="process-step"><div class="n">2</div><h3>Review</h3><p>Use meeting results, participation records, Pathways progress, and the Awards Tracker to ground recognition in real contributions.</p></article>
+<article class="process-step"><div class="n">3</div><h3>Celebrate</h3><p>Recognize the member publicly during a meeting or club communication and explain what specifically earned the recognition.</p></article>
+<article class="process-step"><div class="n">4</div><h3>Record</h3><p>Log the recognition in the Awards Tracker so the club maintains a history of milestones and accomplishments.</p></article>
+</div>
+</div>
+</section>
+<section class="section" id="milestones">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Milestones Matter</div><h2>Not every celebration needs a competition.</h2></div>
+<p>Some of the most important moments are earned milestones. These can be recognized automatically as members reach them.</p>
+</div>
+<div class="milestone-grid">
+<article class="milestone"><span class="big">🎤</span><h3>First Prepared Speech</h3><p>Celebrate the courage it takes to move from member to speaker.</p></article>
+<article class="milestone"><span class="big">🧭</span><h3>Pathways Level Complete</h3><p>Recognize each completed educational level and continued learning.</p></article>
+<article class="milestone"><span class="big">🙋</span><h3>New Meeting Role</h3><p>Celebrate members who stretch into a role they have not held before.</p></article>
+<article class="milestone"><span class="big">🌱</span><h3>Leadership Growth</h3><p>Recognize mentoring, facilitation, initiative, and service beyond the microphone.</p></article>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Recognition Criteria</div><h2>What we want to reinforce.</h2></div>
+<p>A member does not need to be perfect to be recognized. These are the behaviors that move the club forward.</p>
+</div>
+<div class="criteria">
+<div class="criteria-item"><span>🔥</span><b>Courage</b></div>
+<div class="criteria-item"><span>📈</span><b>Growth</b></div>
+<div class="criteria-item"><span>🤝</span><b>Service</b></div>
+<div class="criteria-item"><span>✅</span><b>Consistency</b></div>
+<div class="criteria-item"><span>👑</span><b>Leadership</b></div>
+</div>
+<div class="spacer-24"></div>
+<div class="callout"><b>Recognition principle:</b> Tell members <i>why</i> they are being recognized. Specific recognition teaches the entire club what excellence, growth, service, and leadership look like.</div>
+</div>
+</section>
+<section class="section gold-soft" id="golden-buzzer">
+<div class="container">
+<div class="gold-buzzer">
+<div>
+<div class="eyebrow" style="color:#4c3909">Once Per Program Year</div>
+<h2>The Golden Buzzer</h2>
+<p>This is the club’s rarest recognition—a standout moment that makes the room feel different. It may come from a speech, an act of leadership, a breakthrough, extraordinary service, or a moment that captures the spirit of Friendship Speaker’s Circle.</p>
+<p><b>The point is not perfection. The point is impact.</b></p>
+</div>
+<div aria-label="Golden Buzzer" class="buzzer-mark">🔔</div>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="tracker-panel">
+<div>
+<div class="eyebrow">Behind the Celebration</div>
+<h2>Awards Tracker</h2>
+<p>The club’s shared workbook stores awards alongside role sign-up and attendance. This keeps participation, recognition, and engagement connected in one operating system.</p>
+</div>
+<div class="actions" style="margin-top:0">
+<a class="btn btn-maroon" data-link="awardsTracker" href="#">Open Awards Tracker</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+<div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><span class="login-note">Friendship Google login required</span><a href="meetings.html">Meeting Flow</a><a href="calendar.html">Club Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a href="start-here.html">New Member Start Here</a></div></div>
+<div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
+</div>
+<div class="container footer-bottom">© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

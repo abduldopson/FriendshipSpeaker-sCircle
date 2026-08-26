@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Club Calendar | Friendship Speaker’s Circle</title>
+<meta content="Friendship Speaker’s Circle 2026-2027 club meeting, board meeting, and member learning calendar." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.calendar-hero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.30),transparent 25%),
+    radial-gradient(circle at 10% 90%,rgba(139,41,66,.16),transparent 30%),
+    linear-gradient(135deg,#0b1d31,#173b62);
+  color:#fff;padding:76px 0 68px
+}
+.calendar-hero .breadcrumbs{color:#cbd6e2}
+.calendar-hero .breadcrumbs a{color:var(--gold)}
+.calendar-hero .eyebrow{color:var(--gold)}
+.calendar-hero h1{font-size:clamp(2.8rem,7vw,5.1rem);line-height:1;margin:8px 0 18px;max-width:900px}
+.calendar-hero p{max-width:780px;color:#e5edf5;font-size:1.12rem}
+.calendar-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:-32px;position:relative;z-index:3}
+.summary-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.summary-card strong{display:block;font-size:1.8rem;color:var(--navy)}
+.summary-card span{color:var(--muted);font-size:.9rem}
+.legend{display:flex;gap:10px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-weight:800;font-size:.84rem}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--navy)}
+.dot.board{background:var(--maroon)}
+.dot.learn{background:var(--gold)}
+.month{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-bottom:18px}
+.month-head{background:var(--navy);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.month-head h3{margin:0;color:#fff;font-size:1.3rem}
+.month-head span{color:#d8e3ec;font-size:.9rem}
+.event-row{display:grid;grid-template-columns:82px 1fr 150px 110px;gap:15px;padding:16px 20px;border-top:1px solid var(--line);align-items:center}
+.event-date{font-weight:900;color:var(--maroon);line-height:1.05}
+.event-date small{display:block;color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em}
+.event-title{font-weight:850;color:var(--navy)}
+.event-title small{display:block;color:var(--muted);font-weight:500;margin-top:4px}
+.badge{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:6px 9px;font-size:.76rem;font-weight:900;background:#eef3f7;color:var(--navy)}
+.badge.board{background:#f6e9ed;color:var(--maroon)}
+.badge.learn{background:var(--gold-soft);color:#6e5716}
+.event-time{font-weight:800;color:var(--ink);text-align:right}
+.policy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.policy{background:#fff;border:1px solid var(--line);border-radius:19px;padding:22px}
+.policy h3{color:var(--navy);margin-top:0}
+.note-box{background:linear-gradient(135deg,#fff,#f8f1de);border:1px solid #eadfbf;border-radius:22px;padding:24px}
+@media(max-width:800px){
+ .calendar-summary,.policy-grid{grid-template-columns:1fr}
+ .event-row{grid-template-columns:70px 1fr;gap:10px}
+ .event-row .badge,.event-row .event-time{grid-column:2;text-align:left;justify-self:start}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a href="meetings.html">Meetings</a><a aria-current="page" href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a href="mentorship.html">Mentorship</a><a href="member-hub.html">Member Hub</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="calendar-hero">
+<div class="container">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Club Calendar</div>
+<div class="eyebrow">2026–2027 Program Year</div>
+<h1>Know what’s next—and plan to participate.</h1>
+<p>This working calendar gives Friendship Speaker’s Circle a consistent rhythm for club meetings, board leadership, and optional member learning. Dates are planned around Friendship’s published school calendar and can be updated as special events are confirmed.</p>
+<div class="actions">
+<a class="btn btn-primary" href="assets/docs/Friendship_Speakers_Circle_2026-27_Club_Calendar.ics">Add Calendar to Your Device</a>
+<a class="btn btn-light" data-link="roleSignup" href="#">Sign Up for a Role</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+</section>
+<section class="section white" style="padding-top:0">
+<div class="container">
+<div class="calendar-summary">
+<article class="summary-card"><strong>16</strong><span>planned club meetings</span></article>
+<article class="summary-card"><strong>10</strong><span>executive board meetings</span></article>
+<article class="summary-card"><strong>10</strong><span>optional member learning labs</span></article>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Calendar Rhythm</div><h2>A predictable schedule members can remember.</h2></div>
+<div class="legend"><span><i class="dot"></i>Club Meeting</span><span><i class="dot board"></i>Board Meeting</span><span><i class="dot learn"></i>Learning Lab</span></div>
+</div>
+<div class="policy-grid">
+<article class="policy"><h3>2nd &amp; 4th Mondays</h3><p><b>6:00–7:00 PM</b><br/>Full Friendship Speaker’s Circle meeting with speeches, Table Topics, evaluations, and meeting roles.</p></article>
+<article class="policy"><h3>1st Wednesday</h3><p><b>6:00–6:30 PM</b><br/>Executive Board meeting focused on action items, ownership, deadlines, and club operations.</p></article>
+<article class="policy"><h3>3rd Thursday</h3><p><b>6:00–6:45 PM</b><br/>Optional Learning Lab for leadership development, member education, and the club’s topic/tool of the month.</p></article>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Planned Dates</div><h2>September 2026 through June 2027.</h2></div>
+<p>Holiday and break conflicts are intentionally skipped. Special events, contests, officer training, and in-person gatherings can be added as they are confirmed.</p>
+</div>
+<section class="month"><div class="month-head"><h3>September 2026</h3><span>4 planned events · 2 club meetings</span></div>
+<div class="event-row">
+<div class="event-date">Sep 2<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Sep 14<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Sep 17<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Sep 28<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>October 2026</h3><span>3 planned events · 1 club meeting</span></div>
+<div class="event-row">
+<div class="event-date">Oct 7<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Oct 15<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Oct 26<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>November 2026</h3><span>4 planned events · 2 club meetings</span></div>
+<div class="event-row">
+<div class="event-date">Nov 4<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Nov 9<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Nov 19<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Nov 23<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>December 2026</h3><span>3 planned events · 1 club meeting</span></div>
+<div class="event-row">
+<div class="event-date">Dec 2<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Dec 14<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Dec 17<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>January 2027</h3><span>4 planned events · 2 club meetings</span></div>
+<div class="event-row">
+<div class="event-date">Jan 6<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Jan 11<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Jan 21<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Jan 25<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>February 2027</h3><span>4 planned events · 2 club meetings</span></div>
+<div class="event-row">
+<div class="event-date">Feb 3<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Feb 8<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Feb 18<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Feb 22<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>March 2027</h3><span>3 planned events · 1 club meeting</span></div>
+<div class="event-row">
+<div class="event-date">Mar 3<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Mar 8<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Mar 18<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>April 2027</h3><span>4 planned events · 2 club meetings</span></div>
+<div class="event-row">
+<div class="event-date">Apr 7<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Apr 12<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Apr 22<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Apr 26<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>May 2027</h3><span>4 planned events · 2 club meetings</span></div>
+<div class="event-row">
+<div class="event-date">May 5<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">May 10<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">May 20<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">May 24<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section><section class="month"><div class="month-head"><h3>June 2027</h3><span>3 planned events · 1 club meeting</span></div>
+<div class="event-row">
+<div class="event-date">Jun 2<small>Wed</small></div>
+<div class="event-title">Executive Board Meeting<small>Monthly executive board meeting focused on concerns, action items, ownership, and due dates.</small></div>
+<span class="badge board">Board Meeting</span>
+<div class="event-time">6:00 PM–6:30 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Jun 10<small>Thu</small></div>
+<div class="event-title">Member Learning Lab<small>Optional monthly education and leadership session connected to club growth and the tool/topic of the month.</small></div>
+<span class="badge learn">Learning Lab</span>
+<div class="event-time">6:00 PM–6:45 PM</div>
+</div>
+<div class="event-row">
+<div class="event-date">Jun 14<small>Mon</small></div>
+<div class="event-title">Friendship Speaker’s Circle Club Meeting<small>Biweekly club meeting. Prepared speeches, Table Topics, evaluations, meeting roles, and member growth.</small></div>
+<span class="badge">Club Meeting</span>
+<div class="event-time">6:00 PM–7:00 PM</div>
+</div></section>
+</div>
+</section>
+<section class="section white">
+<div class="container grid-2" style="align-items:start">
+<div class="note-box">
+<div class="eyebrow">Calendar Standard</div>
+<h2 style="color:var(--navy);margin-top:0">Dates are planned, not locked forever.</h2>
+<p>When a meeting must move, the club should update the live calendar, role sign-up workbook, and meeting announcement together. That keeps members from receiving conflicting information.</p>
+<p><b>Default location:</b> Announced with each meeting invitation until a specific meeting location is confirmed.</p>
+</div>
+<div class="card">
+<div class="icon">📅</div>
+<h3>Importable Calendar File</h3>
+<p>The calendar is packaged as an <b>.ics</b> file, which can be imported into Google Calendar, Apple Calendar, Outlook, and most calendar apps.</p>
+<a class="btn btn-dark" href="assets/docs/Friendship_Speakers_Circle_2026-27_Club_Calendar.ics">Download Calendar File</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+<div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><a href="meetings.html">Meeting Flow</a><a href="calendar.html">Club Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a href="start-here.html">New Member Start Here</a></div></div>
+<div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
+</div>
+<div class="container footer-bottom">© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Mentorship | Friendship Speaker’s Circle</title>
+<meta content="Friendship Speaker’s Circle mentorship system: club mentor, board mentors, and Pathways mentoring." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.mentor-hero{
+  background:
+    radial-gradient(circle at 84% 18%,rgba(216,180,90,.28),transparent 24%),
+    linear-gradient(135deg,#0c1d31,#173b62);
+  color:#fff;padding:78px 0 68px
+}
+.mentor-hero .breadcrumbs{color:#cbd6e2}
+.mentor-hero .breadcrumbs a{color:var(--gold)}
+.mentor-hero .eyebrow{color:var(--gold)}
+.mentor-hero h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1;margin:8px 0 18px;max-width:850px}
+.mentor-hero p{max-width:760px;color:#e5edf5;font-size:1.12rem}
+.mentor-system{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mentor-layer{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;position:relative;overflow:hidden}
+.mentor-layer:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--gold)}
+.mentor-layer:nth-child(2):before{background:var(--maroon)}
+.mentor-layer:nth-child(3):before{background:var(--navy)}
+.mentor-layer .level{font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:var(--maroon)}
+.mentor-layer h3{margin:5px 0 9px;color:var(--navy);font-size:1.3rem}
+.mentor-layer p{color:var(--muted)}
+.mentor-name{display:inline-block;background:var(--gold-soft);color:var(--navy);font-weight:900;padding:7px 10px;border-radius:999px;margin-top:8px}
+.connection-line{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;margin:32px 0 4px}
+.connection-node{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center;font-weight:900;color:var(--navy)}
+.connection-arrow{font-size:1.5rem;color:var(--maroon);font-weight:900}
+.checkin-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px}
+.checkin-card h3{margin-top:0;color:var(--navy)}
+.checkin-card ul{padding-left:1.15rem;margin-bottom:0}
+.pathways-box{background:linear-gradient(135deg,var(--navy),#214f79);color:#fff;border-radius:26px;padding:30px}
+.pathways-box h2,.pathways-box h3{color:#fff;margin-top:0}
+.pathways-box p{color:#e6edf5}
+.pathways-steps{display:grid;gap:12px;margin-top:18px}
+.pathways-step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:15px;padding:15px}
+.pathways-step b{color:var(--gold)}
+.questions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.question{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px}
+.question b{display:block;color:var(--navy);margin-bottom:5px}
+.routine{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.routine-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:19px}
+.routine-card .when{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--maroon)}
+.routine-card h3{color:var(--navy);margin:5px 0 7px}
+@media(max-width:900px){
+  .mentor-system,.routine{grid-template-columns:1fr 1fr}
+  .connection-line{grid-template-columns:1fr;gap:8px}
+  .connection-arrow{transform:rotate(90deg);text-align:center}
+}
+@media(max-width:700px){
+  .mentor-system,.routine,.questions-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a aria-current="page" href="mentorship.html">Mentorship</a><a href="member-hub.html">Member Hub</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="mentor-hero">
+<div class="container">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Mentorship</div>
+<div class="eyebrow">Growth Through Connection</div>
+<h1>You are supported at every stage of the journey.</h1>
+<p>Friendship Speaker’s Circle uses a layered mentoring system so members receive support from within the club while also growing into the broader mentoring opportunities available through Toastmasters.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#mentor-system">See Our Mentor System</a>
+<a class="btn btn-light" href="pathways.html">Pathways &amp; Speeches</a>
+</div>
+</div>
+</section>
+<section class="section white" id="mentor-system">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Our Mentor Ecosystem</div><h2>Three layers of support.</h2></div>
+<p>Each layer serves a different purpose. Members should know who supports their club experience, who supports their individual growth, and how Toastmasters mentoring connects to Pathways.</p>
+</div>
+<div class="mentor-system">
+<article class="mentor-layer">
+<div class="level">Layer 1 — Club Development</div>
+<h3>Club Mentor</h3>
+<p>The Club Mentor supports Friendship Speaker’s Circle as an organization—helping strengthen club quality, leadership practices, member experience, and long-term sustainability.</p>
+<span class="mentor-name">Club Mentor: Kimbaley</span>
+</article>
+<article class="mentor-layer">
+<div class="level">Layer 2 — Member Development</div>
+<h3>Board Member Mentors</h3>
+<p>Board members serve as direct mentors to club members. They help members navigate onboarding, meeting roles, speech preparation, participation, goal-setting, and connection to club resources.</p>
+</article>
+<article class="mentor-layer">
+<div class="level">Layer 3 — Toastmasters Development</div>
+<h3>Pathways &amp; Toastmasters Mentoring</h3>
+<p>Members are introduced to Toastmasters mentoring in Level 2 of Pathways. After Level 2, eligible members can explore the optional Pathways Mentor Program and broader Toastmasters mentoring opportunities.</p>
+</article>
+</div>
+<div aria-label="Mentoring pathway" class="connection-line">
+<div class="connection-node">Club Mentor<br/><small>Kimbaley</small></div>
+<div class="connection-arrow">→</div>
+<div class="connection-node">Board Mentors<br/><small>Member Support</small></div>
+<div class="connection-arrow">→</div>
+<div class="connection-node">Pathways Mentoring<br/><small>Expanded Growth</small></div>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Who Does What?</div><h2>Clear roles prevent members from getting lost.</h2></div>
+</div>
+<div class="grid-3">
+<article class="checkin-card">
+<h3>Kimbaley — Club Mentor</h3>
+<ul>
+<li>Supports the club’s overall development.</li>
+<li>Advises club leadership and officers.</li>
+<li>Helps strengthen meeting quality and club systems.</li>
+<li>Provides an experienced Toastmasters perspective.</li>
+<li>Supports the club as it grows toward sustainability.</li>
+</ul>
+</article>
+<article class="checkin-card">
+<h3>Board Member Mentors</h3>
+<ul>
+<li>Maintain direct contact with assigned members.</li>
+<li>Help members understand meeting roles.</li>
+<li>Encourage speech and Pathways progress.</li>
+<li>Share relevant resources and opportunities.</li>
+<li>Notice when a member feels disconnected and reconnect them.</li>
+</ul>
+</article>
+<article class="checkin-card">
+<h3>Members / Protégés</h3>
+<ul>
+<li>Communicate goals and questions honestly.</li>
+<li>Respond to mentor outreach.</li>
+<li>Prepare for roles and speeches.</li>
+<li>Ask for specific feedback.</li>
+<li>Take ownership of their own growth.</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container grid-2" style="align-items:start">
+<div>
+<div class="eyebrow">Pathways Connection</div>
+<h2 style="color:var(--navy);font-size:clamp(2rem,4vw,3rem);line-height:1.08;margin:0 0 14px">Mentoring becomes part of the learning experience.</h2>
+<p>Mentorship is not separate from member development. Toastmasters formally introduces mentoring in Level 2, and members who complete Level 2 may choose to continue into the Pathways Mentor Program.</p>
+<p class="notice">Official Toastmasters program requirements may change. Members should use Toastmasters International and Base Camp as the source of truth for current requirements.</p>
+<div class="actions">
+<a class="btn btn-dark" data-link="officialToastmasters" href="#">Toastmasters International</a>
+<a class="btn btn-maroon" data-link="pathwaysResourceDrive" href="#">Pathways Resource Drive</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+<aside class="pathways-box">
+<div class="eyebrow" style="color:var(--gold)">Mentoring in Pathways</div>
+<h2>Where it fits.</h2>
+<div class="pathways-steps">
+<div class="pathways-step"><b>Level 2</b><br/>Complete the “Introduction to Toastmasters Mentoring” project as part of your Pathways experience.</div>
+<div class="pathways-step"><b>After Level 2</b><br/>Members can choose to enroll in the optional Pathways Mentor Program.</div>
+<div class="pathways-step"><b>Mentoring Practice</b><br/>The official program develops mentoring skills through structured mentoring experiences.</div>
+<div class="pathways-step"><b>Bring It Back</b><br/>Members can apply those skills by supporting others within Friendship Speaker’s Circle.</div>
+</div>
+</aside>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Mentoring Rhythm</div><h2>What ongoing support can look like.</h2></div>
+<p>Mentoring should be consistent enough to matter without becoming another heavy obligation.</p>
+</div>
+<div class="routine">
+<article class="routine-card"><div class="when">At Onboarding</div><h3>Connect</h3><p>Learn the member’s goals, explain club expectations, and identify the first small step.</p></article>
+<article class="routine-card"><div class="when">Before Meetings</div><h3>Prepare</h3><p>Check whether the member has a role or speech and make sure they know where to find resources.</p></article>
+<article class="routine-card"><div class="when">Monthly</div><h3>Check In</h3><p>Discuss participation, Pathways progress, challenges, and one next action.</p></article>
+<article class="routine-card"><div class="when">At Milestones</div><h3>Celebrate</h3><p>Recognize completed speeches, roles, levels, leadership growth, and increased confidence.</p></article>
+</div>
+</div>
+</section>
+<section class="section gold-soft">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Mentor Conversations</div><h2>Questions that move members forward.</h2></div>
+</div>
+<div class="questions-grid">
+<div class="question"><b>What are you working on right now?</b>Identify the communication or leadership skill the member most wants to strengthen.</div>
+<div class="question"><b>What have you done since our last conversation?</b>Celebrate action before jumping immediately to what is incomplete.</div>
+<div class="question"><b>What is getting in the way?</b>Identify confusion, scheduling, nerves, resource gaps, or other barriers.</div>
+<div class="question"><b>What is your next meeting role?</b>Use roles intentionally instead of treating sign-up as a random assignment.</div>
+<div class="question"><b>What feedback are you trying to apply?</b>Connect evaluations to intentional practice.</div>
+<div class="question"><b>What is one action you will take next?</b>End every check-in with a concrete next step.</div>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">When a Member Goes Quiet</div><h2>Reconnect before assuming disengagement.</h2></div>
+<p>Mentorship is especially valuable when someone begins to disappear from meetings or stops participating.</p>
+</div>
+<div class="grid-3">
+<article class="card"><div class="icon">1</div><h3>Reach Out Personally</h3><p>Send a supportive message that focuses on the person—not just attendance or an unfinished task.</p></article>
+<article class="card"><div class="icon">2</div><h3>Reduce the Barrier</h3><p>Offer a manageable next step: attend, take a small role, meet for 15 minutes, or review one resource.</p></article>
+<article class="card"><div class="icon">3</div><h3>Reconnect to Their Why</h3><p>Remind the member what they said they wanted to gain and help them choose a realistic way back in.</p></article>
+</div>
+</div>
+</section>
+<section class="section navy">
+<div class="container center">
+<div class="eyebrow" style="color:var(--gold)">The Goal of Mentoring</div>
+<h2 style="color:#fff;font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;margin:0 auto 16px;max-width:900px">Support people until they can support themselves—and eventually support someone else.</h2>
+<p style="max-width:720px;margin:0 auto;color:#dfe7ef">A strong mentoring culture creates confident members, stronger leaders, and a club that does not depend on one person to keep everyone moving.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><h3>Friendship Speaker’s Circle</h3><p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p></div>
+<div><h3>Quick Access</h3><div class="footer-links"><a href="about.html">About Our Club</a><span class="login-note">Friendship Google login required</span><a href="meetings.html">Meeting Flow</a><a href="calendar.html">Club Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a href="start-here.html">New Member Start Here</a></div></div>
+<div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
+</div>
+<div class="container footer-bottom">© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Meetings | Friendship Speaker’s Circle</title>
+<meta content="Friendship Speaker’s Circle standard meeting flow, timing, handoffs, Golden Rules, and role resources." name="description"/>
+<link href="assets/club-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.meet-hero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(216,180,90,.26),transparent 25%),
+    radial-gradient(circle at 8% 90%,rgba(139,41,66,.18),transparent 28%),
+    linear-gradient(135deg,#0c1d31,#183b61);
+  color:#fff;padding:78px 0 68px;overflow:hidden
+}
+.meet-hero .breadcrumbs{color:#cbd6e2}
+.meet-hero .breadcrumbs a{color:var(--gold)}
+.meet-hero .eyebrow{color:var(--gold)}
+.meet-hero h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1;margin:8px 0 18px;max-width:880px}
+.meet-hero p{max-width:760px;color:#e5edf5;font-size:1.12rem}
+.quickbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:-34px;position:relative;z-index:5}
+.quickbar a,.quickbar div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;box-shadow:var(--shadow)}
+.quickbar strong{display:block;color:var(--navy);margin-bottom:4px}
+.quickbar span{font-size:.88rem;color:var(--muted)}
+.section-nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.section-nav a{background:#fff;border:1px solid var(--line);color:var(--navy);text-decoration:none;font-weight:850;padding:9px 12px;border-radius:999px}
+.control-line{max-width:880px;margin:0 auto}
+.control-step{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 22px;box-shadow:0 8px 22px rgba(19,42,70,.06)}
+.control-step .n{width:44px;height:44px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900}
+.control-step h3{margin:0;color:var(--navy)}
+.control-step p{margin:5px 0 0;color:var(--muted)}
+.control-step .handoff{margin-top:10px;color:var(--maroon);font-weight:850;font-size:.9rem}
+.control-arrow{height:30px;width:2px;background:#a7b0bc;margin:0 auto;position:relative}
+.control-arrow:after{content:"";position:absolute;bottom:-1px;left:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #a7b0bc}
+.agenda-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(19,42,70,.06)}
+.agenda-table th,.agenda-table td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.agenda-table th{background:var(--navy);color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em}
+.agenda-table tr:last-child td{border-bottom:0}
+.agenda-table td:first-child{font-weight:900;color:var(--maroon);white-space:nowrap}
+.agenda-table td:nth-child(2){font-weight:800;color:var(--navy)}
+.handoff-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.handoff-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.handoff-card .from{font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;color:var(--maroon);font-weight:900}
+.handoff-card h3{margin:5px 0 8px;color:var(--navy)}
+.handoff-card blockquote{margin:0;padding:14px 16px;background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:10px;color:var(--ink)}
+.phase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.phase{background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px}
+.phase .phase-tag{display:inline-block;background:var(--gold-soft);color:var(--navy);font-weight:900;font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;padding:5px 9px;border-radius:999px;margin-bottom:10px}
+.phase h3{margin:0 0 8px;color:var(--navy)}
+.phase ul{padding-left:1.1rem;margin-bottom:0}
+.rule-number{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:inline-grid;place-items:center;font-weight:900;margin-right:8px}
+.meeting-resource{background:linear-gradient(135deg,#fff,#f8f1de);border:1px solid #eadfbf;border-radius:22px;padding:24px}
+.meeting-resource h3{margin-top:0;color:var(--navy)}
+.meeting-resource p{color:var(--muted)}
+@media(max-width:900px){
+  .quickbar{grid-template-columns:repeat(2,1fr)}
+  .phase-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .quickbar,.handoff-grid{grid-template-columns:1fr}
+  .agenda-table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<img alt="" src="assets/club-mark.svg"/>
+<span class="brand-text">Friendship Speaker’s Circle<small>Speak. Connect. Grow. Lead.</small></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="start-here.html">Start Here</a><a aria-current="page" href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Roles</a><a href="pathways.html">Pathways</a><a href="mentorship.html">Mentorship</a><a href="member-hub.html">Member Hub</a><a href="recognition.html">Recognition</a><a href="leadership.html">Leadership</a><a href="resources.html">Resources</a><a href="join.html">Join Us</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="meet-hero">
+<div class="container">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Meetings</div>
+<div class="eyebrow">Standard Meeting System</div>
+<h1>Run every meeting with clarity and confidence.</h1>
+<p>This page is the club’s common playbook for meeting flow, timing, handoffs, preparation, and the standards that make Friendship Speaker’s Circle feel polished and welcoming.</p>
+<div class="actions">
+<a class="btn btn-primary" data-link="roleSignup" href="#">Sign Up for a Role</a><span class="login-note">Friendship Google login required</span>
+<a class="btn btn-light" href="roles.html">Open Role Guides</a><span class="login-note">Friendship Google login required</span>
+</div>
+<div class="section-nav">
+<a href="#next-meeting">Next Meeting</a>
+<a href="#flow">Meeting Flow</a>
+<a href="#agenda">60-Minute Agenda</a>
+<a href="#handoffs">Handoffs</a>
+<a href="#golden-rules">Golden Rules</a>
+</div>
+</div>
+</section>
+<section class="section white" id="next-meeting">
+<div class="container">
+<div class="quickbar">
+<div><strong data-config="nextMeeting.date">Monday, September 14, 2026 (planned)</strong><span>Next meeting date</span></div>
+<div><strong data-config="nextMeeting.time">6:00 PM – 7:00 PM</strong><span>Meeting time</span></div>
+<div><strong data-config="nextMeeting.location">Announced with each meeting invitation</strong><span>Location / virtual details</span></div>
+<div><strong data-config="nextMeeting.theme">Announced before each meeting</strong><span>Meeting theme</span></div>
+</div>
+<div class="spacer-24"></div>
+<div class="meeting-banner">
+<div>
+<div class="eyebrow">Before You Arrive</div>
+<h2 style="margin:0;color:var(--navy)">Know your role. Know your handoff. Know your time.</h2>
+<p style="margin-bottom:0;color:var(--muted)">The meeting should begin with preparation already complete—not with members figuring out the agenda in real time.</p>
+</div>
+<div class="actions" style="margin-top:0">
+<a class="btn btn-dark" data-link="meetingAgenda" href="#">Meeting Agenda</a><span class="login-note">Friendship Google login required</span>
+<a class="btn btn-maroon" data-link="roleSignup" href="#">Role Sign-Up</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="flow">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Meeting Flow</div><h2>Who has control—and what happens next.</h2></div>
+<p>The person with control formally introduces the next person. When a role ends, control is clearly returned rather than assumed.</p>
+</div>
+<div class="control-line"><div class="control-step"><div class="n">1</div><div><h3>Sergeant at Arms</h3><p>Calls the meeting to order, welcomes members and guests, reviews basic etiquette, and introduces the President.</p><div class="handoff">Handoff: “Please welcome our Club President, [Name].”</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">2</div><div><h3>Club President</h3><p>Welcomes the club, gives only essential announcements or recognition, and introduces the Toastmaster of the Day.</p><div class="handoff">Handoff: “Please welcome tonight’s Toastmaster of the Day, [Name].”</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">3</div><div><h3>Toastmaster of the Day</h3><p>Introduces the theme, reviews the agenda, explains the meeting experience for guests, and introduces the General Evaluator.</p><div class="handoff">Handoff: Introduce the General Evaluator by name and role.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">4</div><div><h3>General Evaluator</h3><p>Introduces the evaluation team: Speech Evaluator(s), Timer, Grammarian, and Ah-Counter. The Grammarian gives the Word of the Day.</p><div class="handoff">Handoff: Returns control clearly to the Toastmaster of the Day.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">5</div><div><h3>Prepared Speeches</h3><p>The Toastmaster introduces each speaker with name, title, project/objective when appropriate, and time requirement.</p><div class="handoff">Handoff: Thank the speaker, allow feedback time when used, then introduce the next segment.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">6</div><div><h3>Table Topics</h3><p>The Topics Master explains the purpose and timing, asks the question before naming a participant, and manages impromptu speaking.</p><div class="handoff">Handoff: Returns control to the Toastmaster of the Day.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">7</div><div><h3>Evaluation Session</h3><p>The General Evaluator leads speech evaluations, Timer, Grammarian, Ah-Counter, and the overall meeting evaluation.</p><div class="handoff">Handoff: Returns control to the Toastmaster of the Day.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">8</div><div><h3>Toastmaster Wrap-Up</h3><p>Connects back to the theme, thanks speakers and role holders, and completes the educational program.</p><div class="handoff">Handoff: Returns control to the President.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">9</div><div><h3>President Closing</h3><p>Recognizes guests, shares awards or acknowledgments, confirms next steps and upcoming dates, and prepares the room for adjournment.</p><div class="handoff">Handoff: Turns the meeting over to the Sergeant at Arms.</div></div></div><div class="control-arrow"></div><div class="control-step"><div class="n">10</div><div><h3>Sergeant at Arms</h3><p>Formally adjourns the meeting and supports room reset or virtual closeout.</p><div class="handoff">Close: “This meeting of Friendship Speaker’s Circle is officially adjourned.”</div></div></div></div>
+</div>
+</section>
+<section class="section white" id="agenda">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">60-Minute Standard</div><h2>A sample meeting clock.</h2></div>
+<p>This schedule is a model. Speech count, special recognition, or club business can shift the times, but the meeting should still protect speaking and evaluation time.</p>
+</div>
+<table class="agenda-table">
+<thead><tr><th>Time</th><th>Segment</th><th>Lead</th><th>Purpose</th></tr></thead>
+<tbody><tr><td>6:00</td><td>Call to Order</td><td>Sergeant at Arms</td><td>Welcome, housekeeping, etiquette, President introduction</td></tr><tr><td>6:02</td><td>President Welcome</td><td>President</td><td>Brief welcome, recognition, announcements, Toastmaster introduction</td></tr><tr><td>6:05</td><td>Meeting Overview</td><td>Toastmaster</td><td>Theme, agenda, guest orientation</td></tr><tr><td>6:08</td><td>Evaluation Team</td><td>General Evaluator</td><td>Introduce Evaluator(s), Timer, Grammarian, Ah-Counter</td></tr><tr><td>6:12</td><td>Prepared Speech #1</td><td>Toastmaster / Speaker</td><td>5–7 minutes plus brief feedback time</td></tr><tr><td>6:20</td><td>Prepared Speech #2</td><td>Toastmaster / Speaker</td><td>Optional when scheduled</td></tr><tr><td>6:28</td><td>Table Topics</td><td>Topics Master</td><td>Impromptu speaking; protect enough time for several participants</td></tr><tr><td>6:42</td><td>Evaluation Session</td><td>General Evaluator</td><td>Speech evaluations and technical reports</td></tr><tr><td>6:53</td><td>Awards / Recognition</td><td>President / Toastmaster</td><td>When used; keep concise</td></tr><tr><td>6:56</td><td>Closing</td><td>President</td><td>Guest comments, next meeting, reminders</td></tr><tr><td>7:00</td><td>Adjourn</td><td>Sergeant at Arms</td><td>Formal close</td></tr></tbody>
+</table>
+<div class="spacer-24"></div>
+<div class="callout"><b>Timing principle:</b> When the meeting begins to run behind, shorten announcements and transitions before cutting meaningful speaking or evaluation time.</div>
+</div>
+</section>
+<section class="section gold-soft" id="handoffs">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Professional Transitions</div><h2>What a strong handoff sounds like.</h2></div>
+<p>You do not need a long script. One clear sentence is enough to keep the room organized and make the next person feel prepared.</p>
+</div>
+<div class="handoff-grid">
+<article class="handoff-card"><div class="from">SAA → President</div><h3>Opening handoff</h3><blockquote>“Please welcome our Club President, [Name].”</blockquote></article>
+<article class="handoff-card"><div class="from">President → Toastmaster</div><h3>Program handoff</h3><blockquote>“To lead us through tonight’s program, please welcome our Toastmaster of the Day, [Name].”</blockquote></article>
+<article class="handoff-card"><div class="from">Toastmaster → General Evaluator</div><h3>Evaluation team setup</h3><blockquote>“To introduce tonight’s evaluation team, please welcome our General Evaluator, [Name].”</blockquote></article>
+<article class="handoff-card"><div class="from">Topics Master → Toastmaster</div><h3>Return control</h3><blockquote>“Thank you to everyone who participated. I now return control to our Toastmaster of the Day, [Name].”</blockquote></article>
+<article class="handoff-card"><div class="from">General Evaluator → Toastmaster</div><h3>Close evaluation</h3><blockquote>“That concludes the evaluation portion of our meeting. I return control to our Toastmaster of the Day.”</blockquote></article>
+<article class="handoff-card"><div class="from">Toastmaster → President</div><h3>Return club control</h3><blockquote>“Thank you for an engaging meeting. I now return control to our Club President, [Name].”</blockquote></article>
+</div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Meeting Readiness</div><h2>Before, during, and after.</h2></div>
+<p>A great meeting is not only what happens between 6:00 and 7:00. Preparation and follow-through matter too.</p>
+</div>
+<div class="phase-grid">
+<article class="phase"><span class="phase-tag">Before</span><h3>Prepare the Room</h3><ul>
+<li>Confirm all roles and speakers.</li><li>Verify speech titles and time limits.</li><li>Confirm the Word of the Day.</li><li>Check room or virtual setup.</li><li>Have the agenda ready before start time.</li>
+</ul></article>
+<article class="phase"><span class="phase-tag">During</span><h3>Protect the Experience</h3><ul>
+<li>Use formal handoffs.</li><li>Keep explanations concise.</li><li>Support every speaker.</li><li>Protect timing.</li><li>Make guests feel oriented and welcome.</li>
+</ul></article>
+<article class="phase"><span class="phase-tag">After</span><h3>Close the Loop</h3><ul>
+<li>Record attendance and roles.</li><li>Document awards or milestones.</li><li>Confirm upcoming role gaps.</li><li>Capture one meeting improvement.</li><li>Reset the room or close the virtual space.</li>
+</ul></article>
+</div>
+</div>
+</section>
+<section class="section gold-soft" id="golden-rules">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Golden Rules</div><h2>The standards every member should know.</h2></div>
+<p>These are not just officer expectations. They are shared habits that protect the quality of the meeting.</p>
+</div>
+<div class="rule-list"><div class="rule"><span class="rule-number">1</span><b>No awkward handoffs.</b><br/><span style="margin-left:46px;display:block">Introduce the next person by name and role. Never simply say “next.”</span></div><div class="rule"><span class="rule-number">2</span><b>Someone always has control.</b><br/><span style="margin-left:46px;display:block">At every moment, members should know who owns the floor.</span></div><div class="rule"><span class="rule-number">3</span><b>Start and end on time.</b><br/><span style="margin-left:46px;display:block">Do not punish prepared members because someone else arrived late.</span></div><div class="rule"><span class="rule-number">4</span><b>Prepare before the meeting.</b><br/><span style="margin-left:46px;display:block">Role holders should know responsibilities, timing, names, and order before call to order.</span></div><div class="rule"><span class="rule-number">5</span><b>Applaud every speaker.</b><br/><span style="margin-left:46px;display:block">Prepared speeches, Table Topics, evaluations, and major roles deserve visible support.</span></div><div class="rule"><span class="rule-number">6</span><b>Keep transitions brief.</b><br/><span style="margin-left:46px;display:block">The Toastmaster connects the program but does not compete with the speakers.</span></div><div class="rule"><span class="rule-number">7</span><b>Ask the Table Topics question first.</b><br/><span style="margin-left:46px;display:block">Then name the participant so everyone listens to the prompt.</span></div><div class="rule"><span class="rule-number">8</span><b>Feedback builds people.</b><br/><span style="margin-left:46px;display:block">Be specific, constructive, respectful, and focused on improvement.</span></div><div class="rule"><span class="rule-number">9</span><b>Guests should understand the room.</b><br/><span style="margin-left:46px;display:block">Explain Toastmasters language and traditions without overexplaining.</span></div><div class="rule"><span class="rule-number">10</span><b>Leave each meeting better.</b><br/><span style="margin-left:46px;display:block">Identify one improvement and apply it at the next meeting.</span></div></div>
+</div>
+</section>
+<section class="section white">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Meeting Tools</div><h2>Prepare for your next role.</h2></div>
+<p>The sign-up Sheet tells you where you are serving. The resource Drive helps you prepare to serve well.</p>
+</div>
+<div class="grid-2">
+<article class="meeting-resource">
+<h3>Role Sign-Up Sheet</h3>
+<p>Choose your role for an upcoming Friendship Speaker’s Circle meeting.</p>
+<a class="btn btn-maroon" data-link="roleSignup" href="#">Open Role Sign-Up</a><span class="login-note">Friendship Google login required</span>
+</article>
+<article class="meeting-resource">
+<h3>Meeting Roles Resource Drive</h3>
+<p>Open scripts, guides, templates, and preparation materials for meeting roles.</p>
+<a class="btn btn-dark" data-link="meetingRolesResourceDrive" href="#">Open Role Resources</a><span class="login-note">Friendship Google login required</span>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<h3>Friendship Speaker’s Circle</h3>
+<p>Conversations that Matter. A supportive community for communication, leadership, feedback, mentorship, and growth.</p>
+</div>
+<div>
+<h3>Quick Access</h3>
+<div class="footer-links">
+<a href="meetings.html">Meeting Flow</a><span class="login-note">Friendship Google login required</span><a href="calendar.html">Club Calendar</a><span class="login-note">Friendship Google login required</span>
+<a href="roles.html">Meeting Roles</a><span class="login-note">Friendship Google login required</span>
+<a href="member-hub.html">Member Hub</a>
+<a href="start-here.html">New Member Start Here</a>
+</div>
+</div>
+<div>
+<h3>Grow With Us</h3>
+<div class="footer-links">
+<a href="pathways.html">Pathways &amp; Speeches</a>
+<a href="mentorship.html">Mentorship</a>
+<a href="recognition.html">Recognition</a>
+<a href="join.html">Join Us</a>
+<a data-link="friendshipHome" href="#">Friendship Homepage</a>
+<a data-link="talentHub" href="#">Friendship Talent Hub</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom">
+    © <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.
+  </div>
+</footer>
+<script src="site-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

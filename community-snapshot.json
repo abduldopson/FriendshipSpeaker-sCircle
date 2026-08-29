@@ -1,0 +1,135 @@
+{
+  "source": "Friendship PCS Toastmaster Interest Survey and Open House Feedback",
+  "interest_unique_respondents": 56,
+  "campus_network_communities_represented": 10,
+  "campus_affiliations": [
+    {
+      "label": "Community Office",
+      "count": 10
+    },
+    {
+      "label": "Collegiate",
+      "count": 8
+    },
+    {
+      "label": "Southeast",
+      "count": 6
+    },
+    {
+      "label": "Collegiate Online",
+      "count": 6
+    },
+    {
+      "label": "Chamberlain",
+      "count": 6
+    },
+    {
+      "label": "Armstrong",
+      "count": 5
+    },
+    {
+      "label": "Ideal",
+      "count": 5
+    },
+    {
+      "label": "Tech Prep",
+      "count": 5
+    },
+    {
+      "label": "Blow Pierce",
+      "count": 4
+    },
+    {
+      "label": "Woodridge",
+      "count": 2
+    }
+  ],
+  "role_families": [
+    {
+      "label": "Student Support & Special Education",
+      "count": 17,
+      "percent": 30.4
+    },
+    {
+      "label": "School & Program Leadership",
+      "count": 13,
+      "percent": 23.2
+    },
+    {
+      "label": "Classroom Educators",
+      "count": 12,
+      "percent": 21.4
+    },
+    {
+      "label": "Operations & Communications",
+      "count": 9,
+      "percent": 16.1
+    },
+    {
+      "label": "Instructional & Program Specialists",
+      "count": 5,
+      "percent": 8.9
+    }
+  ],
+  "growth_priorities": [
+    {
+      "label": "Public Speaking",
+      "count": 47,
+      "percent": 83.9
+    },
+    {
+      "label": "Leadership",
+      "count": 47,
+      "percent": 83.9
+    },
+    {
+      "label": "Professional Communication",
+      "count": 42,
+      "percent": 75.0
+    },
+    {
+      "label": "Confidence",
+      "count": 30,
+      "percent": 53.6
+    },
+    {
+      "label": "Networking",
+      "count": 24,
+      "percent": 42.9
+    },
+    {
+      "label": "Presentation Skills",
+      "count": 23,
+      "percent": 41.1
+    },
+    {
+      "label": "Facilitation",
+      "count": 15,
+      "percent": 26.8
+    },
+    {
+      "label": "Storytelling",
+      "count": 13,
+      "percent": 23.2
+    },
+    {
+      "label": "Interview Skills",
+      "count": 11,
+      "percent": 19.6
+    }
+  ],
+  "open_house": {
+    "unique_rated_respondents": 16,
+    "welcoming_4_or_5": 16,
+    "understanding_4_or_5": 15,
+    "very_interested": 13
+  },
+  "methodology": [
+    "Duplicate interest survey submissions were removed using normalized name/email matching.",
+    "Campus labels were normalized into consistent campus/network names.",
+    "One respondent reported serving across Blow Pierce and Woodridge; affiliation totals may exceed respondent count.",
+    "Self-reported job titles were grouped into broad role families.",
+    "Growth priorities are multi-select responses, so percentages can total more than 100 percent.",
+    "Public website figures are aggregate only."
+  ]
+}

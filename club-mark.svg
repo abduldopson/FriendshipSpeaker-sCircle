@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+<title id="title">Friendship Speaker's Circle mark</title>
+<desc id="desc">A microphone inside a circular speech motif.</desc>
+<circle cx="80" cy="80" r="72" fill="#132a46"/>
+<circle cx="80" cy="80" r="59" fill="none" stroke="#d8b45a" stroke-width="5"/>
+<rect x="64" y="34" width="32" height="55" rx="16" fill="#ffffff"/>
+<path d="M52 74v5c0 17 12 29 28 29s28-12 28-29v-5" fill="none" stroke="#d8b45a" stroke-width="7" stroke-linecap="round"/>
+<path d="M80 108v20M62 128h36" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+<path d="M35 120c11 15 27 23 45 23 18 0 34-8 45-23" fill="none" stroke="#8b2942" stroke-width="7" stroke-linecap="round"/>
+</svg>

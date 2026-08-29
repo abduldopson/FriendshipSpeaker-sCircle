@@ -1,0 +1,436 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Friendship Speakers Circle//Club Calendar 2026-27//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Friendship Speaker's Circle 2026-27
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:fsc-2026-27-001@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20260902T180000
+DTEND;TZID=America/New_York:20260902T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-002@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20260914T180000
+DTEND;TZID=America/New_York:20260914T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-003@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-004@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20260928T180000
+DTEND;TZID=America/New_York:20260928T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-005@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261007T180000
+DTEND;TZID=America/New_York:20261007T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-006@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261015T180000
+DTEND;TZID=America/New_York:20261015T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-007@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261026T180000
+DTEND;TZID=America/New_York:20261026T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-008@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261104T180000
+DTEND;TZID=America/New_York:20261104T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-009@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261109T180000
+DTEND;TZID=America/New_York:20261109T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-010@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261119T180000
+DTEND;TZID=America/New_York:20261119T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-011@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261123T180000
+DTEND;TZID=America/New_York:20261123T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-012@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261202T180000
+DTEND;TZID=America/New_York:20261202T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-013@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261214T180000
+DTEND;TZID=America/New_York:20261214T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-014@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20261217T180000
+DTEND;TZID=America/New_York:20261217T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-015@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270106T180000
+DTEND;TZID=America/New_York:20270106T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-016@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270111T180000
+DTEND;TZID=America/New_York:20270111T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-017@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270121T180000
+DTEND;TZID=America/New_York:20270121T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-018@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270125T180000
+DTEND;TZID=America/New_York:20270125T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-019@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270203T180000
+DTEND;TZID=America/New_York:20270203T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-020@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270208T180000
+DTEND;TZID=America/New_York:20270208T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-021@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270218T180000
+DTEND;TZID=America/New_York:20270218T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-022@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270222T180000
+DTEND;TZID=America/New_York:20270222T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-023@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270303T180000
+DTEND;TZID=America/New_York:20270303T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-024@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270308T180000
+DTEND;TZID=America/New_York:20270308T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-025@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270318T180000
+DTEND;TZID=America/New_York:20270318T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-026@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270407T180000
+DTEND;TZID=America/New_York:20270407T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-027@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270412T180000
+DTEND;TZID=America/New_York:20270412T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-028@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270422T180000
+DTEND;TZID=America/New_York:20270422T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-029@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270426T180000
+DTEND;TZID=America/New_York:20270426T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-030@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270505T180000
+DTEND;TZID=America/New_York:20270505T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-031@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270510T180000
+DTEND;TZID=America/New_York:20270510T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-032@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270520T180000
+DTEND;TZID=America/New_York:20270520T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-033@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270524T180000
+DTEND;TZID=America/New_York:20270524T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-034@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270602T180000
+DTEND;TZID=America/New_York:20270602T183000
+SUMMARY:Executive Board Meeting
+DESCRIPTION:Monthly executive board meeting focused on concerns\, action 
+ items\, ownership\, and due dates.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-035@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270610T180000
+DTEND;TZID=America/New_York:20270610T184500
+SUMMARY:Member Learning Lab
+DESCRIPTION:Optional monthly education and leadership session connected t
+ o club growth and the tool/topic of the month.
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-2026-27-036@friendship-speakers-circle
+DTSTAMP:20260825T041228Z
+DTSTART;TZID=America/New_York:20270614T180000
+DTEND;TZID=America/New_York:20270614T190000
+SUMMARY:Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Biweekly club meeting. Prepared speeches\, Table Topics\, eva
+ luations\, meeting roles\, and member growth. Role sign-up: https://docs
+ .google.com/spreadsheets/d/133XL4OWdN8Zj9P8SH4ezHY261deVQUAv6ET2zTfrf5Q/
+ edit?usp=sharing
+LOCATION:TBA / Virtual as announced
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR

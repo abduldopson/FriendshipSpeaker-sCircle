@@ -5,6 +5,11 @@ window.SITE_CONFIG = {
     location: "Announced with each meeting invitation",
     theme: "Announced before each meeting"
   },
+  communitySnapshot: {
+    campuses: "10 campus & network communities",
+    roles: "5 broad professional role families",
+    reasons: "Public speaking, leadership, communication & confidence"
+  },
   links: {
     masterClubDrive: "https://drive.google.com/drive/folders/1a21WpR5aW6bgwq30hgOcAOfbEouJ2QvE?usp=sharing",
     officerResourceDrive: "https://drive.google.com/drive/folders/1WCpi6kxrHP-BDiRIaVGTZhm8rujreoYa?usp=sharing",

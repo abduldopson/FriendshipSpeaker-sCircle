@@ -1,0 +1,12 @@
+FRIENDSHIP SPEAKER’S CIRCLE — FLAT GITHUB UPLOAD
+
+Upload EVERY file in this folder directly to the ROOT of the GitHub repository.
+Do not create or upload an assets folder.
+Existing HTML/CSS/JS files should be replaced by these versions.
+
+After committing to main, wait for Vercel to redeploy, then test:
+https://friendship-speaker-s-circle.vercel.app/abdul-dopson.png
+https://friendship-speaker-s-circle.vercel.app/neko-ramos.jpg
+https://friendship-speaker-s-circle.vercel.app/monique-miller.png
+
+If those three URLs show the headshots, the image hosting problem is fixed.

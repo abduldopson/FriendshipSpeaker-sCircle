@@ -6,9 +6,9 @@ FINAL_AUDIT.md
 LAUNCH_CHECKLIST.md
 README.md
 about.html
-assets/club-mark.svg
-assets/docs/Friendship_Speakers_Circle_2026-27_Club_Calendar.ics
-assets/member-welcome.png
+club-mark.svg
+Friendship_Speakers_Circle_2026-27_Club_Calendar.ics
+member-welcome.png
 calendar.html
 index.html
 join.html

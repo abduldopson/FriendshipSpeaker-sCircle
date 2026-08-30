@@ -1,43 +1,20 @@
 window.FSC_CLUB_KNOWLEDGE = {
-  club: {
-    name: "Friendship Speaker’s Circle",
-    theme: "Conversations that Matter.",
-    tagline: "Speak. Connect. Grow. Lead.",
-    vision: "A club where people feel safe enough to practice and challenged enough to grow.",
-    values: ["Integrity", "Respect", "Service", "Excellence"]
-  },
-  meeting: {
-    cadence: "Club meetings are generally held on the second and fourth Mondays from 6:00–7:00 PM, with exceptions for closures and special events.",
-    nextPlanned: "Monday, September 14, 2026, 6:00–7:00 PM. Location and theme are announced with the meeting invitation.",
-    flow: "Sergeant at Arms opens; President welcomes; Toastmaster of the Day hosts; General Evaluator introduces the evaluation team; prepared speeches; Table Topics; evaluations and reports; Toastmaster wrap-up; President closing; Sergeant at Arms adjourns.",
-    handoffRule: "Use formal handoffs: say the next person’s name and role and explicitly transfer control."
-  },
-  roles: {
-    "Toastmaster of the Day": "Hosts the meeting, connects segments, introduces major portions of the agenda, and protects flow and energy.",
-    "Table Topics Master": "Leads impromptu speaking. Ask the question before naming the participant and keep answers within the announced time.",
-    "General Evaluator": "Leads the evaluation team and evaluates the meeting as a whole, including organization, transitions, timing, and effectiveness.",
-    "Speech Evaluator": "Provides supportive, specific, actionable feedback tied to the speaker’s project objective and growth goal.",
-    "Timer": "Tracks speaking time, gives timing signals, and reports actual times at the end of the evaluation segment.",
-    "Grammarian": "Introduces the Word of the Day and listens for effective language, memorable phrasing, and word usage.",
-    "Ah-Counter": "Tracks filler words and distracting verbal habits and reports patterns respectfully.",
-    "Sergeant at Arms": "Supports meeting readiness, calls the meeting to order, reviews etiquette, and formally adjourns."
-  },
-  pathways: {
-    note: "Friendship Speaker’s Circle provides a club-built Pathways Identifier for guidance only. Toastmasters International is the source of truth for current Pathways requirements.",
-    currentPaths: ["Dynamic Leadership", "Engaging Humor", "Motivational Strategies", "Persuasive Influence", "Presentation Mastery", "Visionary Communication"]
-  },
-  recognition: ["Member of the Month", "Speech Spotlight", "Pathways Achievement", "Service Recognition", "Golden Buzzer", "Growth Award"],
-  mentoring: "Members are supported through club mentoring. Board-member mentors help with onboarding, roles, speeches, Pathways, participation, and check-ins.",
-  privacy: "The public website does not authenticate users and should not contain confidential member or board information. Protected club files remain behind Friendship Google access.",
-  commonLinks: {
-    meetings: "meetings.html",
-    roles: "roles.html",
-    pathways: "pathways.html",
-    mentorship: "mentorship.html",
-    recognition: "recognition.html",
-    memberHub: "member-hub.html",
-    calendar: "calendar.html",
-    startHere: "start-here.html",
-    resources: "resources.html"
-  }
+  meeting: "Friendship Speaker’s Circle generally meets on the second and fourth Mondays from 6:00–7:00 PM, with adjustments for school closures and holidays. Check the Club Calendar or your meeting invitation for the confirmed date and location.",
+  nextMeeting: "The currently planned next club meeting is Monday, September 14, 2026, from 6:00–7:00 PM. Location and theme are announced with the meeting invitation.",
+  roles: "Meeting roles are practice opportunities for communication and leadership. The Roles page includes preparation notes and scripts for Toastmaster of the Day, Table Topics Master, General Evaluator, Speech Evaluator, Timer, Grammarian, Ah-Counter, and Sergeant at Arms.",
+  timer: "The Timer tracks speaking time, displays timing signals, records each timed segment, and gives a brief report during the evaluation portion. The Roles page includes an introduction script and sample report.",
+  grammarian: "The Grammarian listens for effective language, introduces the Word of the Day when used, notes strong word choices and language opportunities, and reports during evaluations.",
+  ahcounter: "The Ah-Counter listens for filler words and distracting verbal habits such as ah, um, you know, and repeated phrases. The goal is awareness and growth, not embarrassment.",
+  evaluator: "A Speech Evaluator gives supportive, specific feedback tied to the speaker’s project objective. Strong evaluations identify evidence-based strengths and one or two actionable next steps.",
+  generalevaluator: "The General Evaluator leads the evaluation portion, introduces the evaluation team, and gives feedback on the meeting as a whole—including organization, transitions, timing, and effectiveness.",
+  tabletopics: "Table Topics is the impromptu speaking portion. The Topics Master asks the question before naming the participant, and responses are generally about one to two minutes.",
+  toastmaster: "The Toastmaster of the Day is the primary meeting host. This person connects the agenda, introduces major segments, maintains energy, and uses clear handoffs so someone is always in control of the meeting.",
+  pathways: "Pathways is Toastmasters’ education program for communication and leadership development. Use the Find Your Path tool for a club recommendation, then verify current official program details with Toastmasters International.",
+  mentor: "Friendship Speaker’s Circle uses mentoring to support onboarding, role preparation, speeches, Pathways progress, participation, and leadership growth. Start with your assigned mentor or a club officer if you need support.",
+  recognition: "Club recognition may include Member of the Month, Speech Spotlight, Pathways Achievement, Service Recognition, the annual Golden Buzzer, and Growth Award. Recognition is intended to celebrate courage, growth, service, consistency, and leadership.",
+  speech: "Use the Speech Submission form before a prepared speech so the club can plan the agenda and support your project. The Member Hub and Pathways page link to the form.",
+  feedback: "Meeting feedback helps the club improve. The Member Hub links to the meeting feedback form.",
+  join: "The Join Us page links to the Friendship Speaker’s Circle interest form. New members can also use Start Here for onboarding steps.",
+  officer: "The public Leadership page lists club officers. Officer-only working resources are kept behind Friendship Google access in the Officer Hub.",
+  privacy: "Do not enter confidential student, employee, member, financial, medical, or other sensitive information into Ask the Club. The assistant is intended for general club guidance and public club resources."
 };

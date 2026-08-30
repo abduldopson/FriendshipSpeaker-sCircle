@@ -105,33 +105,40 @@
   ];
 
   function installSearch(){
-    if(!nav || document.querySelector(".site-search-open")) return;
-    const join = nav.querySelector(".nav-cta");
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "site-search-open";
-    btn.setAttribute("aria-label","Search this site");
-    btn.innerHTML = '<span aria-hidden="true">⌕</span><span class="search-label">Search</span>';
-    nav.insertBefore(btn, join || null);
+    if(!nav) return;
+    let btn = document.querySelector(".site-search-open");
+    if(!btn){
+      const join = nav.querySelector(".nav-cta");
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "site-search-open";
+      btn.setAttribute("aria-label","Search this site");
+      btn.innerHTML = '<span aria-hidden="true">⌕</span><span class="search-label">Search</span>';
+      nav.insertBefore(btn, join || null);
+    }
 
-    const dialog = document.createElement("div");
-    dialog.className = "search-modal";
-    dialog.setAttribute("aria-hidden","true");
-    dialog.innerHTML = `
-      <div class="search-backdrop" data-search-close></div>
-      <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="site-search-title">
-        <div class="search-panel-head"><div><div class="eyebrow">Find it fast</div><h2 id="site-search-title">Search Friendship Speaker’s Circle</h2></div><button class="icon-button" type="button" data-search-close aria-label="Close search">×</button></div>
-        <label class="search-box"><span aria-hidden="true">⌕</span><input id="site-search-input" type="search" autocomplete="off" placeholder="Try ‘Timer’, ‘next meeting’, ‘Pathways’…"></label>
-        <div class="search-results" id="site-search-results"><p class="search-hint">Type a word or phrase to search the club website.</p></div>
-      </section>`;
-    document.body.appendChild(dialog);
+    let dialog = document.querySelector(".search-modal");
+    if(!dialog){
+      dialog = document.createElement("div");
+      dialog.className = "search-modal";
+      dialog.setAttribute("aria-hidden","true");
+      dialog.innerHTML = `
+        <div class="search-backdrop" data-search-close></div>
+        <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="site-search-title">
+          <div class="search-panel-head"><div><div class="eyebrow">Find it fast</div><h2 id="site-search-title">Search Friendship Speaker’s Circle</h2></div><button class="icon-button" type="button" data-search-close aria-label="Close search">×</button></div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="site-search-input" type="search" autocomplete="off" placeholder="Try ‘Timer’, ‘next meeting’, ‘Pathways’…"></label>
+          <div class="search-results" id="site-search-results"><p class="search-hint">Type a word or phrase to search the club website.</p></div>
+        </section>`;
+      document.body.appendChild(dialog);
+    }
     const input = dialog.querySelector("#site-search-input");
     const results = dialog.querySelector("#site-search-results");
+    if(!input || !results) return;
 
     function openSearch(){ dialog.classList.add("open"); dialog.setAttribute("aria-hidden","false"); document.body.classList.add("modal-open"); setTimeout(()=>input.focus(),30); }
     function closeSearch(){ dialog.classList.remove("open"); dialog.setAttribute("aria-hidden","true"); document.body.classList.remove("modal-open"); }
-    btn.addEventListener("click", openSearch);
-    dialog.querySelectorAll("[data-search-close]").forEach(x=>x.addEventListener("click",closeSearch));
+    if(!btn.dataset.searchBound){ btn.addEventListener("click", openSearch); btn.dataset.searchBound="1"; }
+    dialog.querySelectorAll("[data-search-close]").forEach(x=>{ if(!x.dataset.searchBound){x.addEventListener("click",closeSearch);x.dataset.searchBound="1";} });
     document.addEventListener("keydown",e=>{ if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==="k"){e.preventDefault();openSearch();} if(e.key==="Escape"&&dialog.classList.contains("open"))closeSearch(); });
     input.addEventListener("input",()=>{
       const q=input.value.trim().toLowerCase();
@@ -167,32 +174,43 @@
   }
 
   function installAssistant(){
-    if(document.querySelector(".club-ai-launch")) return;
-    const launch=document.createElement("button");
-    launch.type="button"; launch.className="club-ai-launch"; launch.innerHTML='<span aria-hidden="true">✦</span><span>Ask the Club</span>';
-    launch.setAttribute("aria-label","Open Friendship Speaker’s Circle assistant");
-    document.body.appendChild(launch);
+    let launch=document.querySelector(".club-ai-launch");
+    if(!launch){
+      launch=document.createElement("button");
+      launch.type="button"; launch.className="club-ai-launch"; launch.innerHTML='<span aria-hidden="true">✦</span><span>Ask the Club</span>';
+      launch.setAttribute("aria-label","Open Friendship Speaker’s Circle assistant");
+      document.body.appendChild(launch);
+    }
 
-    const panel=document.createElement("aside");
-    panel.className="club-ai-panel"; panel.setAttribute("aria-hidden","true");
-    panel.innerHTML=`<div class="club-ai-head"><div><strong>Ask Friendship Speaker’s Circle</strong><span>Member question assistant</span></div><button class="icon-button" type="button" data-ai-close aria-label="Close assistant">×</button></div>
-      <div class="club-ai-messages" aria-live="polite"><div class="ai-message assistant">Hi! Ask me about meetings, roles, scripts, Pathways, mentoring, recognition, or club resources.</div></div>
-      <form class="club-ai-form"><label class="sr-only" for="club-ai-input">Ask a club question</label><textarea id="club-ai-input" rows="2" placeholder="Ask a member question…" required></textarea><button type="submit">Ask</button></form>
-      <div class="club-ai-note">Club guidance only. Verify official Pathways requirements with Toastmasters International. Do not enter confidential member information.</div>`;
-    document.body.appendChild(panel);
+    let panel=document.querySelector(".club-ai-panel");
+    if(!panel){
+      panel=document.createElement("aside");
+      panel.className="club-ai-panel"; panel.setAttribute("aria-hidden","true");
+      panel.innerHTML=`<div class="club-ai-head"><div><strong>Ask Friendship Speaker’s Circle</strong><span>Member question assistant</span></div><button class="icon-button" type="button" data-ai-close aria-label="Close assistant">×</button></div>
+        <div class="club-ai-messages" aria-live="polite"><div class="ai-message assistant">Hi! Ask me about meetings, roles, scripts, Pathways, mentoring, recognition, or club resources.</div></div>
+        <form class="club-ai-form"><label class="sr-only" for="club-ai-input">Ask a club question</label><textarea id="club-ai-input" rows="2" placeholder="Ask a member question…" required></textarea><button type="submit">Ask</button></form>
+        <div class="club-ai-note">Club guidance only. Verify official Pathways requirements with Toastmasters International. Do not enter confidential member information.</div>`;
+      document.body.appendChild(panel);
+    }
     const messages=panel.querySelector(".club-ai-messages"), form=panel.querySelector("form"), input=panel.querySelector("textarea");
+    const closeBtn=panel.querySelector("[data-ai-close]");
+    if(!messages || !form || !input || !closeBtn) return;
     function open(){panel.classList.add("open");panel.setAttribute("aria-hidden","false");setTimeout(()=>input.focus(),30)}
     function close(){panel.classList.remove("open");panel.setAttribute("aria-hidden","true")}
     function add(text,who){const d=document.createElement("div");d.className=`ai-message ${who}`;d.textContent=text;messages.appendChild(d);messages.scrollTop=messages.scrollHeight;return d}
-    launch.addEventListener("click",open); panel.querySelector("[data-ai-close]").addEventListener("click",close);
-    form.addEventListener("submit",async e=>{
-      e.preventDefault(); const question=input.value.trim(); if(!question)return; add(question,"user"); input.value=""; const waiting=add("Thinking…","assistant waiting");
-      try{
-        const resp=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question})});
-        if(!resp.ok) throw new Error("AI endpoint unavailable");
-        const data=await resp.json(); waiting.textContent=data.answer || localClubAnswer(question); waiting.classList.remove("waiting");
-      }catch(err){ waiting.textContent=localClubAnswer(question); waiting.classList.remove("waiting"); }
-    });
+    if(!launch.dataset.aiBound){launch.addEventListener("click",open);launch.dataset.aiBound="1";}
+    if(!closeBtn.dataset.aiBound){closeBtn.addEventListener("click",close);closeBtn.dataset.aiBound="1";}
+    if(!form.dataset.aiBound){
+      form.addEventListener("submit",async e=>{
+        e.preventDefault(); const question=input.value.trim(); if(!question)return; add(question,"user"); input.value=""; const waiting=add("Thinking…","assistant waiting");
+        try{
+          const resp=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question})});
+          if(!resp.ok) throw new Error("AI endpoint unavailable");
+          const data=await resp.json(); waiting.textContent=data.answer || localClubAnswer(question); waiting.classList.remove("waiting");
+        }catch(err){ waiting.textContent=localClubAnswer(question); waiting.classList.remove("waiting"); }
+      });
+      form.dataset.aiBound="1";
+    }
   }
 
   // ---------- Copy sample scripts ----------

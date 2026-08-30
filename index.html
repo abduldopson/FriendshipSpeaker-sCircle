@@ -19,6 +19,11 @@
 .home-hero .eyebrow{color:var(--gold)}
 .home-hero h1{font-size:clamp(3.2rem,8vw,5.8rem);line-height:.96;margin:8px 0 20px;max-width:980px}
 .home-hero p{max-width:790px;color:#e5edf5;font-size:1.16rem}
+.home-hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:42px;align-items:center}
+.home-friendship-card{background:#fff;border:1px solid rgba(255,255,255,.35);border-radius:24px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,.22);color:var(--navy)}
+.home-friendship-card .network-label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;color:var(--maroon);margin-bottom:12px}
+.home-friendship-card img{display:block;width:100%;height:auto;max-width:420px;margin:0 auto}
+.home-friendship-card p{color:var(--muted);font-size:.92rem;margin:15px 0 0;line-height:1.45}
 .home-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .home-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:-34px;position:relative;z-index:4}
 .home-stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
@@ -85,12 +90,15 @@
   .home-strip,.command-grid{grid-template-columns:1fr 1fr}
   .journey-grid{grid-template-columns:repeat(3,1fr)}
   .feature-grid{grid-template-columns:1fr 1fr}
-  .next-card,.recognition-home,.lead-home{grid-template-columns:1fr}
+  .next-card,.recognition-home,.lead-home,.home-hero-grid{grid-template-columns:1fr}
+  .home-friendship-card{max-width:560px}
 }
 @media(max-width:700px){
   .home-strip,.command-grid,.journey-grid,.feature-grid,.next-facts{grid-template-columns:1fr}
   .resource-band{display:block}
   .resource-band .actions{margin-top:18px}
+  .home-hero{padding-top:58px}
+  .home-friendship-card{padding:18px}
 }
 </style>
 </head>
@@ -139,6 +147,7 @@
 <a href="resources.html#official">Official Toastmasters</a>
 </div>
 </div>
+<button type="button" class="site-search-open" aria-label="Search this site"><span aria-hidden="true">⌕</span><span class="search-label">Search</span></button>
 <a class="nav-cta" href="join.html">Join Us</a>
 </nav>
 </div>
@@ -146,6 +155,8 @@
 <main id="main">
 <section class="home-hero">
 <div class="container">
+<div class="home-hero-grid">
+<div>
 <div class="eyebrow">Friendship Speaker’s Circle</div>
 <h1>Conversations that Matter.</h1>
 <p>Build confidence. Strengthen your voice. Practice leadership. Grow alongside a community committed to communication, feedback, mentoring, service, and excellence.</p>
@@ -154,6 +165,13 @@
 <a class="btn btn-light" href="about.html">Learn About the Club</a>
 <a class="btn btn-light" href="member-hub.html">Open Member Hub</a>
 <a class="btn btn-light" data-link="roleSignup" href="#">Sign Up for a Role</a><span class="login-note">Friendship Google login required</span>
+</div>
+</div>
+<aside class="home-friendship-card" aria-label="Friendship Public Charter School affiliation">
+<span class="network-label">Official Friendship Public Charter School Affiliation</span>
+<img src="friendship-public-charter-school.png" alt="Friendship Public Charter School — Grades Pre-K3 to 12"/>
+<p>Friendship Speaker’s Circle supports Friendship staff in strengthening communication, leadership, confidence, and professional connection.</p>
+</aside>
 </div>
 </div>
 </section>
@@ -328,6 +346,14 @@
 </div>
 <div class="container footer-bottom"><span>© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</span><span class="footer-legal">Toastmasters International® owns all Toastmasters trademarks and copyrights, including “Toastmaster,” “Toastmasters,” “Toastmasters International,” and the official emblem.</span></div>
 </footer>
+
+<button type="button" class="club-ai-launch" aria-label="Open Friendship Speaker’s Circle assistant"><span aria-hidden="true">✦</span><span>Ask the Club</span></button>
+<aside class="club-ai-panel" aria-hidden="true">
+  <div class="club-ai-head"><div><strong>Ask Friendship Speaker’s Circle</strong><span>Member question assistant</span></div><button class="icon-button" type="button" data-ai-close aria-label="Close assistant">×</button></div>
+  <div class="club-ai-messages" aria-live="polite"><div class="ai-message assistant">Hi! Ask me about meetings, roles, scripts, Pathways, mentoring, recognition, or club resources.</div></div>
+  <form class="club-ai-form"><label class="sr-only" for="club-ai-input">Ask a club question</label><textarea id="club-ai-input" rows="2" placeholder="Ask a member question…" required></textarea><button type="submit">Ask</button></form>
+  <div class="club-ai-note">Club guidance only. Verify official Pathways requirements with Toastmasters International. Do not enter confidential member information.</div>
+</aside>
 <script src="site-config.js"></script>
 <script src="club-knowledge.js"></script>
 <script src="script.js"></script>

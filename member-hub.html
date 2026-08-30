@@ -71,7 +71,67 @@
   .workbook-head{display:block}
 }
 </style>
-</head>
+<style>
+/* Member Dashboard v1 — self-contained so it can be deployed as a single HTML update */
+.dashboard-shell{background:linear-gradient(180deg,#f5f7fa 0,#fff 100%)}
+.dashboard-topbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
+.dashboard-title-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.dashboard-title-wrap h2{margin:0;color:var(--navy,#0b1d31);font-size:clamp(1.9rem,4vw,3rem)}
+.preview-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#fff5d8;color:#694f00;border:1px solid #ead18a;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.member-picker{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line,#dfe5eb);border-radius:14px;padding:8px 10px;box-shadow:0 6px 18px rgba(11,29,49,.05)}
+.member-picker label{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:var(--muted,#5d6874)}
+.member-picker select{border:0;background:transparent;font:inherit;font-weight:800;color:var(--navy,#0b1d31);outline:none;min-width:160px}
+.dashboard-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:22px;align-items:start}
+.dashboard-main,.dashboard-side{display:grid;gap:20px}
+.profile-card{background:linear-gradient(135deg,#0b1d31,#173b62);color:#fff;border-radius:28px;padding:28px;box-shadow:0 18px 45px rgba(11,29,49,.18);position:relative;overflow:hidden}
+.profile-card:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:rgba(216,180,90,.14);right:-65px;top:-72px}
+.profile-card h3{color:#fff;font-size:clamp(1.7rem,4vw,2.6rem);margin:0 0 6px;position:relative;z-index:1}
+.profile-card p{color:#dfe8f2;margin:0;position:relative;z-index:1}
+.profile-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;position:relative;z-index:1}
+.profile-pill{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:.86rem;font-weight:800}
+.stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.stat-card{background:#fff;border:1px solid var(--line,#dfe5eb);border-radius:20px;padding:20px;box-shadow:0 8px 26px rgba(11,29,49,.055)}
+.stat-label{color:var(--muted,#66727d);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;font-weight:900}
+.stat-value{font-size:2rem;line-height:1;color:var(--navy,#0b1d31);font-weight:950;margin:8px 0 6px}
+.stat-sub{font-size:.86rem;color:var(--muted,#66727d)}
+.progress-track{height:9px;background:#e8edf2;border-radius:999px;overflow:hidden;margin-top:12px}
+.progress-bar{height:100%;background:linear-gradient(90deg,#d8b45a,#8b2942);border-radius:inherit;width:0;transition:width .45s ease}
+.panel{background:#fff;border:1px solid var(--line,#dfe5eb);border-radius:22px;padding:22px;box-shadow:0 8px 26px rgba(11,29,49,.05)}
+.panel-head{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:15px}
+.panel-head h3{margin:0;color:var(--navy,#0b1d31)}
+.panel-head .small-link{font-size:.84rem;font-weight:900;color:#8b2942;text-decoration:none}
+.next-action{background:linear-gradient(135deg,#fff7df,#fff);border-color:#ebd79a}
+.next-action .action-icon{width:48px;height:48px;border-radius:15px;background:#d8b45a;display:grid;place-items:center;font-size:1.35rem;margin-bottom:12px}
+.next-action h3{font-size:1.4rem}
+.next-action p{color:var(--muted,#66727d);margin:.4rem 0 1rem}
+.action-buttons{display:flex;gap:9px;flex-wrap:wrap}
+.mini-list{display:grid;gap:10px}
+.mini-row{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid #edf0f3}
+.mini-row:last-child{border-bottom:0}
+.mini-row strong{color:var(--navy,#0b1d31)}
+.mini-row span{color:var(--muted,#66727d);font-size:.9rem;text-align:right}
+.role-chips{display:flex;gap:8px;flex-wrap:wrap}
+.role-chip{background:#f3f5f7;border:1px solid #e1e6eb;border-radius:999px;padding:7px 10px;font-size:.86rem;font-weight:850;color:#24384c}
+.award-card{background:linear-gradient(135deg,#fff,#f8f1de)}
+.award-medal{font-size:2.2rem}
+.award-stage{display:flex;gap:6px;margin-top:14px}
+.award-stage span{height:8px;flex:1;background:#e7e9ec;border-radius:999px}
+.award-stage span.done{background:#d8b45a}
+.meeting-countdown{background:#8b2942;color:#fff;border:0}
+.meeting-countdown h3,.meeting-countdown strong{color:#fff}
+.meeting-countdown p,.meeting-countdown span{color:#f5dfe5}
+.mentor-card .mentor-name{font-size:1.25rem;font-weight:950;color:var(--navy,#0b1d31)}
+.dashboard-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.dashboard-tab{border:1px solid #d9dfe5;background:#fff;border-radius:999px;padding:8px 12px;font-weight:850;color:#33485e;cursor:pointer}
+.dashboard-tab.active{background:#0b1d31;color:#fff;border-color:#0b1d31}
+.dashboard-view{display:none}.dashboard-view.active{display:block}
+.data-map{background:#f7f9fb;border:1px dashed #bac5cf;border-radius:18px;padding:18px}
+.data-map summary{cursor:pointer;font-weight:900;color:var(--navy,#0b1d31)}
+.data-map code{font-size:.84rem}
+.data-map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;margin-top:12px}
+@media(max-width:980px){.dashboard-grid{grid-template-columns:1fr}.stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.stat-grid{grid-template-columns:1fr}.profile-card,.panel{padding:18px}.dashboard-topbar{align-items:stretch}.member-picker{width:100%;justify-content:space-between}.member-picker select{min-width:0;max-width:60%}}
+</style></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -117,7 +177,7 @@
 <a href="resources.html#official">Official Toastmasters</a>
 </div>
 </div>
-<button type="button" class="site-search-open" aria-label="Search this site"><span aria-hidden="true">⌕</span><span class="search-label">Search</span></button>
+<button aria-label="Search this site" class="site-search-open" type="button"><span aria-hidden="true">⌕</span><span class="search-label">Search</span></button>
 <a class="nav-cta" href="join.html">Join Us</a>
 </nav>
 </div>
@@ -133,12 +193,124 @@
 <a class="btn btn-primary" data-link="roleSignup" href="#">Sign Up for a Role</a><span class="login-note">Friendship Google login required</span>
 <a class="btn btn-light" data-link="memberResourceDrive" href="#">Open Member Resource Drive</a><span class="login-note">Friendship Google login required</span>
 </div>
-<div class="hub-nav">
+<div class="hub-nav"><a href="#my-dashboard">My Dashboard</a>
 <a href="#participate">Participate</a><span class="login-note">Friendship Google login required</span>
 <a href="#tracking">Track &amp; Recognize</a><span class="login-note">Friendship Google login required</span>
 <a href="#support">Get Support</a>
 <a href="#resources">Resources</a>
 </div>
+</div>
+</section><section class="section dashboard-shell" id="my-dashboard">
+<div class="container">
+<div class="dashboard-topbar">
+<div class="dashboard-title-wrap">
+<div>
+<div class="eyebrow">Member Dashboard</div>
+<h2>Your Friendship Speaker’s Circle Journey</h2>
+</div>
+<span class="preview-badge">● Sample data — Sheets connection next</span>
+</div>
+<div class="member-picker">
+<label for="dashboard-member">Preview</label>
+<select aria-label="Choose a member dashboard preview" id="dashboard-member">
+<option value="abdul">Abdul — Dashboard Preview</option>
+<option value="newmember">New Member — Onboarding Preview</option>
+<option value="advanced">Advanced Member — Growth Preview</option>
+</select>
+</div>
+</div>
+<div aria-label="Member dashboard views" class="dashboard-tabs" role="tablist">
+<button class="dashboard-tab active" data-dashboard-tab="overview" type="button">Overview</button>
+<button class="dashboard-tab" data-dashboard-tab="pathways" type="button">Pathways</button>
+<button class="dashboard-tab" data-dashboard-tab="participation" type="button">Participation</button>
+<button class="dashboard-tab" data-dashboard-tab="awards" type="button">Awards</button>
+<button class="dashboard-tab" data-dashboard-tab="mentoring" type="button">Mentoring</button>
+</div>
+<div class="dashboard-view active" data-dashboard-view="overview">
+<div class="dashboard-grid">
+<div class="dashboard-main">
+<article class="profile-card">
+<h3 id="dash-welcome">Welcome, Abdul 👋</h3>
+<p id="dash-summary">You are building momentum in Level 2. Your strongest next move is to keep your meeting-role participation balanced with your next prepared speech.</p>
+<div class="profile-meta">
+<span class="profile-pill" id="dash-path-pill">Pathways Level 2</span>
+<span class="profile-pill" id="dash-award-pill">🥈 Silver</span>
+<span class="profile-pill" id="dash-mentor-pill">Mentor: Kimbaley</span>
+</div>
+</article>
+<div class="stat-grid">
+<article class="stat-card"><div class="stat-label">Pathways Progress</div><div class="stat-value" id="dash-pathways">72%</div><div class="stat-sub" id="dash-level">Level 2</div><div class="progress-track"><div class="progress-bar" id="dash-pathways-bar"></div></div></article>
+<article class="stat-card"><div class="stat-label">Attendance</div><div class="stat-value" id="dash-attendance">92%</div><div class="stat-sub">Club meetings attended</div><div class="progress-track"><div class="progress-bar" id="dash-attendance-bar"></div></div></article>
+<article class="stat-card"><div class="stat-label">Prepared Speeches</div><div class="stat-value" id="dash-speeches">3</div><div class="stat-sub">Delivered this year</div></article>
+<article class="stat-card"><div class="stat-label">Roles Completed</div><div class="stat-value" id="dash-roles">12</div><div class="stat-sub">Across club meetings</div></article>
+<article class="stat-card"><div class="stat-label">Current Award</div><div class="stat-value" id="dash-award-short">🥈</div><div class="stat-sub" id="dash-award-name">Silver</div></article>
+<article class="stat-card"><div class="stat-label">Next Meeting</div><div class="stat-value" id="dash-next-date" style="font-size:1.45rem">Sep 14</div><div class="stat-sub">6:00 PM – 7:00 PM</div></article>
+</div>
+<article class="panel next-action">
+<div class="action-icon">➜</div>
+<div class="section-label">Your Next Recommended Action</div>
+<h3 id="dash-next-action">Complete an Evaluator role.</h3>
+<p id="dash-next-action-why">This will diversify your role history while strengthening the feedback skills that support your next Pathways projects.</p>
+<div class="action-buttons">
+<a class="btn btn-maroon" data-link="roleSignup" href="#">Sign Up for a Role</a>
+<a class="btn btn-dark" href="pathways.html">View Pathways</a>
+<button class="btn btn-light fsc-open-chat" type="button">Ask FSC AI</button>
+</div>
+</article>
+<article class="panel">
+<div class="panel-head"><h3>Participation Snapshot</h3><a class="small-link" href="roles.html">Role Academy →</a></div>
+<div class="role-chips" id="dash-role-chips">
+<span class="role-chip">Timer × 4</span><span class="role-chip">Evaluator × 2</span><span class="role-chip">Speaker × 3</span><span class="role-chip">Topics Master × 1</span><span class="role-chip">Other × 2</span>
+</div>
+</article>
+</div>
+<aside class="dashboard-side">
+<article class="panel meeting-countdown">
+<div class="stat-label" style="color:#f5dfe5">Next Meeting</div>
+<h3 id="dash-meeting-title" style="margin:.35rem 0 .7rem">Monday, September 14</h3>
+<p style="margin:0 0 12px">Theme: Announced before each meeting</p>
+<div class="mini-list">
+<div class="mini-row"><strong>Time</strong><span>6:00–7:00 PM</span></div>
+<div class="mini-row"><strong>Your role</strong><span id="dash-upcoming-role">Evaluator</span></div>
+<div class="mini-row"><strong>Status</strong><span>Prepare this week</span></div>
+</div>
+</article>
+<article class="panel award-card">
+<div class="panel-head"><div><div class="award-medal" id="dash-award-icon">🥈</div><h3 id="dash-award-title">Silver Member</h3></div><a class="small-link" href="recognition.html">Awards →</a></div>
+<p id="dash-award-copy" style="color:var(--muted,#66727d)">You are progressing toward Gold. Keep building participation, speeches, and Pathways milestones.</p>
+<div aria-label="Award progress" class="award-stage"><span class="done"></span><span class="done"></span><span></span><span></span><span></span></div>
+</article>
+<article class="panel mentor-card">
+<div class="panel-head"><h3>Your Mentor</h3><a class="small-link" href="mentorship.html">Mentor Center →</a></div>
+<div class="mentor-name" id="dash-mentor-name">Kimbaley</div>
+<p id="dash-mentor-copy" style="color:var(--muted,#66727d)">Use your mentor for role preparation, speech planning, Pathways questions, and accountability.</p>
+<div class="mini-list"><div class="mini-row"><strong>Last check-in</strong><span id="dash-checkin">Preview data</span></div><div class="mini-row"><strong>Next focus</strong><span id="dash-mentor-focus">Level 2 planning</span></div></div>
+</article>
+</aside>
+</div>
+</div>
+<div class="dashboard-view" data-dashboard-view="pathways">
+<div class="dashboard-grid"><div class="dashboard-main">
+<article class="panel"><div class="panel-head"><h3>Pathways Progress</h3><a class="small-link" href="pathways.html">Open Pathways Center →</a></div>
+<div class="mini-list"><div class="mini-row"><strong>Current level</strong><span id="path-current-level">Level 2</span></div><div class="mini-row"><strong>Progress</strong><span id="path-current-progress">72%</span></div><div class="mini-row"><strong>Next milestone</strong><span id="path-next-milestone">Evaluation &amp; Feedback</span></div></div>
+<div class="progress-track"><div class="progress-bar" id="path-progress-bar"></div></div>
+</article>
+</div><aside class="dashboard-side"><article class="panel next-action"><h3>Find Your Path</h3><p>Not sure whether your current path still matches your goals? Use the interactive Pathways Finder.</p><a class="btn btn-maroon" href="pathways.html#path-finder">Take the Assessment</a></article></aside></div>
+</div>
+<div class="dashboard-view" data-dashboard-view="participation">
+<div class="dashboard-grid"><div class="dashboard-main"><article class="panel"><div class="panel-head"><h3>Role History</h3><a class="small-link" data-link="roleSignup" href="#">Sign Up →</a></div><div class="role-chips" id="participation-role-chips"></div></article><article class="panel"><div class="panel-head"><h3>Speech Activity</h3></div><div class="mini-list"><div class="mini-row"><strong>Prepared speeches</strong><span id="participation-speeches">3</span></div><div class="mini-row"><strong>Next recommended speaking action</strong><span id="participation-speech-action">Schedule your next Pathways project</span></div></div></article></div><aside class="dashboard-side"><article class="panel"><h3>Attendance</h3><div class="stat-value" id="participation-attendance">92%</div><div class="progress-track"><div class="progress-bar" id="participation-attendance-bar"></div></div></article></aside></div>
+</div>
+<div class="dashboard-view" data-dashboard-view="awards">
+<div class="dashboard-grid"><div class="dashboard-main"><article class="panel award-card"><div class="award-medal" id="awards-icon">🥈</div><h3 id="awards-current">Silver</h3><p id="awards-next">Next: Gold</p><div class="award-stage"><span class="done"></span><span class="done"></span><span></span><span></span><span></span></div></article></div><aside class="dashboard-side"><article class="panel"><h3>Recognition Opportunities</h3><div class="mini-list"><div class="mini-row"><strong>Golden Buzzer</strong><span>Annual speech recognition</span></div><div class="mini-row"><strong>Member of the Month</strong><span>Growth + service</span></div><div class="mini-row"><strong>10×10 Challenge</strong><span>Participation milestone</span></div></div></article></aside></div>
+</div>
+<div class="dashboard-view" data-dashboard-view="mentoring">
+<div class="dashboard-grid"><div class="dashboard-main"><article class="panel mentor-card"><div class="panel-head"><h3>Mentor Relationship</h3><a class="small-link" href="mentorship.html">Open Mentor Center →</a></div><div class="mentor-name" id="mentor-view-name">Kimbaley</div><p id="mentor-view-copy">Your mentor can support preparation, Pathways navigation, role practice, and accountability.</p><div class="mini-list"><div class="mini-row"><strong>Current focus</strong><span id="mentor-view-focus">Level 2 planning</span></div><div class="mini-row"><strong>Suggested check-in</strong><span>Before your next major project</span></div></div></article></div><aside class="dashboard-side"><article class="panel next-action"><h3>Need Support?</h3><p>Bring a specific question to your mentor or use Ask FSC for quick club guidance.</p><button class="btn btn-maroon fsc-open-chat" type="button">Ask FSC AI</button></article></aside></div>
+</div>
+<details class="data-map" style="margin-top:22px">
+<summary>How this dashboard will connect to your Google Sheets tracker</summary>
+<p style="color:var(--muted,#66727d)">The design is ready for live data. The next step is mapping your tracker columns to these dashboard fields. No redesign will be needed.</p>
+<div class="data-map-grid"><code>Member Name → welcome/profile</code><code>Pathways Level → current level</code><code>Pathways % → progress bar</code><code>Attendance % → attendance card</code><code>Prepared Speeches → speech count</code><code>Role Counts → role history</code><code>Award Level → recognition card</code><code>Mentor → mentor card</code><code>Upcoming Role → next meeting card</code><code>Recommended Action → next-step engine</code></div>
+</details>
 </div>
 </section>
 <section class="section white" id="participate">
@@ -280,7 +452,6 @@
 </div>
 </div>
 </section>
-
 <section class="section member-tools-section" id="member-tools"><div class="container">
 <div class="section-head"><div><div class="eyebrow">New Member Tools</div><h2>Search. Ask. Find your path.</h2></div><p>Use the new tools to find club information quickly, ask common member questions, and identify a Pathways direction that matches your goals.</p></div>
 <div class="grid-3">
@@ -288,7 +459,6 @@
 <article class="card feature"><div class="icon">✦</div><h3>Ask the Club</h3><p>Open the “Ask the Club” assistant in the lower corner for member questions about meetings, roles, scripts, mentoring, recognition, and resources.</p></article>
 <article class="card feature"><div class="icon">🧭</div><h3>Find Your Path</h3><p>Take the 10-question club-built Pathways Identifier and receive a primary and secondary path recommendation.</p><a class="link-arrow" href="pathways.html#pathfinder">Take the Pathways Identifier →</a></article>
 </div></div></section>
-
 </main>
 <footer class="site-footer">
 <div class="container footer-grid">
@@ -298,17 +468,70 @@
 </div>
 <div class="container footer-bottom"><span>© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</span><span class="footer-legal">Toastmasters International® owns all Toastmasters trademarks and copyrights, including “Toastmaster,” “Toastmasters,” “Toastmasters International,” and the official emblem.</span></div>
 </footer>
-
-<button type="button" class="club-ai-launch" aria-label="Open Friendship Speaker’s Circle assistant"><span aria-hidden="true">✦</span><span>Ask the Club</span></button>
-<aside class="club-ai-panel" aria-hidden="true">
-  <div class="club-ai-head"><div><strong>Ask Friendship Speaker’s Circle</strong><span>Member question assistant</span></div><button class="icon-button" type="button" data-ai-close aria-label="Close assistant">×</button></div>
-  <div class="club-ai-messages" aria-live="polite"><div class="ai-message assistant">Hi! Ask me about meetings, roles, scripts, Pathways, mentoring, recognition, or club resources.</div></div>
-  <form class="club-ai-form"><label class="sr-only" for="club-ai-input">Ask a club question</label><textarea id="club-ai-input" rows="2" placeholder="Ask a member question…" required></textarea><button type="submit">Ask</button></form>
-  <div class="club-ai-note">Club guidance only. Verify official Pathways requirements with Toastmasters International. Do not enter confidential member information.</div>
+<button aria-label="Open Friendship Speaker’s Circle assistant" class="club-ai-launch" type="button"><span aria-hidden="true">✦</span><span>Ask the Club</span></button>
+<aside aria-hidden="true" class="club-ai-panel">
+<div class="club-ai-head"><div><strong>Ask Friendship Speaker’s Circle</strong><span>Member question assistant</span></div><button aria-label="Close assistant" class="icon-button" data-ai-close="" type="button">×</button></div>
+<div aria-live="polite" class="club-ai-messages"><div class="ai-message assistant">Hi! Ask me about meetings, roles, scripts, Pathways, mentoring, recognition, or club resources.</div></div>
+<form class="club-ai-form"><label class="sr-only" for="club-ai-input">Ask a club question</label><textarea id="club-ai-input" placeholder="Ask a member question…" required="" rows="2"></textarea><button type="submit">Ask</button></form>
+<div class="club-ai-note">Club guidance only. Verify official Pathways requirements with Toastmasters International. Do not enter confidential member information.</div>
 </aside>
 <script src="site-config.js"></script>
 <script src="club-knowledge.js"></script>
 <script src="script.js"></script>
 <script src="v2-tools.js"></script>
-</body>
+<script>
+(function(){
+  const members={
+    abdul:{name:'Abdul',summary:'You are building momentum in Level 2. Your strongest next move is to keep your meeting-role participation balanced with your next prepared speech.',level:'Level 2',pathways:72,attendance:92,speeches:3,roles:12,award:'Silver',awardIcon:'🥈',mentor:'Kimbaley',nextAction:'Complete an Evaluator role.',nextWhy:'This will diversify your role history while strengthening the feedback skills that support your next Pathways projects.',upcomingRole:'Evaluator',roleCounts:[['Timer',4],['Evaluator',2],['Speaker',3],['Topics Master',1],['Other',2]],mentorFocus:'Level 2 planning',nextMilestone:'Evaluation & Feedback',speechAction:'Schedule your next Pathways project'},
+    newmember:{name:'New Member',summary:'You are at the beginning of your club journey. Focus on onboarding, meeting your mentor, and taking your first meeting role.',level:'Getting Started',pathways:18,attendance:100,speeches:0,roles:1,award:'Bronze',awardIcon:'🥉',mentor:'Board Mentor',nextAction:'Sign up for your first support role.',nextWhy:'A Timer, Ah-Counter, or Grammarian role is a low-pressure way to learn the meeting flow and build confidence.',upcomingRole:'Not assigned',roleCounts:[['Guest / Observer',2],['Timer',1]],mentorFocus:'Onboarding + first role',nextMilestone:'Select a Pathway',speechAction:'Plan your Ice Breaker'},
+    advanced:{name:'Advanced Member',summary:'You have a strong participation foundation. Your next opportunity is to deepen leadership, mentoring, and advanced speaking.',level:'Level 4',pathways:86,attendance:95,speeches:8,roles:26,award:'Gold',awardIcon:'🥇',mentor:'Club Mentor',nextAction:'Lead a high-impact meeting role or mentor another member.',nextWhy:'Your growth now comes from leadership, coaching, and applying your communication skills at a higher level.',upcomingRole:'Toastmaster of the Day',roleCounts:[['Timer',4],['Evaluator',5],['Speaker',8],['Topics Master',3],['Toastmaster',3],['General Evaluator',3]],mentorFocus:'Leadership + Level 4',nextMilestone:'Complete Level 4 project',speechAction:'Schedule your next advanced project'}
+  };
+  const $=id=>document.getElementById(id);
+  function pct(id,v){const el=$(id); if(el) el.style.width=Math.max(0,Math.min(100,v))+'%'}
+  function chips(id,items){const el=$(id); if(!el)return; el.innerHTML=items.map(([n,c])=>`<span class="role-chip">${n} × ${c}</span>`).join('')}
+  function render(key){const d=members[key]||members.abdul;
+    if($('dash-welcome')) $('dash-welcome').textContent=`Welcome, ${d.name} 👋`;
+    if($('dash-summary')) $('dash-summary').textContent=d.summary;
+    if($('dash-path-pill')) $('dash-path-pill').textContent='Pathways '+d.level;
+    if($('dash-award-pill')) $('dash-award-pill').textContent=`${d.awardIcon} ${d.award}`;
+    if($('dash-mentor-pill')) $('dash-mentor-pill').textContent='Mentor: '+d.mentor;
+    if($('dash-pathways')) $('dash-pathways').textContent=d.pathways+'%';
+    if($('dash-level')) $('dash-level').textContent=d.level;
+    if($('dash-attendance')) $('dash-attendance').textContent=d.attendance+'%';
+    if($('dash-speeches')) $('dash-speeches').textContent=d.speeches;
+    if($('dash-roles')) $('dash-roles').textContent=d.roles;
+    if($('dash-award-short')) $('dash-award-short').textContent=d.awardIcon;
+    if($('dash-award-name')) $('dash-award-name').textContent=d.award;
+    if($('dash-next-action')) $('dash-next-action').textContent=d.nextAction;
+    if($('dash-next-action-why')) $('dash-next-action-why').textContent=d.nextWhy;
+    if($('dash-upcoming-role')) $('dash-upcoming-role').textContent=d.upcomingRole;
+    if($('dash-award-icon')) $('dash-award-icon').textContent=d.awardIcon;
+    if($('dash-award-title')) $('dash-award-title').textContent=d.award+' Member';
+    if($('dash-mentor-name')) $('dash-mentor-name').textContent=d.mentor;
+    if($('dash-mentor-focus')) $('dash-mentor-focus').textContent=d.mentorFocus;
+    if($('path-current-level')) $('path-current-level').textContent=d.level;
+    if($('path-current-progress')) $('path-current-progress').textContent=d.pathways+'%';
+    if($('path-next-milestone')) $('path-next-milestone').textContent=d.nextMilestone;
+    if($('participation-speeches')) $('participation-speeches').textContent=d.speeches;
+    if($('participation-speech-action')) $('participation-speech-action').textContent=d.speechAction;
+    if($('participation-attendance')) $('participation-attendance').textContent=d.attendance+'%';
+    if($('awards-icon')) $('awards-icon').textContent=d.awardIcon;
+    if($('awards-current')) $('awards-current').textContent=d.award;
+    if($('mentor-view-name')) $('mentor-view-name').textContent=d.mentor;
+    if($('mentor-view-focus')) $('mentor-view-focus').textContent=d.mentorFocus;
+    pct('dash-pathways-bar',d.pathways); pct('dash-attendance-bar',d.attendance); pct('path-progress-bar',d.pathways); pct('participation-attendance-bar',d.attendance);
+    chips('dash-role-chips',d.roleCounts); chips('participation-role-chips',d.roleCounts);
+  }
+  document.querySelectorAll('.dashboard-tab').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.dashboard-tab').forEach(b=>b.classList.toggle('active',b===btn));
+    document.querySelectorAll('.dashboard-view').forEach(v=>v.classList.toggle('active',v.dataset.dashboardView===btn.dataset.dashboardTab));
+  }));
+  const picker=$('dashboard-member'); if(picker){picker.addEventListener('change',e=>render(e.target.value)); render(picker.value)}
+  document.querySelectorAll('.fsc-open-chat').forEach(btn=>btn.addEventListener('click',()=>{
+    const existing=document.querySelector('.fsc-chat-toggle,.ask-club-button,[data-fsc-chat-toggle]');
+    if(existing){existing.click();return}
+    alert('Ask FSC is part of the Member Tools layer. If the floating chat is not active on this deployment yet, the dashboard is still ready for it once the tools patch is live.');
+  }));
+})();
+</script></body>
 </html>

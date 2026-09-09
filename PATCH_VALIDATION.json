@@ -1,0 +1,28 @@
+{
+  "site-config.js": [
+    true,
+    ""
+  ],
+  "script.js": [
+    true,
+    ""
+  ],
+  "portal_link_count": 23,
+  "contains_vercel_json": false,
+  "patched_html_files": [
+    "about.html",
+    "calendar.html",
+    "index.html",
+    "join.html",
+    "leadership.html",
+    "meetings.html",
+    "member-hub.html",
+    "mentorship.html",
+    "officer-hub.html",
+    "pathways.html",
+    "recognition.html",
+    "resources.html",
+    "roles.html",
+    "start-here.html"
+  ]
+}

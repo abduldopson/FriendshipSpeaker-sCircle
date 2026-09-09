@@ -95,7 +95,8 @@
     {title:"Meetings", url:"meetings.html", text:"meeting flow agenda toastmaster president prepared speeches table topics evaluation handoff etiquette virtual in person"},
     {title:"Calendar", url:"calendar.html", text:"calendar dates meetings board learning labs schedule september october november december january february march april may june"},
     {title:"Meeting Roles & Scripts", url:"roles.html", text:"role scripts toastmaster table topics general evaluator speech evaluator timer grammarian ah-counter sergeant at arms introduction report timing word of the day filler words"},
-    {title:"Member Hub", url:"member-hub.html", text:"member dashboard role signup speech submission feedback progress tracker resources tools"},
+    {title:"Member Hub", url:"member-hub.html", text:"member dashboard secure portal role signup speech request feedback progress tracker resources tools"},
+    {title:"Secure Member Portal", url:"https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec", text:"secure portal school google sign in role signup speech request member assignments vpe approval"},
     {title:"Start Here", url:"start-here.html", text:"new member onboarding mentor first role first speech ice breaker track growth four week roadmap"},
     {title:"Pathways & Find Your Path", url:"pathways.html#pathfinder", text:"pathways quiz identifier assessment dynamic leadership engaging humor motivational strategies persuasive influence presentation mastery visionary communication speech projects"},
     {title:"Mentorship", url:"mentorship.html", text:"mentor mentee coaching onboarding check-ins board member mentors club mentor pathways support"},
@@ -168,8 +169,8 @@
     if(/mentor|mentoring|mentorship/.test(q)) return knowledge.mentoring || "Visit the Mentorship page for club mentoring support.";
     if(/golden buzzer|recognition|award|member of the month/.test(q)) return `Club recognition includes ${(knowledge.recognition||[]).join(", ")}. Visit the Recognition page for the criteria and process.`;
     if(/join|membership|become.*member/.test(q)) return "Open the Join Us page and complete the club interest form. A club leader can then follow up with next steps.";
-    if(/speech submission|submit.*speech|speech form/.test(q)) return "Use the Speech Submission link in the Member Hub or Pathways page. Protected club resources may require your Friendship Google login.";
-    if(/role sign|sign.*role|volunteer.*role/.test(q)) return "Use the Role Sign-Up link on the Meeting Roles or Member Hub page. The sign-up sheet may require your Friendship Google login.";
+    if(/speech submission|submit.*speech|speech form|request.*speech/.test(q)) return "Use the Secure Member Portal to request a prepared speech. Sign in with your Friendship school Google account; approved requests are managed through the VP Education workflow.";
+    if(/role sign|sign.*role|volunteer.*role/.test(q)) return "Use the Secure Member Portal from the Meeting Roles or Member Hub page. Sign in with your Friendship school Google account to see live openings and claim an available role.";
     return "I can help with club meetings, roles, scripts, Pathways, mentoring, recognition, onboarding, resources, and common member questions. Try asking something like “What do I say when I introduce the Timer role?” or “Which Pathways path fits me?”";
   }
 

@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <style>
+    :root{
+      --navy:#13294B;--gold:#D6B45A;--maroon:#7A1F2B;--cream:#F7F1E6;
+      --text:#1f2937;--muted:#667085;--line:#e6dfd3;--green:#18794e;
+      --greenbg:#eaf7ef;--amber:#8a5a00;--amberbg:#fff4d6;
+      --red:#a61b1b;--redbg:#fdeaea;--shadow:0 12px 34px rgba(19,41,75,.10)
+    }
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(#f7f2e9 0,#fff 340px);
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text)}
+    header{background:var(--navy);color:white;border-bottom:4px solid var(--gold)}
+    .top{max-width:1180px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}.mark{width:46px;height:46px;border-radius:50%;background:var(--gold);
+      display:grid;place-items:center;color:var(--navy);font-weight:950}.brand b{display:block}.brand small{opacity:.75}
+    .secure{font-size:11px;font-weight:900;border:1px solid rgba(255,255,255,.22);padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.1)}
+    main{max-width:1180px;margin:auto;padding:24px 18px 56px}.card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    .hero{padding:25px;background:linear-gradient(135deg,var(--navy),#315b8c);color:white;border:none}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:900}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:6px 0}.hero p{color:#e8eef7;margin:0;line-height:1.55}
+    .userbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}.badge{padding:7px 10px;border-radius:999px;font-size:11px;font-weight:900;background:#eef2f7;color:#46566e}
+    .good{background:var(--greenbg);color:var(--green)}.warn{background:var(--amberbg);color:var(--amber)}.bad{background:var(--redbg);color:var(--red)}
+    .meeting-select{margin-left:auto;min-width:220px}select,input,textarea,button{font:inherit}select,input,textarea{width:100%;border:1px solid #d4ccbf;border-radius:10px;padding:10px;background:white}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.tab{border:1px solid var(--line);background:white;color:var(--navy);border-radius:999px;padding:9px 13px;font-weight:850;cursor:pointer}.tab.active{background:var(--navy);color:white;border-color:var(--navy)}
+    .panel{display:none}.panel.active{display:block}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.section{padding:20px}.section h2{color:var(--navy);font-size:20px;margin:0 0 14px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}.stat{border:1px solid var(--line);border-radius:12px;padding:11px;text-align:center;background:#faf9f6}.stat b{display:block;color:var(--navy);font-size:21px}.stat span{font-size:10px;color:var(--muted);text-transform:uppercase;font-weight:800}
+    .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.role{border:1px solid var(--line);border-radius:14px;padding:13px}.role.open{border-color:#b9ddc5;background:#fbfffc}.role.filled{background:#fafafa}
+    .role-top{display:flex;justify-content:space-between;gap:8px}.role-name{font-weight:900;color:var(--navy)}.meta{font-size:11px;color:var(--muted);line-height:1.45;margin-top:4px}
+    .btn{border:0;border-radius:10px;padding:9px 12px;font-weight:850;cursor:pointer;background:var(--navy);color:white}.btn.gold{background:var(--gold);color:var(--navy)}.btn.maroon{background:var(--maroon)}.btn.light{background:#eef2f7;color:var(--navy)}
+    .actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.notice{padding:12px 13px;border-radius:12px;background:var(--amberbg);color:#684b00;border:1px solid #ecd795;font-size:12px;line-height:1.5}.success{background:var(--greenbg);color:#155b38;border-color:#b9ddc5}
+    label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:900;color:var(--navy);margin-bottom:5px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.span2{grid-column:1/-1}textarea{min-height:90px;resize:vertical}
+    .item{border:1px solid var(--line);border-radius:13px;padding:12px;margin-bottom:9px}.item b{color:var(--navy)}.loading{padding:30px;text-align:center;color:var(--muted)}
+    .error{max-width:760px;margin:30px auto;padding:20px;border:1px solid #efb5b5;background:var(--redbg);color:#7d1515;border-radius:16px;line-height:1.55}
+    .vpe{display:grid;grid-template-columns:1.2fr 1fr 1.4fr auto;gap:9px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:11px;margin-bottom:9px}
+    @media(max-width:850px){.grid2{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.roles{grid-template-columns:1fr}.meeting-select{margin-left:0;width:100%}.vpe{grid-template-columns:1fr}}
+
+    .main-nav-wrap{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 3px 12px rgba(19,41,75,.05)}
+    .main-nav{max-width:1180px;margin:auto;padding:10px 18px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .main-nav a{color:var(--navy);text-decoration:none;font-size:12px;font-weight:850;padding:8px 10px;border-radius:9px}
+    .main-nav a:hover,.main-nav a:focus{background:#f3f5f8}
+    .main-nav a.portal-current{background:var(--gold);color:var(--navy)}
+    .main-nav .nav-spacer{flex:1}
+    .main-nav .back-member{background:var(--maroon);color:#fff}
+    .main-nav .back-member:hover,.main-nav .back-member:focus{background:#641825}
+    @media(max-width:850px){
+      .main-nav{gap:4px}
+      .main-nav a{font-size:11px;padding:7px 8px}
+      .main-nav .nav-spacer{display:none}
+    }
+
+
+    .connection-banner{margin:14px 0;padding:12px 14px;border-radius:12px;border:1px solid #b9ddc5;background:var(--greenbg);color:#155b38;font-size:12px;line-height:1.5}
+    .connection-banner.warn{border-color:#ecd795;background:var(--amberbg);color:#684b00}
+    .connection-banner.bad{border-color:#efb5b5;background:var(--redbg);color:#7d1515}
+    .connection-banner b{color:inherit}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="brand"><div class="mark">FSC</div><div><b>Friendship Speaker's Circle</b><small>Secure Member Participation Portal</small></div></div>
+    <div class="secure">FRIENDSHIP GOOGLE SIGN-IN</div>
+  </div>
+</header>
+
+<div class="main-nav-wrap">
+  <nav class="main-nav" aria-label="Main Friendship Speaker's Circle website">
+    <a href="https://friendship-speaker-s-circle.vercel.app/index.html">Home</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/about.html">About</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/meetings.html">Meetings</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/calendar.html">Calendar</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/roles.html">Roles</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/pathways.html">Pathways</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/mentorship.html">Mentorship</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/recognition.html">Recognition</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/resources.html">Resources</a>
+    <a href="https://friendship-speaker-s-circle.vercel.app/leadership.html">Leadership</a>
+    <span class="nav-spacer"></span>
+    <a class="portal-current" href="https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec">Secure Portal</a>
+    <a class="back-member" href="https://friendship-speaker-s-circle.vercel.app/member-hub.html">← Member Hub</a>
+  </nav>
+</div>
+
+<main>
+  <div id="loading" class="card loading">Connecting to the Friendship Speaker's Circle tracker…</div>
+  <div id="error" class="error" style="display:none"></div>
+
+  <div id="app" style="display:none">
+    <section class="card hero">
+      <div class="eyebrow">Speak. Connect. Grow. Lead.</div>
+      <h1 id="hello">Welcome</h1>
+      <p>Sign up for meeting roles, request a prepared speech, review your assignments, and—when authorized—manage the speaker approval queue.</p>
+    </section>
+
+    <div id="connectionBanner" class="connection-banner">Connecting to live member data…</div>
+
+    <div class="userbar">
+      <span class="badge good" id="userBadge"></span>
+      <span class="badge" id="accessBadge"></span>
+      <div class="meeting-select"><select id="meetingSelect"></select></div>
+    </div>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="meeting">Meeting</button>
+      <button class="tab" data-tab="roles">Role Signup</button>
+      <button class="tab" data-tab="speech">Request Speech</button>
+      <button class="tab" data-tab="mine">My Participation</button>
+      <button class="tab" data-tab="vpe" id="vpeTab" style="display:none">VPE Review</button>
+    </nav>
+
+    <section id="meeting" class="panel active">
+      <div class="card section">
+        <h2 id="meetingTitle">Meeting</h2>
+        <div class="stats">
+          <div class="stat"><b id="filled">0</b><span>Filled</span></div>
+          <div class="stat"><b id="openRoles">0</b><span>Open Roles</span></div>
+          <div class="stat"><b id="openSpeakers">0</b><span>Open Speakers</span></div>
+          <div class="stat"><b id="confirmed">0</b><span>Confirmed</span></div>
+        </div>
+        <div id="meetingRoles" class="roles"></div>
+      </div>
+    </section>
+
+    <section id="roles" class="panel">
+      <div class="card section">
+        <h2>Sign Up for a Meeting Role</h2>
+        <div class="notice" style="margin-bottom:12px">Your signup is re-checked against the live Google Sheet before it is accepted, so the same slot cannot be claimed twice.</div>
+        <div id="signupRoles" class="roles"></div>
+      </div>
+    </section>
+
+    <section id="speech" class="panel">
+      <div class="grid2">
+        <div class="card section">
+          <h2>Request a Prepared Speech</h2>
+          <div id="speechStatus" class="notice" style="margin-bottom:12px"></div>
+          <div class="formgrid">
+            <div class="span2"><label>Speech Title</label><input id="speechTitle" placeholder="e.g., Finding My Voice"></div>
+            <div><label>Pathways Path</label>
+              <select id="speechPath">
+                <option>Dynamic Leadership</option><option>Engaging Humor</option>
+                <option>Motivational Strategies</option><option>Persuasive Influence</option>
+                <option>Presentation Mastery</option><option>Visionary Communication</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div><label>Level / Project</label><input id="speechProject" placeholder="e.g., Level 2 — Effective Body Language"></div>
+            <div><label>Expected Length</label>
+              <select id="speechLength"><option>4–6 minutes</option><option selected>5–7 minutes</option><option>6–8 minutes</option><option>8–10 minutes</option><option>10–12 minutes</option><option>Other</option></select>
+            </div>
+            <div><label>Meeting</label><input id="speechMeeting" disabled></div>
+            <div class="span2"><label>Notes / Presentation Needs</label><textarea id="speechNotes" placeholder="Slides, screen sharing, handouts, room setup, or anything the VPE should know."></textarea></div>
+          </div>
+          <div class="actions"><button class="btn maroon" onclick="submitSpeech()">Submit Speech Request</button></div>
+        </div>
+        <div class="card section">
+          <h2>Speech Workflow</h2>
+          <div class="item"><b>1. Request</b><div class="meta">Choose a meeting and submit your speech information.</div></div>
+          <div class="item"><b>2. VPE Review</b><div class="meta">The VP Education reviews timing and available speaker slots.</div></div>
+          <div class="item"><b>3. Confirmation</b><div class="meta">Approval writes you into Prepared Speaker #1 or #2 in the live meeting sheet.</div></div>
+          <div class="item"><b>4. Waitlist</b><div class="meta">If both slots are full, your request remains visible for a future opening.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mine" class="panel">
+      <div class="grid2">
+        <div class="card section"><h2>My Meeting Assignments</h2><div id="myAssignments"></div></div>
+        <div class="card section"><h2>My Speech Requests</h2><div id="mySpeechRequests"></div></div>
+      </div>
+    </section>
+
+    <section id="vpe" class="panel">
+      <div class="card section">
+        <h2>Speech Review Queue</h2>
+        <div class="notice" style="margin-bottom:12px">Only the President and VP Education can use these approval controls.</div>
+        <div id="speechQueue"></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="card section" style="margin-top:18px;text-align:center">
+    <div class="meta" style="margin-bottom:10px">Friendship Speaker's Circle • Conversations that Matter</div>
+    <div class="actions" style="justify-content:center">
+      <a class="btn light" href="https://friendship-speaker-s-circle.vercel.app/member-hub.html">Return to Member Hub</a>
+      <a class="btn light" href="https://friendship-speaker-s-circle.vercel.app/index.html">Main Website</a>
+      <a class="btn light" href="https://friendship-speaker-s-circle.vercel.app/resources.html">Resources</a>
+    </div>
+  </div>
+
+</main>
+
+<script>
+let STATE = null;
+
+const $ = id => document.getElementById(id);
+
+function start() {
+  google.script.run
+    .withSuccessHandler(initApp)
+    .withFailureHandler(showError)
+    .uiBootstrap();
+}
+
+function initApp(data) {
+  STATE = data || {};
+  $('loading').style.display = 'none';
+  $('error').style.display = 'none';
+  $('app').style.display = 'block';
+
+  const user = STATE.user || {};
+  const memberName = String(user.member || '').trim();
+  const firstName = memberName ? memberName.split(/\s+/)[0] : 'Member';
+
+  $('hello').textContent = 'Welcome, ' + firstName + ' 👋';
+  $('userBadge').textContent = memberName || 'Member record not mapped';
+  $('accessBadge').textContent = user.officerPosition || user.access || 'Member';
+
+  const banner = $('connectionBanner');
+  if (!memberName) {
+    banner.className = 'connection-banner warn';
+    banner.innerHTML = '<b>Google sign-in connected, but your member name was not returned.</b> ' +
+      'Check your exact school email and Member name on the Member Directory tab.';
+  } else {
+    banner.className = 'connection-banner';
+    banner.innerHTML = '<b>Live tracker connected.</b> Signed in as ' + esc(memberName) +
+      (user.email ? ' (' + esc(user.email) + ')' : '') + '.';
+  }
+
+  const meetings = Array.isArray(STATE.meetings) ? STATE.meetings : [];
+  const ms = $('meetingSelect');
+  ms.innerHTML = '';
+
+  meetings.forEach((m,i) => {
+    const o = document.createElement('option');
+    o.value = i;
+    o.textContent = m.displayDate || m.date || m.sheet || ('Meeting ' + (i+1));
+    ms.appendChild(o);
+  });
+
+  if (meetings.length) {
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    let chosen = meetings.findIndex(m => {
+      if (!m.date) return false;
+      const d = new Date(m.date + 'T00:00:00');
+      return !isNaN(d) && d >= today;
+    });
+    if (chosen < 0) chosen = Math.max(0, meetings.length - 1);
+    ms.value = String(chosen);
+  } else {
+    const o = document.createElement('option');
+    o.value = '';
+    o.textContent = 'No meeting data returned';
+    ms.appendChild(o);
+    banner.className = 'connection-banner warn';
+    banner.innerHTML += '<br><b>No meeting sheets were returned by the backend.</b>';
+  }
+
+  ms.onchange = renderMeeting;
+
+  const canReview = user.access === 'Admin' ||
+    ['President','Vice President Education'].includes(user.officerPosition);
+  $('vpeTab').style.display = canReview ? '' : 'none';
+
+  renderMeeting();
+  renderMine();
+  if (canReview) renderQueue(Array.isArray(STATE.speechQueue) ? STATE.speechQueue : []);
+}
+
+function currentMeeting() {
+  const meetings = STATE && Array.isArray(STATE.meetings) ? STATE.meetings : [];
+  const idx = Number($('meetingSelect').value || 0);
+  return meetings[idx] || null;
+}
+
+function stats(m) {
+  let filled=0, openRoles=0, openSpeakers=0, confirmed=0;
+  const slots = m && Array.isArray(m.slots) ? m.slots : [];
+  slots.forEach(s => {
+    if (s.assignedMember) {
+      filled++;
+      if (s.confirmed === 'Yes') confirmed++;
+    } else if (s.role === 'Prepared Speaker') openSpeakers++;
+    else openRoles++;
+  });
+  return {filled,openRoles,openSpeakers,confirmed};
+}
+
+function renderMeeting() {
+  const m = currentMeeting();
+  if (!m) {
+    $('meetingTitle').textContent = 'No meeting data available';
+    $('filled').textContent = '0';
+    $('openRoles').textContent = '0';
+    $('openSpeakers').textContent = '0';
+    $('confirmed').textContent = '0';
+    $('meetingRoles').innerHTML = '<div class="meta">The portal did not receive meeting slots from the live tracker.</div>';
+    $('signupRoles').innerHTML = '<div class="meta">No role openings can be displayed yet.</div>';
+    $('speechMeeting').value = '';
+    $('speechStatus').className = 'notice';
+    $('speechStatus').innerHTML = 'Meeting data is not available yet.';
+    return;
+  }
+  const s = stats(m);
+
+  $('meetingTitle').textContent = m.displayDate + ' • ' + m.time;
+  $('filled').textContent = s.filled;
+  $('openRoles').textContent = s.openRoles;
+  $('openSpeakers').textContent = s.openSpeakers;
+  $('confirmed').textContent = s.confirmed;
+  $('speechMeeting').value = m.displayDate;
+
+  $('speechStatus').className = s.openSpeakers ? 'notice success' : 'notice';
+  $('speechStatus').innerHTML = s.openSpeakers
+    ? '<b>'+s.openSpeakers+' prepared-speaker slot(s) currently open.</b> Your request still goes to the VP Education for approval.'
+    : '<b>Both prepared-speaker slots are currently filled.</b> You may still submit a request to join the waitlist.';
+
+  $('meetingRoles').innerHTML = (Array.isArray(m.slots) ? m.slots : []).map(slot => roleCard(slot,false)).join('');
+  $('signupRoles').innerHTML = (Array.isArray(m.slots) ? m.slots : [])
+    .filter(slot => slot.role !== 'Prepared Speaker')
+    .map(slot => roleCard(slot,true)).join('');
+}
+
+function roleCard(slot, interactive) {
+  if (slot.assignedMember) {
+    return '<div class="role filled"><div class="role-top"><div><div class="role-name">'+esc(slot.role)+'</div>'+
+      '<div class="meta">Position '+esc(slot.position)+'</div></div><span class="badge">'+esc(slot.confirmed==='Yes'?'Confirmed':'Assigned')+'</span></div>'+
+      '<div class="meta" style="margin-top:8px">Assigned to <b>'+esc(slot.assignedMember)+'</b></div></div>';
+  }
+
+  let action = '';
+  if (interactive) {
+    action = '<div class="actions"><button class="btn gold" onclick=\'signupRole('+JSON.stringify(slot.role)+','+JSON.stringify(slot.position)+')\'>Sign Up</button></div>';
+  }
+
+  return '<div class="role open"><div class="role-top"><div><div class="role-name">'+esc(slot.role)+'</div>'+
+    '<div class="meta">Position '+esc(slot.position)+'</div></div><span class="badge good">AVAILABLE</span></div>'+
+    '<div class="meta" style="margin-top:8px">This meeting role is open.</div>'+action+'</div>';
+}
+
+function signupRole(role, position) {
+  const m = currentMeeting();
+  if (!confirm('Sign up as '+role+' for '+m.displayDate+'?')) return;
+
+  google.script.run
+    .withSuccessHandler(res => {
+      alert(res.message || 'Role confirmed.');
+      reload();
+    })
+    .withFailureHandler(showError)
+    .uiRoleSignup({meetingSheet:m.sheet, role:role, position:position});
+}
+
+function submitSpeech() {
+  const m = currentMeeting();
+  const title = $('speechTitle').value.trim();
+  if (!title) { alert('Please enter your speech title.'); return; }
+
+  google.script.run
+    .withSuccessHandler(res => {
+      alert(res.message || 'Speech request submitted.');
+      $('speechTitle').value = '';
+      $('speechProject').value = '';
+      $('speechNotes').value = '';
+      reload('mine');
+    })
+    .withFailureHandler(showError)
+    .uiSpeechRequest({
+      meetingSheet:m.sheet,
+      speechTitle:title,
+      pathwaysPath:$('speechPath').value,
+      levelProject:$('speechProject').value.trim(),
+      expectedLength:$('speechLength').value,
+      specialNeeds:$('speechNotes').value.trim()
+    });
+}
+
+function renderMine() {
+  const p = (STATE && STATE.participation) || {assignments:[],speechRequests:[]};
+  p.assignments = Array.isArray(p.assignments) ? p.assignments : [];
+  p.speechRequests = Array.isArray(p.speechRequests) ? p.speechRequests : [];
+
+  $('myAssignments').innerHTML = p.assignments.length
+    ? p.assignments.map(a => '<div class="item"><b>'+esc(a.role)+'</b><div class="meta">'+esc(a.displayDate)+' • Position '+esc(a.position)+' • '+esc(a.confirmed==='Yes'?'Confirmed':'Assigned')+'</div>'+
+      (a.completed==='Yes' ? '<span class="badge good">Completed</span>' : '<div class="actions"><button class="btn light" onclick=\'cancelRole('+JSON.stringify(a.meetingSheet)+','+JSON.stringify(a.role)+','+JSON.stringify(a.position)+')\'>Cancel Role</button></div>')+'</div>').join('')
+    : '<div class="meta">No meeting assignments are currently recorded.</div>';
+
+  $('mySpeechRequests').innerHTML = p.speechRequests.length
+    ? p.speechRequests.map(r => '<div class="item"><b>'+esc(r['Speech Title'] || 'Untitled Speech')+'</b><div class="meta">'+
+      esc(r['Requested Meeting'] || r['Meeting Sheet'] || '')+' • '+esc(r['Status'] || '')+
+      (r['Assigned Slot'] ? ' • '+esc(r['Assigned Slot']) : '')+'</div>'+
+      (!['Approved','Completed','Cancelled','Declined'].includes(r['Status'])
+        ? '<div class="actions"><button class="btn light" onclick=\'cancelSpeech('+JSON.stringify(r['Request ID'])+')\'>Cancel Request</button></div>' : '')+
+      '</div>').join('')
+    : '<div class="meta">No speech requests are currently recorded.</div>';
+}
+
+function cancelRole(meetingSheet, role, position) {
+  if (!confirm('Cancel this meeting role?')) return;
+  google.script.run.withSuccessHandler(res => {alert(res.message);reload('mine');})
+    .withFailureHandler(showError)
+    .uiCancelRole({meetingSheet,role,position});
+}
+
+function cancelSpeech(requestId) {
+  if (!confirm('Cancel this speech request?')) return;
+  google.script.run.withSuccessHandler(res => {alert(res.message);reload('mine');})
+    .withFailureHandler(showError)
+    .uiCancelSpeechRequest({requestId});
+}
+
+function renderQueue(queue) {
+  $('speechQueue').innerHTML = queue.length
+    ? queue.map(r => '<div class="vpe"><div><b>'+esc(r['Member'] || '')+'</b><div class="meta">'+esc(r['Speech Title'] || '')+' • '+esc(r['Expected Length'] || '')+'</div></div>'+
+      '<div class="meta">'+esc(r['Requested Meeting'] || '')+'<br>'+esc(r['Pathways Path'] || '')+'</div>'+
+      '<div class="meta">'+esc(r['Level / Project'] || '')+'<br>Status: '+esc(r['Status'] || '')+'</div>'+
+      '<div class="actions"><button class="btn gold" onclick=\'reviewSpeech('+JSON.stringify(r['Request ID'])+',"approve")\'>Approve</button>'+
+      '<button class="btn light" onclick=\'reviewSpeech('+JSON.stringify(r['Request ID'])+',"waitlist")\'>Waitlist</button>'+
+      '<button class="btn light" onclick=\'reviewSpeech('+JSON.stringify(r['Request ID'])+',"decline")\'>Decline</button></div></div>').join('')
+    : '<div class="meta">No active speech requests.</div>';
+}
+
+function reviewSpeech(requestId, decision) {
+  const notes = prompt('Optional VPE notes:', '') || '';
+  google.script.run.withSuccessHandler(res => {
+      alert('Speech request: '+(res.status || decision));
+      reload('vpe');
+    })
+    .withFailureHandler(showError)
+    .uiReviewSpeech({requestId,decision,vpeNotes:notes});
+}
+
+function reload(tab) {
+  $('loading').style.display = 'block';
+  $('app').style.display = 'none';
+  google.script.run.withSuccessHandler(data => {
+      initApp(data);
+      if (tab) switchTab(tab);
+    })
+    .withFailureHandler(showError)
+    .uiBootstrap();
+}
+
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === id));
+}
+
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
+
+function showError(err) {
+  $('loading').style.display = 'none';
+  $('app').style.display = 'none';
+  $('error').style.display = 'block';
+  $('error').innerHTML = '<b>Unable to open the member portal.</b><br><br>'+
+    esc(err && err.message ? err.message : String(err))+
+    '<br><br>Make sure you are signed into your Friendship school Google account and that your school email appears in the Member Directory.'+
+    '<br><br><b>Diagnostic:</b> open the same portal URL with <code>?action=status</code> at the end to confirm which account the backend sees.';
+}
+
+function esc(v) {
+  return String(v == null ? '' : v).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
+  }[c]));
+}
+
+start();
+</script>
+</body>
+</html>

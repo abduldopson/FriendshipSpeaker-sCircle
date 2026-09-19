@@ -99,6 +99,8 @@
     {title:"Secure Member Portal", url:"https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec", text:"secure portal school google sign in role signup speech request member assignments vpe approval"},
     {title:"Start Here", url:"start-here.html", text:"new member onboarding mentor first role first speech ice breaker track growth four week roadmap"},
     {title:"Pathways & Find Your Path", url:"pathways.html#pathfinder", text:"pathways quiz identifier assessment dynamic leadership engaging humor motivational strategies persuasive influence presentation mastery visionary communication speech projects"},
+    {title:"Speech Contest Center", url:"speech-contests.html", text:"speech contest international evaluation humorous table topics tall tales online rulebook competition world championship"},
+    {title:"Club Success Plan", url:"club-success-plan.html", text:"club success plan distinguished president distinguished smedley goals education membership training administration urgency September DCP"},
     {title:"Mentorship", url:"mentorship.html", text:"mentor mentee coaching onboarding check-ins board member mentors club mentor pathways support"},
     {title:"Recognition", url:"recognition.html", text:"member of month speech spotlight pathways achievement service recognition golden buzzer growth award"},
     {title:"Resources", url:"resources.html", text:"resource library flyers club media google drive official toastmasters forms trackers"},
@@ -166,6 +168,8 @@
     if(/next meeting|when.*meeting|meeting date/.test(q)) return `${knowledge.meeting?.nextPlanned || "Check the Calendar page for the next meeting."} See the Calendar page for the full schedule.`;
     if(/meeting flow|agenda|order of.*meeting|how.*meeting/.test(q)) return `${knowledge.meeting?.flow || "See the Meetings page for the club meeting flow."}`;
     if(/pathway|which path|find.*path|pathways/.test(q)) return `The club’s Find Your Path assessment compares the six currently offered core paths: Dynamic Leadership, Engaging Humor, Motivational Strategies, Persuasive Influence, Presentation Mastery, and Visionary Communication. Open Pathways & Speeches and take the identifier.`;
+    if(/contest|speech contest|international speech|table topics contest|evaluation contest/.test(q)) return "Open the Speech Contest Center for the six official contest types, preparation guidance, and the current 2026–2027 Toastmasters rulebook.";
+    if(/success plan|club plan|distinguished club|dcp goal/.test(q)) return "Open the Club Success Plan page to see the club’s 2026–2027 goals, September priorities, and concrete ways every member can contribute.";
     if(/mentor|mentoring|mentorship/.test(q)) return knowledge.mentoring || "Visit the Mentorship page for club mentoring support.";
     if(/golden buzzer|recognition|award|member of the month/.test(q)) return `Club recognition includes ${(knowledge.recognition||[]).join(", ")}. Visit the Recognition page for the criteria and process.`;
     if(/join|membership|become.*member/.test(q)) return "Open the Join Us page and complete the club interest form. A club leader can then follow up with next steps.";

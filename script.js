@@ -98,6 +98,7 @@
     {title:"Member Hub", url:"member-hub.html", text:"member dashboard secure portal role signup speech request feedback progress tracker resources tools"},
     {title:"Secure Member Portal", url:"https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec", text:"secure portal school google sign in role signup speech request member assignments vpe approval"},
     {title:"Start Here", url:"start-here.html", text:"new member onboarding mentor first role first speech ice breaker track growth four week roadmap"},
+    {title:"Pathways Launch Center", url:"pathways-launch.html", text:"new member login forgot password reset email base camp choose path pathways ice breaker first speech 30 days speaking spot toastmasters access"},
     {title:"Pathways & Find Your Path", url:"pathways.html#pathfinder", text:"pathways quiz identifier assessment dynamic leadership engaging humor motivational strategies persuasive influence presentation mastery visionary communication speech projects"},
     {title:"Speech Contest Center", url:"speech-contests.html", text:"speech contest international evaluation humorous table topics tall tales online rulebook competition world championship"},
     {title:"Club Success Plan", url:"club-success-plan.html", text:"club success plan distinguished president distinguished smedley goals education membership training administration urgency September DCP"},
@@ -167,6 +168,8 @@
     }
     if(/next meeting|when.*meeting|meeting date/.test(q)) return `${knowledge.meeting?.nextPlanned || "Check the Calendar page for the next meeting."} See the Calendar page for the full schedule.`;
     if(/meeting flow|agenda|order of.*meeting|how.*meeting/.test(q)) return `${knowledge.meeting?.flow || "See the Meetings page for the club meeting flow."}`;
+    if(/forgot.*password|reset.*password|can.t log in|cannot log in/.test(q)) return "Open the Pathways Launch Center. Toastmasters’ current reset process is Login → Forgot Password → enter your primary email → request the six-digit verification code → verify it → create a new password.";
+    if(/first speech|ice breaker|icebreaker|new member access|toastmasters access|base camp/.test(q)) return "Open the Pathways Launch Center for the 30-day new-member plan: sign in, choose your path, enter Base Camp, begin the Ice Breaker, and request a prepared-speaking spot.";
     if(/pathway|which path|find.*path|pathways/.test(q)) return `The club’s Find Your Path assessment compares the six currently offered core paths: Dynamic Leadership, Engaging Humor, Motivational Strategies, Persuasive Influence, Presentation Mastery, and Visionary Communication. Open Pathways & Speeches and take the identifier.`;
     if(/contest|speech contest|international speech|table topics contest|evaluation contest/.test(q)) return "Open the Speech Contest Center for the six official contest types, preparation guidance, and the current 2026–2027 Toastmasters rulebook.";
     if(/success plan|club plan|distinguished club|dcp goal/.test(q)) return "Open the Club Success Plan page to see the club’s 2026–2027 goals, September priorities, and concrete ways every member can contribute.";

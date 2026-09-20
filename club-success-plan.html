@@ -4,6 +4,66 @@
 <link href="club-mark.svg" rel="icon" type="image/svg+xml"/><link href="styles.css" rel="stylesheet"/>
 <style>
 .north-star{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.star-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:19px}.star-card h3{color:var(--navy);margin:5px 0}.goal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.goal-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 22px 22px 68px}.goal-number{position:absolute;left:18px;top:20px;width:36px;height:36px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:var(--navy);font-weight:950}.goal-card h3{color:var(--navy);margin:5px 0 8px}.contribute-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.urgency{background:linear-gradient(135deg,#7A1F2B,#4c1420);color:#fff;border-radius:26px;padding:28px}.urgency h2{color:#fff;margin:4px 0 10px}.urgency p{color:#f5e9ec}@media(max-width:900px){.north-star,.contribute-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.north-star,.goal-grid,.contribute-grid{grid-template-columns:1fr}}
+
+.live-dcp-wrap{margin-top:26px}
+.live-dcp-hero{background:linear-gradient(135deg,#0b1d31,#173b62);color:#fff;border-radius:28px;padding:28px;box-shadow:0 18px 45px rgba(19,42,70,.15)}
+.live-dcp-hero h2{color:#fff;margin:4px 0 10px;font-size:clamp(2rem,4vw,3.1rem)}
+.live-dcp-hero p{color:#dce6ef;margin:0}
+.live-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.live-stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:17px}
+.live-stat strong{display:block;color:var(--gold);font-size:1.8rem;line-height:1}
+.live-stat span{display:block;color:#e7edf5;font-size:.83rem;margin-top:7px}
+.recognition-track{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.recognition-level{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.recognition-level b{display:block;color:var(--navy)} .recognition-level small{color:var(--muted)}
+.dcp-live-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:18px}
+.dcp-live-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.dcp-live-card.achieved{border-color:#8bc7a7;background:#f1fbf5}
+.dcp-live-card h3{margin:4px 0 8px;color:var(--navy);font-size:1rem}
+.dcp-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.82rem;margin-bottom:9px}
+.progress-shell{height:12px;background:#e8ecf1;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#d8b45a,#b38a2f);border-radius:999px}
+.dcp-live-card.achieved .progress-fill{background:linear-gradient(90deg,#2f8b5c,#58aa78)}
+.goal-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border-radius:999px;background:#eef2f7;color:#42546a;font-size:.72rem;font-weight:900}
+.goal-badge.done{background:#dff3e7;color:#226b45}
+.dcp-note{margin-top:18px;background:#fff7db;border:1px solid #e5cf7a;border-radius:16px;padding:17px}
+@media(max-width:900px){.live-stat-grid,.recognition-track,.dcp-live-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.live-stat-grid,.recognition-track,.dcp-live-grid{grid-template-columns:1fr}}
+
+
+.interactive-dcp{margin-top:24px}
+.target-switcher{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 18px}
+.target-btn{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:999px;padding:9px 13px;font-weight:900;cursor:pointer}
+.target-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.target-panel{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.goal-ring{--pct:22;position:relative;width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--pct)*1%),#e9edf2 0);display:grid;place-items:center;margin:auto}
+.goal-ring:after{content:"";position:absolute;width:112px;height:112px;border-radius:50%;background:#fff}
+.goal-ring-inner{position:relative;z-index:2;text-align:center}
+.goal-ring-inner strong{display:block;color:var(--navy);font-size:1.8rem;line-height:1}
+.goal-ring-inner span{font-size:.78rem;color:var(--muted);font-weight:800}
+.target-copy h3{margin:0 0 8px;color:var(--navy);font-size:1.55rem}
+.target-copy p{margin:0;color:var(--muted)}
+.target-progress{height:16px;background:#e9edf2;border-radius:999px;overflow:hidden;margin:15px 0 7px}
+.target-progress > div{height:100%;background:linear-gradient(90deg,#d8b45a,#b38a2f);border-radius:999px;transition:width .45s ease}
+.goal-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 14px}
+.goal-filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-weight:850;color:var(--navy);cursor:pointer}
+.goal-filter.active{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.dcp-live-card[hidden]{display:none!important}
+.goal-action{margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
+.goal-action button{border:0;background:transparent;color:var(--maroon);font-weight:900;cursor:pointer;padding:0}
+.goal-action-panel{margin-top:8px;background:#f7f8fa;border-radius:12px;padding:11px 12px;color:var(--muted);font-size:.84rem;display:none}
+.goal-action-panel.open{display:block}
+.member-action-box{margin-top:24px;background:linear-gradient(135deg,#fff8e2,#fff);border:1px solid #ead79c;border-radius:22px;padding:22px}
+.member-action-box h3{color:var(--navy);margin:3px 0 8px}
+.member-checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.member-check{display:flex;gap:9px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px;cursor:pointer}
+.member-check input{margin-top:3px}
+.check-progress{margin-top:15px}
+.check-progress-line{height:12px;background:#e9edf2;border-radius:999px;overflow:hidden}
+.check-progress-line div{height:100%;width:0;background:linear-gradient(90deg,#2f8b5c,#58aa78);transition:width .3s ease}
+.small-note{font-size:.76rem;color:var(--muted);margin-top:8px}
+@media(max-width:760px){.target-panel{grid-template-columns:1fr}.member-checklist{grid-template-columns:1fr}}
+
 </style></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -17,7 +77,8 @@
 <div class="nav-group"><button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Participate <span aria-hidden="true">▾</span></button><div class="nav-dropdown">
 <a href="meetings.html">Meetings</a><a href="calendar.html">Calendar</a><a href="roles.html">Meeting Roles</a><a href="member-hub.html">Member Hub</a><a data-link="secureMemberPortal" href="#">Member Portal</a></div></div>
 <div class="nav-group active-group"><button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Grow <span aria-hidden="true">▾</span></button><div class="nav-dropdown">
-<a href="start-here.html">Start Here</a><a href="pathways.html">Pathways &amp; Speeches</a><a  href="speech-contests.html">Speech Contests</a><a href="mentorship.html">Mentorship</a></div></div>
+<a href="start-here.html">Start Here</a>
+<a href="pathways-launch.html">Pathways Launch Center</a><a href="pathways.html">Pathways &amp; Speeches</a><a  href="speech-contests.html">Speech Contests</a><a href="mentorship.html">Mentorship</a></div></div>
 <div class="nav-group"><button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Resources <span aria-hidden="true">▾</span></button><div class="nav-dropdown">
 <a href="resources.html">Resource Library</a><a href="resources.html#club-media">Flyers &amp; Club Media</a><a href="resources.html#official">Official Toastmasters</a></div></div>
 <button type="button" class="site-search-open" aria-label="Search this site"><span aria-hidden="true">⌕</span><span class="search-label">Search</span></button>
@@ -25,6 +86,102 @@
 </nav></div></header>
 <main id="main">
 <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">Home</a> / Club Success Plan</div><div class="eyebrow">2026–2027 Program Year</div><h1>Know the plan. Help move it.</h1><p>The Club Success Plan turns the Distinguished Club Program into a yearlong operating plan for member growth, club quality, leadership, and measurable follow-through.</p><div class="actions"><a class="btn btn-primary" data-link="clubSuccessPlanPdf" href="#">View Full Plan PDF</a><a class="btn btn-light" data-link="secureMemberPortal" href="#">Take Your Next Action</a></div></div></section>
+
+<section class="section white" id="live-dcp-status">
+<div class="container">
+<div class="live-dcp-wrap">
+<div class="live-dcp-hero">
+<div class="eyebrow" style="color:var(--gold)">Official Toastmasters Snapshot • As of September 17, 2026</div>
+<h2>Where we stand right now.</h2>
+<p>Membership growth is strong. The next major opportunity is converting member participation into education awards and completing the remaining recognition requirements.</p>
+<div class="live-stat-grid">
+<div class="live-stat"><strong>25</strong><span>Members to date</span></div>
+<div class="live-stat"><strong>+17</strong><span>Net membership growth</span></div>
+<div class="live-stat"><strong>2 / 10</strong><span>DCP goals achieved</span></div>
+<div class="live-stat"><strong>4</strong><span>Officer roles trained in Period 1</span></div>
+</div>
+</div>
+
+<div class="recognition-track">
+<div class="recognition-level"><b>Distinguished</b><small>3 more goals needed</small></div>
+<div class="recognition-level"><b>Select Distinguished</b><small>5 more goals needed</small></div>
+<div class="recognition-level"><b>President’s Distinguished</b><small>7 more goals needed</small></div>
+<div class="recognition-level"><b>Smedley Distinguished</b><small>8 more goals needed</small></div>
+</div>
+
+
+<div class="interactive-dcp">
+<div class="section-head" style="margin-top:30px"><div><div class="eyebrow">Interactive Recognition Tracker</div><h2>Choose the target and watch the gap change.</h2></div><p>This uses the September 17, 2026 Toastmasters snapshot. It is an interactive display of the dated official results, not a live Toastmasters API connection.</p></div>
+
+<div class="target-switcher" role="group" aria-label="Recognition target">
+<button class="target-btn" data-target="distinguished" type="button">Distinguished</button>
+<button class="target-btn" data-target="select" type="button">Select Distinguished</button>
+<button class="target-btn active" data-target="president" type="button">President’s Distinguished</button>
+<button class="target-btn" data-target="smedley" type="button">Smedley Distinguished</button>
+</div>
+
+<div class="target-panel">
+<div class="goal-ring" id="recognitionRing" style="--pct:22">
+<div class="goal-ring-inner"><strong id="ringValue">2 / 9</strong><span id="ringPercent">22% complete</span></div>
+</div>
+<div class="target-copy">
+<div class="eyebrow">Current Target</div>
+<h3 id="targetTitle">President’s Distinguished</h3>
+<p id="targetDescription">The club has achieved 2 of the 9 DCP goals needed for President’s Distinguished. The Club Success Plan and membership qualifying requirements are already met.</p>
+<div class="target-progress"><div id="targetProgressBar" style="width:22%"></div></div>
+<div class="dcp-meta"><span id="targetAchieved">2 goals achieved</span><span id="targetNeeded">7 more goals needed</span></div>
+</div>
+</div>
+
+<div class="goal-filter-bar" aria-label="Filter DCP goals">
+<button class="goal-filter active" data-filter="all" type="button">All Goals</button>
+<button class="goal-filter" data-filter="education" type="button">Education</button>
+<button class="goal-filter" data-filter="membership" type="button">Membership</button>
+<button class="goal-filter" data-filter="training" type="button">Training</button>
+<button class="goal-filter" data-filter="administration" type="button">Administration</button>
+<button class="goal-filter" data-filter="open" type="button">Still Needed</button>
+<button class="goal-filter" data-filter="achieved" type="button">Achieved</button>
+</div>
+
+<div class="member-action-box">
+<div class="eyebrow">My Contribution This Month</div>
+<h3>What chapter will you help write?</h3>
+<p>Use this personal checklist to choose concrete actions. Your checkmarks stay only in this browser and are not part of the official Toastmasters dashboard.</p>
+<div class="member-checklist">
+<label class="member-check"><input type="checkbox" data-action-check="role"> <span><b>Take a meeting role</b><br><small>Build the club’s meeting quality and your leadership portfolio.</small></span></label>
+<label class="member-check"><input type="checkbox" data-action-check="speech"> <span><b>Request a prepared speech</b><br><small>Turn participation into Pathways progress.</small></span></label>
+<label class="member-check"><input type="checkbox" data-action-check="pathways"> <span><b>Complete a Pathways project</b><br><small>Help move Education Goals 1–6.</small></span></label>
+<label class="member-check"><input type="checkbox" data-action-check="mentor"> <span><b>Check in with my mentor/member</b><br><small>Remove barriers and keep members connected.</small></span></label>
+<label class="member-check"><input type="checkbox" data-action-check="guest"> <span><b>Invite or welcome a guest</b><br><small>Protect the club’s strong membership momentum.</small></span></label>
+<label class="member-check"><input type="checkbox" data-action-check="plan"> <span><b>Review the Club Success Plan</b><br><small>Know the priorities and where help is needed.</small></span></label>
+</div>
+<div class="check-progress">
+<div class="dcp-meta"><span>My monthly contribution progress</span><span id="checkCount">0 of 6</span></div>
+<div class="check-progress-line"><div id="checkProgressBar"></div></div>
+</div>
+<div class="actions"><a class="btn btn-maroon" data-link="secureMemberPortal" href="#">Open My Member Portal</a><a class="btn btn-dark" href="pathways.html">Work on Pathways</a></div>
+<div class="small-note">Personal checklist only. Official club recognition status remains based on Toastmasters reporting.</div>
+</div>
+</div>
+
+<div class="dcp-live-grid">
+<article class="dcp-live-card" data-category="education" data-status="open"><span class="goal-badge">Goal 1 • Education</span><h3>Level 1 awards</h3><div class="dcp-meta"><span>0 of 4</span><span>4 needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Complete a Pathways project, schedule a prepared speech, and submit the completed level promptly.<div style="margin-top:8px"><a class="link-arrow" href="pathways.html">Work on Pathways →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="education" data-status="open"><span class="goal-badge">Goal 2 • Education</span><h3>Level 2 awards or Online Meeting Mastery completions</h3><div class="dcp-meta"><span>0 of 2</span><span>2 needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Keep progressing through Pathways and request speaking opportunities that align to your next project.<div style="margin-top:8px"><a class="link-arrow" href="pathways.html">Plan My Next Project →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="education" data-status="open"><span class="goal-badge">Goal 3 • Education</span><h3>More Level 2 awards or Online Meeting Mastery completions</h3><div class="dcp-meta"><span>0 of 2</span><span>2 needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Members approaching Level 2 can help by reserving prepared-speech opportunities and completing remaining projects.<div style="margin-top:8px"><a class="link-arrow" href="pathways.html">Continue Pathways →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="education" data-status="open"><span class="goal-badge">Goal 4 • Education</span><h3>Level 3 awards</h3><div class="dcp-meta"><span>0 of 2</span><span>2 needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Advanced members can help by identifying the projects needed to reach Level 3 and scheduling them early.<div style="margin-top:8px"><a class="link-arrow" href="pathways.html">Review Pathways →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="education" data-status="open"><span class="goal-badge">Goal 5 • Education</span><h3>Level 4, Path Completion, or DTM award</h3><div class="dcp-meta"><span>0 of 1</span><span>1 needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Protect advanced speaking and leadership opportunities for members close to a major milestone.<div style="margin-top:8px"><a class="link-arrow" href="pathways.html">See Growth Resources →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="education" data-status="open"><span class="goal-badge">Goal 6 • Education</span><h3>One more Level 4, Path Completion, or DTM award</h3><div class="dcp-meta"><span>0 of 1</span><span>1 needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Encourage advanced members to complete the final projects needed for a Level 4, Path Completion, or DTM milestone.<div style="margin-top:8px"><a class="link-arrow" href="pathways.html">See Growth Resources →</a></div></div></div></article>
+<article class="dcp-live-card achieved" data-category="membership" data-status="achieved"><span class="goal-badge done">✓ Goal 7 • Achieved</span><h3>New members</h3><div class="dcp-meta"><span>4 of 4</span><span>Requirement met</span></div><div class="progress-shell"><div class="progress-fill" style="width:100%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">This goal is already achieved. Keep welcoming, engaging, and retaining new members.<div style="margin-top:8px"><a class="link-arrow" href="join.html">Help Welcome Members →</a></div></div></div></article>
+<article class="dcp-live-card achieved" data-category="membership" data-status="achieved"><span class="goal-badge done">✓ Goal 8 • Achieved</span><h3>More new members</h3><div class="dcp-meta"><span>13 recorded toward this measure</span><span>Requirement met</span></div><div class="progress-shell"><div class="progress-fill" style="width:100%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">This goal is already achieved. Retention and meaningful participation now matter as much as recruitment.<div style="margin-top:8px"><a class="link-arrow" href="member-hub.html">Support Member Engagement →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="training" data-status="open"><span class="goal-badge">Goal 9 • Training</span><h3>Club officer training</h3><div class="dcp-meta"><span>Period 1: 4 of 4 ✓</span><span>Period 2: 0 of 4</span></div><div class="progress-shell"><div class="progress-fill" style="width:50%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Period 1 is complete. Officers can help by completing the second official training period when it opens.<div style="margin-top:8px"><a class="link-arrow" href="leadership.html">Officer Resources →</a></div></div></div></article>
+<article class="dcp-live-card" data-category="administration" data-status="open"><span class="goal-badge">Goal 10 • Administration</span><h3>On-time dues renewal + officer list</h3><div class="dcp-meta"><span>0 of 2 requirements complete</span><span>Both still needed</span></div><div class="progress-shell"><div class="progress-fill" style="width:0%"></div></div><div class="goal-action"><button type="button" class="goal-help-toggle">How can I help?</button><div class="goal-action-panel">Officers can help by preparing dues and officer-list requirements early enough to correct errors before deadlines.<div style="margin-top:8px"><a class="link-arrow" href="leadership.html">Leadership & Admin →</a></div></div></div></article>
+</div>
+
+<div class="dcp-note"><b>Requirements already met:</b> the Toastmasters dashboard shows both the <b>Club Success Plan requirement</b> and the <b>membership requirement</b> as met. The club’s membership base is 8, membership to date is 25, and net growth is +17.</div>
+</div>
+</div>
+</section>
+
 <section class="section white"><div class="container">
 <div class="section-head"><div><div class="eyebrow">Our North Star</div><h2>Four areas of focus.</h2></div><p>The plan keeps member growth at the center of club decisions.</p></div>
 <div class="north-star"><article class="star-card"><div class="icon">🤝</div><h3>Member Experience</h3><p>Prepared meetings, supportive feedback, mentoring, and recognition.</p></article><article class="star-card"><div class="icon">🎓</div><h3>Education</h3><p>Steady Pathways progress and visible milestones.</p></article><article class="star-card"><div class="icon">🌱</div><h3>Membership</h3><p>Recruit, onboard, engage, and retain members.</p></article><article class="star-card"><div class="icon">🧭</div><h3>Leadership &amp; Operations</h3><p>Trained officers, on-time administration, and clear action ownership.</p></article></div>
@@ -32,7 +189,7 @@
 <div class="callout"><b>Primary recognition target:</b> President’s Distinguished — submit the Club Success Plan by September 30, finish with at least 20 members, and achieve at least 9 of 10 DCP goals. <b>Stretch target:</b> Smedley Distinguished — finish with at least 25 members and achieve all 10 goals.</div>
 </div></section>
 <section class="section"><div class="container">
-<div class="urgency"><div class="eyebrow" style="color:var(--gold)">September Focus</div><h2>Urgency means knowing what matters now.</h2><p>The plan calls for submission by September 30 and a clear Pathways completion pipeline. It also prioritizes confirming the membership base, officer training, board mentors, and a monthly DCP review rhythm.</p><div class="actions"><a class="btn btn-primary" data-link="secureMemberPortal" href="#">Complete a Role or Request a Speech</a><a class="btn btn-light" href="pathways.html">Work on Pathways</a></div></div>
+<div class="urgency"><div class="eyebrow" style="color:var(--gold)">September Focus</div><h2>Our next chapter: turn participation into education awards.</h2><p>The official dashboard now shows the Club Success Plan and membership requirements as met, with Goals 7 and 8 achieved. The immediate challenge is education: Goals 1–6 are still at zero. The club also needs the second officer-training period and both administration requirements for Goals 9–10.</p><div class="actions"><a class="btn btn-primary" data-link="secureMemberPortal" href="#">Complete a Role or Request a Speech</a><a class="btn btn-light" href="pathways.html">Work on Pathways</a></div></div>
 </div></section>
 <section class="section white"><div class="container"><div class="section-head"><div><div class="eyebrow">Distinguished Club Program</div><h2>The 10 goals we are working toward.</h2></div><p>This page displays the club’s plan. Official achievement status should be verified against Toastmasters dashboards.</p></div><div class="goal-grid"><article class="goal-card"><span class="goal-number">1</span><div class="eyebrow">Education</div><h3>4 Level 1 awards</h3><p><b>Lead:</b> William Foster, VPE<br><b>Internal target:</b> Dec. 31, 2026</p></article>
 <article class="goal-card"><span class="goal-number">2</span><div class="eyebrow">Education</div><h3>2 Level 2 awards</h3><p><b>Lead:</b> William Foster, VPE<br><b>Internal target:</b> Jan. 31, 2027</p></article>
@@ -62,4 +219,87 @@
 </div><div class="container footer-bottom"><span>© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</span><span class="footer-legal">Toastmasters International® owns all Toastmasters trademarks and copyrights, including “Toastmaster,” “Toastmasters,” “Toastmasters International,” and the official emblem.</span></div></footer>
 <button type="button" class="club-ai-launch" aria-label="Open Friendship Speaker’s Circle assistant"><span aria-hidden="true">✦</span><span>Ask the Club</span></button>
 <aside class="club-ai-panel" aria-hidden="true"><div class="club-ai-head"><div><strong>Ask Friendship Speaker’s Circle</strong><span>Member question assistant</span></div><button class="icon-button" type="button" data-ai-close aria-label="Close assistant">×</button></div><div class="club-ai-messages" aria-live="polite"><div class="ai-message assistant">Hi! Ask me about meetings, roles, Pathways, speech contests, recognition, or the Club Success Plan.</div></div><form class="club-ai-form"><label class="sr-only" for="club-ai-input">Ask a club question</label><textarea id="club-ai-input" rows="2" placeholder="Ask a member question…" required></textarea><button type="submit">Ask</button></form><div class="club-ai-note">Club guidance only. Verify official contest and Pathways requirements with Toastmasters International.</div></aside>
-<script src="site-config.js"></script><script src="club-knowledge.js"></script><script src="script.js"></script></body></html>
+<script src="site-config.js"></script><script src="club-knowledge.js"></script><script src="script.js"></script>
+<script>
+(function(){
+  const targets = {
+    distinguished:{title:"Distinguished",required:5,needed:3},
+    select:{title:"Select Distinguished",required:7,needed:5},
+    president:{title:"President’s Distinguished",required:9,needed:7},
+    smedley:{title:"Smedley Distinguished",required:10,needed:8}
+  };
+  const achieved = 2;
+
+  function setTarget(key){
+    const t = targets[key] || targets.president;
+    const pct = Math.min(100, Math.round((achieved / t.required) * 100));
+    document.querySelectorAll(".target-btn").forEach(b=>b.classList.toggle("active", b.dataset.target===key));
+    const ring = document.getElementById("recognitionRing");
+    const value = document.getElementById("ringValue");
+    const percent = document.getElementById("ringPercent");
+    const title = document.getElementById("targetTitle");
+    const desc = document.getElementById("targetDescription");
+    const bar = document.getElementById("targetProgressBar");
+    const a = document.getElementById("targetAchieved");
+    const n = document.getElementById("targetNeeded");
+    if(ring) ring.style.setProperty("--pct",pct);
+    if(value) value.textContent = achieved+" / "+t.required;
+    if(percent) percent.textContent = pct+"% complete";
+    if(title) title.textContent = t.title;
+    if(desc) desc.textContent = "The club has achieved "+achieved+" of the "+t.required+" DCP goals needed for "+t.title+". The Club Success Plan and membership qualifying requirements are already met.";
+    if(bar) bar.style.width = pct+"%";
+    if(a) a.textContent = achieved+" goals achieved";
+    if(n) n.textContent = t.needed+" more goals needed";
+  }
+
+  document.querySelectorAll(".target-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>setTarget(btn.dataset.target));
+  });
+
+  document.querySelectorAll(".goal-filter").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      document.querySelectorAll(".goal-filter").forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active");
+      const f = btn.dataset.filter;
+      document.querySelectorAll(".dcp-live-card").forEach(card=>{
+        const cat = card.dataset.category;
+        const status = card.dataset.status;
+        card.hidden = !(f==="all" || f===cat || f===status);
+      });
+    });
+  });
+
+  document.querySelectorAll(".goal-help-toggle").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const panel = btn.nextElementSibling;
+      const open = panel.classList.toggle("open");
+      btn.textContent = open ? "Hide member action" : "How can I help?";
+    });
+  });
+
+  const storageKey = "fscSuccessPlanMonthlyActionsSep2026";
+  const boxes = Array.from(document.querySelectorAll("[data-action-check]"));
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(storageKey) || "{}"); } catch(e){}
+  boxes.forEach(box=>{
+    box.checked = !!saved[box.dataset.actionCheck];
+    box.addEventListener("change",()=>{
+      saved[box.dataset.actionCheck] = box.checked;
+      try { localStorage.setItem(storageKey, JSON.stringify(saved)); } catch(e){}
+      updateChecklist();
+    });
+  });
+  function updateChecklist(){
+    const done = boxes.filter(b=>b.checked).length;
+    const pct = Math.round((done / boxes.length)*100);
+    const count = document.getElementById("checkCount");
+    const bar = document.getElementById("checkProgressBar");
+    if(count) count.textContent = done+" of "+boxes.length;
+    if(bar) bar.style.width = pct+"%";
+  }
+  updateChecklist();
+  setTarget("president");
+})();
+</script>
+
+</body></html>

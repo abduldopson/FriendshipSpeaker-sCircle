@@ -1,12 +1,12 @@
 window.SITE_CONFIG = {
   nextMeeting: {
-    date: "Monday, September 28, 2026 (planned)",
-    time: "6:00 PM – 7:00 PM",
-    location: "Announced with each meeting invitation",
+    date: "Monday, October 19, 2026 (In-Person)",
+    time: "6:00 PM – 7:30 PM",
+    location: "Armstrong Campus — 3rd Floor Conference Room",
     theme: "Writing New Chapters"
   },
   monthlyTheme: {
-    month: "September 2026",
+    month: "October 2026",
     title: "Writing New Chapters",
     message: "Every speech, role, reflection, and courageous contribution is a chance to write the next chapter of your growth."
   },

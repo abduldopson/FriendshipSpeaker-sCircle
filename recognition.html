@@ -90,6 +90,12 @@
   .tracker-panel{display:block}
   .tracker-panel .actions{margin-top:18px}
 }
+
+.member-feature{display:grid;grid-template-columns:minmax(240px,.75fr) minmax(0,1.25fr);gap:26px;align-items:center}
+.member-feature-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 34%;border-radius:22px;border:1px solid rgba(255,255,255,.22);box-shadow:0 18px 36px rgba(0,0,0,.22)}
+.member-feature-copy h2{margin:8px 0 6px}.member-feature-name{font-size:clamp(1.45rem,3vw,2.1rem);font-weight:950;color:var(--gold);margin:0 0 10px}.member-feature-copy p{font-size:1rem;line-height:1.65}.member-feature-reason{margin-top:16px;padding-top:15px;border-top:1px solid rgba(255,255,255,.18);color:#f4f7fa}.member-feature-reason b{color:var(--gold)}
+@media(max-width:760px){.member-feature{grid-template-columns:1fr}.member-feature-photo{max-width:460px;margin:0 auto}}
+
 </style>
 </head>
 <body>
@@ -104,7 +110,7 @@
 <nav aria-label="Primary navigation" class="nav-links" id="primary-nav">
 <a href="index.html">Home</a>
 <div class="nav-group active-group">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">About <span aria-hidden="true">▾</span></button>
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">About <span aria-hidden="true">▼</span></button>
 <div class="nav-dropdown">
 <a href="about.html">About the Club</a>
 <a href="about.html#community">Our Community</a>
@@ -113,7 +119,7 @@
 </div>
 </div>
 <div class="nav-group">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Participate <span aria-hidden="true">▾</span></button>
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Participate <span aria-hidden="true">▼</span></button>
 <div class="nav-dropdown">
 <a href="meetings.html">Meetings</a>
 <a href="calendar.html">Calendar</a>
@@ -123,7 +129,7 @@
 </div>
 </div>
 <div class="nav-group">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Grow <span aria-hidden="true">▾</span></button>
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Grow <span aria-hidden="true">▼</span></button>
 <div class="nav-dropdown">
 <a href="start-here.html">Start Here</a>
 <a href="pathways-launch.html">Pathways Launch Center</a>
@@ -133,14 +139,14 @@
 </div>
 </div>
 <div class="nav-group">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Resources <span aria-hidden="true">▾</span></button>
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">Resources <span aria-hidden="true">▼</span></button>
 <div class="nav-dropdown">
 <a href="resources.html">Resource Library</a>
 <a href="resources.html#club-media">Flyers &amp; Club Media</a>
 <a href="resources.html#official">Official Toastmasters</a>
 </div>
 </div>
-<button type="button" class="site-search-open" aria-label="Search this site"><span aria-hidden="true">⌕</span><span class="search-label">Search</span></button>
+<button type="button" class="site-search-open" aria-label="Search this site"><span aria-hidden="true">⌔</span><span class="search-label">Search</span></button>
 <a class="nav-cta" href="join.html">Join Us</a>
 </nav>
 </div>
@@ -178,16 +184,20 @@
 <div class="container">
 <div class="section-head">
 <div><div class="eyebrow">Celebration Wall</div><h2>Recognition lives here.</h2></div>
-<p>As honorees are selected, this section can become the club’s digital wall of celebration—with names, photos, milestones, and short recognition notes.</p>
+<p>Our Celebration Wall highlights members whose participation, growth, service, and courage strengthen the club community.</p>
 </div>
 <div class="featured-grid">
 <article class="featured-main">
-<div>
-<span class="featured-badge">Featured Recognition</span>
+<div class="member-feature">
+<img class="member-feature-photo" src="bernadette-white-member-of-the-month.webp" alt="Bernadette White, Friendship Speaker’s Circle Member of the Month"/>
+<div class="member-feature-copy">
+<span class="featured-badge">October 2026 • Member of the Month</span>
 <h2>Member of the Month</h2>
-<p>Future honorees will be featured here with their name, photo, recognition category, and a short note celebrating their contribution.</p>
+<div class="member-feature-name">Bernadette White</div>
+<p>Ms. White is recognized for her willingness to step forward for prepared speaking opportunities, her enthusiasm for continued growth, and her positive engagement with Friendship Speaker’s Circle.</p>
+<p class="member-feature-reason"><b>Why she was selected:</b> She has shown initiative in continuing to speak, practice, and challenge herself. That willingness to participate and keep growing reflects the spirit of our club: <b>Speak. Connect. Grow. Lead.</b></p>
 </div>
-<div><b style="color:var(--gold)">Coming with the next award announcement.</b></div>
+</div>
 </article>
 <div class="featured-side">
 <article class="featured-slot">
@@ -221,7 +231,7 @@
 </div>
 </article>
 <article class="award-card">
-<div class="award-icon">🎙️</div>
+<div class="award-icon">🍙️</div>
 <h3>Speech Spotlight</h3>
 <p>Celebrates a prepared speech that connects with the audience, demonstrates strong preparation, or shows meaningful improvement.</p>
 <div class="award-meta">
@@ -230,7 +240,7 @@
 </div>
 </article>
 <article class="award-card">
-<div class="award-icon">🏅</div>
+<div class="award-icon">🣥</div>
 <h3>Pathways Achievement</h3>
 <p>Recognizes members who complete educational projects, levels, or other meaningful Pathways milestones.</p>
 <div class="award-meta">
@@ -243,23 +253,23 @@
 <h3>Service Recognition</h3>
 <p>Honors members who step up for roles, mentor others, solve problems, support events, or quietly help the club succeed.</p>
 <div class="award-meta">
-<span><b>Looks for:</b> Service • reliability • leadership</span>
+<span><b>Looks for:</b> Service • reliability • initiative</span>
 <span><b>Rhythm:</b> As earned</span>
 </div>
 </article>
 <article class="award-card">
-<div class="award-icon">🔔</div>
-<h3>Golden Buzzer</h3>
-<p>A special annual recognition for a standout moment that captures courage, connection, excellence, growth, or the spirit of the club.</p>
+<div class="award-icon">🔓</div>
+<h3>Consistency Award</h3>
+<p>Recognizes reliable participation and follow-through over time—showing up, preparing, completing roles, and staying engaged.</p>
 <div class="award-meta">
-<span><b>Looks for:</b> Memorable impact • club spirit</span>
-<span><b>Rhythm:</b> Once per program year</span>
+<span><b>Looks for:</b> Consistency • reliability • follow-through</span>
+<span><b>Rhythm:</b> Quarterly / year-end</span>
 </div>
 </article>
 <article class="award-card">
-<div class="award-icon">🚀</div>
+<div class="award-icon">🏗</div>
 <h3>Growth Award</h3>
-<p>Highlights visible improvement over time. This award celebrates movement, effort, and application of feedback—not simply the strongest starting performance.</p>
+<p>Recognizes meaningful improvement over time. This award celebrates movement, effort, and application of feedback—not simply the strongest starting performance.</p>
 <div class="award-meta">
 <span><b>Looks for:</b> Improvement • feedback • courage</span>
 <span><b>Rhythm:</b> Quarterly / year-end</span>
@@ -289,9 +299,10 @@
 </div>
 <div class="milestone-grid">
 <article class="milestone"><span class="big">🎤</span><h3>First Prepared Speech</h3><p>Celebrate the courage it takes to move from member to speaker.</p></article>
-<article class="milestone"><span class="big">🧭</span><h3>Pathways Level Complete</h3><p>Recognize each completed educational level and continued learning.</p></article>
-<article class="milestone"><span class="big">🙋</span><h3>New Meeting Role</h3><p>Celebrate members who stretch into a role they have not held before.</p></article>
-<article class="milestone"><span class="big">🌱</span><h3>Leadership Growth</h3><p>Recognize mentoring, facilitation, initiative, and service beyond the microphone.</p></article>
+<article class="milestone"><span class="big">🧭</span><h3>Pathways Level Complete</h3>
+<p>Recognize each completed educational level and continued learning.</p></article>
+<article class="milestone"><span class="big">🤋</span><h3>New Meeting Role</h3><p>Celebrate members who stretch into a role they have not held before.</p></article>
+<article class="milestone"><span class="big">💱</span><h3>Leadership Growth</h3><p>Recognize mentoring, facilitation, initiative, and service beyond the microphone.</p></article>
 </div>
 </div>
 </section>
@@ -347,7 +358,7 @@
 <div><h3>Grow With Us</h3><div class="footer-links"><a href="pathways.html">Pathways &amp; Speeches</a><a href="speech-contests.html">Speech Contests</a><a href="mentorship.html">Mentorship</a><a href="recognition.html">Recognition</a>
 <a href="club-success-plan.html">Club Success Plan</a><a href="join.html">Join Us</a><a data-link="friendshipHome" href="#">Friendship Homepage</a><a data-link="talentHub" href="#">Friendship Talent Hub</a></div></div>
 </div>
-<div class="container footer-bottom"><span>© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</span><span class="footer-legal">Toastmasters International® owns all Toastmasters trademarks and copyrights, including “Toastmaster,” “Toastmasters,” “Toastmasters International,” and the official emblem.</span></div>
+<div class="container footer-bottom"><span>© <span data-year=""></span> Friendship Speaker’s Circle. Club-built resource site.</span><span class="footer-legal">Toastmasters International° owns all Toastmasters trademarks and copyrights, including “Toastmaster” “Toastmasters,” “Toastmasters International,” and the official emblem.</span></div>
 </footer>
 
 <button type="button" class="club-ai-launch" aria-label="Open Friendship Speaker’s Circle assistant"><span aria-hidden="true">✦</span><span>Ask the Club</span></button>

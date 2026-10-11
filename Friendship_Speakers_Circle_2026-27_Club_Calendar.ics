@@ -1,189 +1,314 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Friendship Speakers Circle//Updated Club Calendar 2026-27//EN
+PRODID:-//Friendship Speakers Circle//Cross-Checked Club Calendar 2026-27//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Friendship Speaker's Circle 2026-27
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
 UID:fsc-2026-09-28-cancelled@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20260928T180000
 DTEND;TZID=America/New_York:20260928T190000
 SUMMARY:CANCELLED — Friendship Speaker’s Circle Club Meeting
 DESCRIPTION:This meeting was cancelled and rescheduled to Monday\, October 5\, 2026.
-LOCATION:TBA / Virtual as announced
 STATUS:CANCELLED
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-2026-10-05-rescheduled@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261005T180000
 DTEND;TZID=America/New_York:20261005T190000
 SUMMARY:Rescheduled Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Rescheduled from September 28. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
+DESCRIPTION:Rescheduled from September 28.
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-2026-10-12-holiday@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261012T180000
 DTEND;TZID=America/New_York:20261012T190000
-SUMMARY:NO MEETING — Holiday
-DESCRIPTION:The October 12 club meeting is cancelled because of the holiday.
-LOCATION:
-STATUS:CONFIRMED
+SUMMARY:NO MEETING — Friendship Holiday
+DESCRIPTION:Friendship holiday. No school for students and staff.
+STATUS:CANCELLED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:fsc-lab-20261015@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20261015T180000
+DTEND;TZID=America/New_York:20261015T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Optional member learning and leadership session. Cross-checked against the Friendship school calendar: regular school day.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
 UID:fsc-2026-10-19-inperson@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261019T180000
 DTEND;TZID=America/New_York:20261019T193000
 SUMMARY:In-Person Friendship Speaker’s Circle Meeting
-DESCRIPTION:Special in-person meeting. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
+DESCRIPTION:Special in-person meeting.
 LOCATION:Armstrong Campus - 3rd Floor Conference Room
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20261026@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261026T180000
 DTEND;TZID=America/New_York:20261026T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
+DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth.
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20261104@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20261104T180000
+DTEND;TZID=America/New_York:20261104T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:First-Wednesday board meeting. Cross-checked against the Friendship school calendar: regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20261109@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261109T180000
 DTEND;TZID=America/New_York:20261109T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20261119@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20261119T180000
+DTEND;TZID=America/New_York:20261119T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20261123@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261123T180000
 DTEND;TZID=America/New_York:20261123T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
+DESCRIPTION:Thanksgiving week. No direct calendar conflict; monitor attendance.
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20261202@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20261202T180000
+DTEND;TZID=America/New_York:20261202T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20261214@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20261214T180000
 DTEND;TZID=America/New_York:20261214T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20261217@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20261217T180000
+DTEND;TZID=America/New_York:20261217T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20270106@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270106T180000
+DTEND;TZID=America/New_York:20270106T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270111@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270111T180000
 DTEND;TZID=America/New_York:20270111T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20270121@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270121T180000
+DTEND;TZID=America/New_York:20270121T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270125@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270125T180000
 DTEND;TZID=America/New_York:20270125T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20270203@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270203T180000
+DTEND;TZID=America/New_York:20270203T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270208@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270208T180000
 DTEND;TZID=America/New_York:20270208T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20270218@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270218T180000
+DTEND;TZID=America/New_York:20270218T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270222@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270222T180000
 DTEND;TZID=America/New_York:20270222T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20270303@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270303T180000
+DTEND;TZID=America/New_York:20270303T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270308@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270308T180000
 DTEND;TZID=America/New_York:20270308T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20270318@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270318T180000
+DTEND;TZID=America/New_York:20270318T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Regular school day. Friendship Data Talk/record-keeping day follows on March 19.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20270407@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270407T180000
+DTEND;TZID=America/New_York:20270407T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270412@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270412T180000
 DTEND;TZID=America/New_York:20270412T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20270415@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270415T180000
+DTEND;TZID=America/New_York:20270415T184500
+SUMMARY:REVIEW DATE — Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Friendship calendar shows QLC 3 / Wellness Day with no school for students. Confirm staff availability before holding this Learning Lab.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270426@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270426T180000
 DTEND;TZID=America/New_York:20270426T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-board-20270505@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270505T180000
+DTEND;TZID=America/New_York:20270505T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270510@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270510T180000
 DTEND;TZID=America/New_York:20270510T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20270520@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270520T180000
+DTEND;TZID=America/New_York:20270520T184500
+SUMMARY:Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20270524@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270524T180000
 DTEND;TZID=America/New_York:20270524T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:fsc-board-20270602@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270602T180000
+DTEND;TZID=America/New_York:20270602T183000
+SUMMARY:Friendship Speaker’s Circle Executive Board Meeting
+DESCRIPTION:Regular school day.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
 UID:fsc-20270614@friendship-speakers-circle
-DTSTAMP:20261008T000000Z
+DTSTAMP:20261010T000000Z
 DTSTART;TZID=America/New_York:20270614T180000
 DTEND;TZID=America/New_York:20270614T190000
 SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Prepared speeches\, Table Topics\, evaluations\, meeting roles\, and member growth. Member portal: https://script.google.com/a/macros/friendshipschools.com/s/AKfycbyZEIzv7_63jYnWHx-WAhOTq_VdZqBfbvo2qhcT8tLEcMD3Hxf3so3uGSggS7it2RYv/exec
-LOCATION:TBA / Virtual as announced
+DESCRIPTION:Final student week. Friendship’s last student day is June 16; monitor attendance.
 STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fsc-lab-20270617@friendship-speakers-circle
+DTSTAMP:20261010T000000Z
+DTSTART;TZID=America/New_York:20270617T180000
+DTEND;TZID=America/New_York:20270617T184500
+SUMMARY:REVIEW DATE — Friendship Speaker’s Circle Member Learning Lab
+DESCRIPTION:Friendship calendar shows June 17 as the last day of school for teachers. Consider cancelling or moving this Learning Lab.
+STATUS:TENTATIVE
 END:VEVENT
 END:VCALENDAR

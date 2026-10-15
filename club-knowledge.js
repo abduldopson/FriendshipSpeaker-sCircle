@@ -18,3 +18,28 @@ window.FSC_CLUB_KNOWLEDGE = {
   officer: "The public Leadership page lists club officers. Officer-only working resources are kept behind Friendship Google access in the Officer Hub.",
   privacy: "Do not enter confidential student, employee, member, financial, medical, or other sensitive information into Ask the Club. The assistant is intended for general club guidance and public club resources."
 };
+
+// Recognition-page correction: September Member of the Month + reliable photo source.
+(function(){
+  function fixRecognitionSpotlight(){
+    if(!/recognition\.html(?:$|[?#])/i.test(window.location.href)) return;
+
+    const badge = document.querySelector('.member-feature .featured-badge');
+    if(badge) badge.textContent = 'September 2026 • Member of the Month';
+
+    const photo = document.querySelector('.member-feature-photo');
+    if(photo){
+      photo.src = 'https://raw.githubusercontent.com/abduldopson/FriendshipSpeaker-sCircle/main/bernadette-white-member-of-the-month.webp?v=20261014';
+      photo.alt = 'Bernadette White, Friendship Speaker’s Circle September Member of the Month';
+      photo.loading = 'eager';
+      photo.decoding = 'async';
+      photo.style.display = 'block';
+    }
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', fixRecognitionSpotlight, {once:true});
+  }else{
+    fixRecognitionSpotlight();
+  }
+})();

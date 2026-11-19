@@ -1,9 +1,9 @@
 window.SITE_CONFIG = {
   nextMeeting: {
-    date: "Monday, October 19, 2026 (In-Person)",
-    time: "6:00 PM – 7:30 PM",
-    location: "Armstrong Campus — 3rd Floor Conference Room",
-    theme: "Writing New Chapters"
+    date: "Monday, November 23, 2026",
+    time: "6:00 PM – 7:00 PM ET",
+    location: "To be announced",
+    theme: "Announced before the meeting"
   },
   monthlyTheme: {
     month: "October 2026",
@@ -57,34 +57,3 @@ window.SITE_CONFIG = {
     meetingRolesResourceDrive: "https://drive.google.com/drive/folders/1j692m0sYNNqTMuSzytbDXojHNoKLAurF?usp=sharing"
   }
 };
-
-// Keep the public October calendar aligned with the live tracker.
-(function(){
-  function syncOctoberCalendar(){
-    if(!/calendar\.html(?:$|[?#])/i.test(window.location.href)) return;
-
-    const update = document.querySelector('.update-banner p');
-    if(update){
-      update.textContent = 'The September 28 meeting was moved to October 5. There was no meeting on October 12 because of the holiday. The October 19 in-person meeting at Armstrong Campus replaces the regular October 26 meeting, so there is no separate club meeting on October 26.';
-    }
-
-    document.querySelectorAll('.event-row').forEach(row => {
-      const date = row.querySelector('.event-date');
-      if(date && /Oct\s*26/i.test(date.textContent || '')) row.remove();
-    });
-
-    document.querySelectorAll('.event-row').forEach(row => {
-      const date = row.querySelector('.event-date');
-      if(date && /Oct\s*19/i.test(date.textContent || '')){
-        const note = row.querySelector('.event-title small');
-        if(note) note.textContent = 'Armstrong Campus — 3rd Floor Conference Room. This meeting replaces October 26.';
-      }
-    });
-  }
-
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', syncOctoberCalendar, {once:true});
-  }else{
-    syncOctoberCalendar();
-  }
-})();

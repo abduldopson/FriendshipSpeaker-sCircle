@@ -81,11 +81,13 @@ STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:fsc-20261123@friendship-speakers-circle
-DTSTAMP:20261016T142600Z
-DTSTART;TZID=America/New_York:20261123T180000
-DTEND;TZID=America/New_York:20261123T190000
-SUMMARY:Friendship Speaker’s Circle Club Meeting
-DESCRIPTION:Thanksgiving week.
+DTSTAMP:20261119T175112Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261130T180000
+DTEND;TZID=America/New_York:20261130T190000
+SUMMARY:In-Person Friendship Speaker’s Circle Club Meeting
+DESCRIPTION:Rescheduled from November 23. In-person meeting confirmed.
+LOCATION:Venue to be announced
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

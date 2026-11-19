@@ -1,8 +1,8 @@
 window.SITE_CONFIG = {
   nextMeeting: {
-    date: "Monday, November 23, 2026",
+    date: "Monday, November 30, 2026 (In Person — Confirmed)",
     time: "6:00 PM – 7:00 PM ET",
-    location: "To be announced",
+    location: "In person — venue to be announced",
     theme: "Announced before the meeting"
   },
   monthlyTheme: {

@@ -96,6 +96,35 @@
 .member-feature-copy h2{margin:8px 0 6px}.member-feature-name{font-size:clamp(1.45rem,3vw,2.1rem);font-weight:950;color:var(--gold);margin:0 0 10px}.member-feature-copy p{font-size:1rem;line-height:1.65}.member-feature-reason{margin-top:16px;padding-top:15px;border-top:1px solid rgba(255,255,255,.18);color:#f4f7fa}.member-feature-reason b{color:var(--gold)}
 @media(max-width:760px){.member-feature{grid-template-columns:1fr}.member-feature-photo{max-width:460px;margin:0 auto}}
 
+
+/* Public milestone recognition: editorial navy, maroon and gold */
+.rec-earned-meta{color:var(--muted);margin:-4px 0 22px;font-size:.94rem}
+.honorees-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.honoree-card{border:1px solid var(--line);background:#fff;border-radius:22px;padding:23px;box-shadow:0 10px 26px rgba(15,36,60,.05)}
+.honoree-head{display:flex;gap:13px;align-items:flex-start;margin-bottom:16px}
+.honoree-head>div{flex:1;min-width:0}
+.honoree-icon{width:49px;height:49px;border-radius:16px;background:#faf0d5;display:grid;place-items:center;font-size:1.55rem;flex:none}
+.honoree-head h3{margin:0 0 5px;color:var(--navy);font-size:1.25rem}
+.honoree-head p{margin:0;color:var(--muted);font-size:.89rem}
+.honoree-count{background:#eff2f7;color:var(--navy);border-radius:100px;font-size:.73rem;font-weight:850;padding:6px 10px;white-space:nowrap}
+.honoree-names{display:flex;flex-wrap:wrap;gap:7px}
+.honoree-person{background:#f8f4ec;border:1px solid #e9dfce;color:#293a50;border-radius:99px;padding:7px 10px;font-size:.84rem;font-weight:700}
+.honor-awaiting-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.honor-awaiting-list li{display:flex;align-items:center;gap:9px;background:#f7f8fa;border:1px solid var(--line);border-radius:13px;padding:12px;font-size:.86rem}
+.honor-awaiting-list li b{color:var(--navy)}.honor-awaiting-list small{flex:1;color:var(--muted);line-height:1.4}
+.honor-awaiting{font-size:.73rem;color:#637186;white-space:nowrap}
+.monthly-honors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.monthly-honor{background:linear-gradient(135deg,#fff,#faf5e9);border:1px solid #e2d8c5;border-radius:22px;padding:24px}
+.monthly-honor h3{color:var(--navy);font-size:1.65rem;margin:15px 0 9px}
+.monthly-honor p{color:#536173;margin:0 0 12px;font-size:.94rem}
+.monthly-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.monthly-month,.monthly-category{display:inline-block;padding:6px 11px;border-radius:99px;font-size:.75rem;font-weight:900}
+.monthly-month{background:#153457;color:#fff}.monthly-category{background:#f4e2b4;color:#502f05}
+.monthly-pending{background:#fff;border:1px dashed #b7a98d;border-radius:20px;padding:24px}
+.monthly-pending b{color:var(--navy)}.monthly-pending p{color:var(--muted);margin-bottom:0}
+@media(max-width:850px){.honorees-grid,.monthly-honors-grid,.honor-awaiting-list{grid-template-columns:1fr}}
+@media(max-width:540px){.honoree-head{flex-wrap:wrap}.honoree-count{margin-left:62px}.honor-awaiting-list li{flex-wrap:wrap}.honor-awaiting-list small{flex-basis:100%}}
+
 </style>
 </head>
 <body>
@@ -164,6 +193,8 @@
 </div>
 <div class="rec-nav">
 <a href="#spotlight">Celebration Wall</a><span class="login-note">Friendship Google login required</span>
+<a href="#member-honors">Honorees</a>
+<a href="#monthly-honors">Monthly Honors</a>
 <a href="#awards">Awards</a>
 <a href="#process">How It Works</a>
 <a href="#milestones">Milestones</a>
@@ -191,7 +222,7 @@
 <div class="member-feature">
 <img class="member-feature-photo" src="bernadette-white-member-of-the-month.webp" alt="Bernadette White, Friendship Speaker’s Circle Member of the Month"/>
 <div class="member-feature-copy">
-<span class="featured-badge">October 2026 • Member of the Month</span>
+<span class="featured-badge">September 2026 • Member of the Month</span>
 <h2>Member of the Month</h2>
 <div class="member-feature-name">Bernadette White</div>
 <p>Ms. White is recognized for her willingness to step forward for prepared speaking opportunities, her enthusiasm for continued growth, and her positive engagement with Friendship Speaker’s Circle.</p>
@@ -211,6 +242,52 @@
 <p>Completed levels and educational milestones can be celebrated here as members progress.</p>
 </article>
 </div>
+</div>
+</div>
+</section>
+
+<section class="section white" id="member-honors">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Club Honors Roll</div><h2>Members who earned recognition.</h2></div><p>Achievements are based on completed speeches and meeting roles, including archived club service.</p></div>
+<p class="rec-earned-meta"><strong>Recognition snapshot:</strong> November 24, 2026. Award criteria and honorees are drawn from the club's Master Tracker and Rewards Dashboard; changes made after this snapshot require a website refresh.</p>
+<div class="honorees-grid"><article class="honoree-card">
+  <div class="honoree-head"><span class="honoree-icon" aria-hidden="true">✨</span><div><h3>First Step</h3><p>Complete any meeting role</p></div><span class="honoree-count">19 members</span></div>
+  <div class="honoree-names"><span class="honoree-person">Abdul Dopson</span><span class="honoree-person">Anna Morton</span><span class="honoree-person">Brandy Winchester</span><span class="honoree-person">Monique Miller</span><span class="honoree-person">Tattiana Peters</span><span class="honoree-person">Neko Ramos</span><span class="honoree-person">Renee Gibson</span><span class="honoree-person">William Foster</span><span class="honoree-person">Bernadette White</span><span class="honoree-person">Jeromeka Chappelle</span><span class="honoree-person">LaKeema Moore</span><span class="honoree-person">Kyunghee Kim</span><span class="honoree-person">Tiffany Creagh Lee</span><span class="honoree-person">Gregory Williams</span><span class="honoree-person">Carleen Howard</span><span class="honoree-person">Jewelyn Williams</span><span class="honoree-person">Daijon Rice</span><span class="honoree-person">Whitney Jerome</span><span class="honoree-person">Maggie Bobo</span></div>
+</article>
+<article class="honoree-card">
+  <div class="honoree-head"><span class="honoree-icon" aria-hidden="true">🎤</span><div><h3>Speaker Spotlight</h3><p>Complete 2 prepared speeches</p></div><span class="honoree-count">7 members</span></div>
+  <div class="honoree-names"><span class="honoree-person">Abdul Dopson</span><span class="honoree-person">Brandy Winchester</span><span class="honoree-person">Monique Miller</span><span class="honoree-person">Neko Ramos</span><span class="honoree-person">Renee Gibson</span><span class="honoree-person">William Foster</span><span class="honoree-person">Bernadette White</span></div>
+</article>
+<article class="honoree-card">
+  <div class="honoree-head"><span class="honoree-icon" aria-hidden="true">📝</span><div><h3>Evaluation Builder</h3><p>Serve as Speech Evaluator 5 times</p></div><span class="honoree-count">1 member</span></div>
+  <div class="honoree-names"><span class="honoree-person">Abdul Dopson</span></div>
+</article>
+<article class="honoree-card">
+  <div class="honoree-head"><span class="honoree-icon" aria-hidden="true">🧭</span><div><h3>Leadership in Action</h3><p>Serve as Toastmaster 3 times</p></div><span class="honoree-count">3 members</span></div>
+  <div class="honoree-names"><span class="honoree-person">Abdul Dopson</span><span class="honoree-person">Brandy Winchester</span><span class="honoree-person">William Foster</span></div>
+</article>
+<article class="honoree-card">
+  <div class="honoree-head"><span class="honoree-icon" aria-hidden="true">🥉</span><div><h3>Balanced Member</h3><p>Complete every core role at least once</p></div><span class="honoree-count">1 member</span></div>
+  <div class="honoree-names"><span class="honoree-person">William Foster</span></div>
+</article></div>
+<h3 style="color:var(--navy);margin:28px 0 14px">Milestones we are working toward</h3>
+<ul class="honor-awaiting-list"><li><span aria-hidden="true">✍️</span><b>Grammar Guardian</b><small>Serve as Grammarian 5 times</small><span class="honor-awaiting">In progress</span></li>
+<li><span aria-hidden="true">🥈</span><b>Silver Member</b><small>Complete every core role at least twice</small><span class="honor-awaiting">In progress</span></li>
+<li><span aria-hidden="true">🥇</span><b>Gold Member</b><small>Complete every core role at least 4 times</small><span class="honor-awaiting">In progress</span></li>
+<li><span aria-hidden="true">🌟</span><b>Platinum Member</b><small>Complete every core role at least 6 times</small><span class="honor-awaiting">In progress</span></li>
+<li><span aria-hidden="true">💎</span><b>Diamond Member</b><small>Complete every core role at least 8 times</small><span class="honor-awaiting">In progress</span></li></ul>
+</div>
+</section>
+<section class="section gold-soft" id="monthly-honors">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Featured Recognition</div><h2>Monthly &amp; special honors.</h2></div><p>Selected by club leadership and recorded in our Recognition Center.</p></div>
+<div class="monthly-honors-grid"><article class="monthly-honor">
+  <div class="monthly-top"><span class="monthly-month">September 2026</span><span class="monthly-category">Member of the Month</span></div>
+  <h3>Bernadette White</h3>
+  
+  <p>Initiative in prepared speaking, positive engagement, and continued growth.</p>
+</article>
+<article class="monthly-pending"><div class="eyebrow">Nominations open</div><h3 style="color:var(--navy);margin:10px 0">November 2026</h3><b>Member of the Month &amp; Speech of the Month</b><p>Recipients will be announced after club leadership confirms the selections.</p></article>
 </div>
 </div>
 </section>
